@@ -1,0 +1,15 @@
+# Partner allowlist.
+#
+# Only partners listed here are scraped, normalized, and shown on the site.
+# Names must match the ABDM dashboard partner names exactly (as returned by
+# the TOPABHAPART / TOPHRLPART endpoints). Add new partners one per line.
+partners:
+  - HFW Assam (CARE HMIS)
+  - HFW Assam (10BedICU)
+  - Ramgarh Jharkhand (CARE-HMIS)
+  - eGovernments Foundation
+  - HFWS Karnataka (Tele-ICU)
+  - JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES
+  - DHS Manipur (10BedICU)
+  - HFW Nagaland (10BedICU)
+  - HFW Sikkim (10BedICU)

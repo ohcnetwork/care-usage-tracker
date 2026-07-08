@@ -14,9 +14,9 @@ const config = {
   value: { label: "ABHAs created", color: "var(--chart-2)" },
 } satisfies ChartConfig;
 
-export function AbhaTrendChart({ data, id }: { data: TrendPoint[]; id: string }) {
+export function AbhaTrendChart({ data, id, className }: { data: TrendPoint[]; id: string; className?: string }) {
   return (
-    <ChartContainer config={config} className="h-64 w-full sm:h-72">
+    <ChartContainer config={config} className={className ?? "h-64 w-full sm:h-72"}>
       <AreaChart data={data} margin={{ left: 4, right: 12, top: 8 }}>
         <defs>
           <linearGradient id={`fill-${id}`} x1="0" y1="0" x2="0" y2="1">

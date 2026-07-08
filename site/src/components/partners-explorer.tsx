@@ -2,9 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
-import { Check, ChevronsUpDown, Search, X } from "lucide-react";
+import { Activity } from "lucide-react";
 import { Badge } from "@/components/careui/badge";
-import { Button } from "@/components/careui/button";
 import {
   Card,
   CardContent,
@@ -18,16 +17,6 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/careui/chart";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/careui/command";
-import { Input } from "@/components/careui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/careui/popover";
 import {
   Select,
   SelectContent,
@@ -44,11 +33,20 @@ import {
   TableRow,
 } from "@/components/careui/table";
 import { Tabs, TabsList, TabsTrigger } from "@/components/careui/tabs";
-import { meta, partners, NATIONAL, scopeName, type PartnerRow } from "@/lib/data";
+import { AbhaTrendChart } from "@/components/charts/abha-trend-chart";
+import { HrlTrendChart } from "@/components/charts/hrl-trend-chart";
+import {
+  meta,
+  partners,
+  partnerTrends,
+  NATIONAL,
+  scopeName,
+  type PartnerRow,
+} from "@/lib/data";
 import { fmtCompact, fmtIN, pct } from "@/lib/format";
-import { cn } from "@/lib/utils";
 
 type Metric = "abha" | "hrl";
+type Range = "daily" | "all";
 
 const chartConfig = {
   value: { label: "Total", color: "var(--chart-2)" },
@@ -59,12 +57,13 @@ const METRIC_LABEL: Record<Metric, string> = {
   hrl: "Health records linked",
 };
 
+/** Stable slug for chart gradient ids. */
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
 export function PartnersExplorer() {
   const [metric, setMetric] = useState<Metric>("abha");
+  const [range, setRange] = useState<Range>("daily");
   const [scope, setScope] = useState(NATIONAL);
-  const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<string[]>([]);
-  const [comboOpen, setComboOpen] = useState(false);
 
   const rows: PartnerRow[] = useMemo(() => {
     const src = partners[metric];
@@ -74,40 +73,42 @@ export function PartnersExplorer() {
 
   const grandTotal = useMemo(() => rows.reduce((s, r) => s + (r.value ?? 0), 0), [rows]);
 
-  const filtered = useMemo(() => {
-    let out = rows;
-    if (selected.length > 0) out = out.filter((r) => selected.includes(r.name));
-    const q = query.trim().toLowerCase();
-    if (q) out = out.filter((r) => r.name.toLowerCase().includes(q));
-    return out;
-  }, [rows, query, selected]);
-
   const chartRows = useMemo(
-    () =>
-      (selected.length > 0 ? filtered : filtered.slice(0, 15)).map((r) => ({
-        name: r.name,
-        value: r.value,
-      })),
-    [filtered, selected],
+    () => rows.map((r) => ({ name: r.name, value: r.value })),
+    [rows],
   );
+
+  // Trend cards keep the national ranking of the active metric so every
+  // tracked partner is shown, even when a state filter hides its totals.
+  const trendOrder = useMemo(() => {
+    const ranked = [...partners[metric].national].sort(
+      (a, b) => (b.value ?? 0) - (a.value ?? 0),
+    );
+    const names = ranked.map((r) => r.name);
+    for (const name of partners.allowlist) {
+      if (!names.includes(name)) names.push(name);
+    }
+    return names;
+  }, [metric]);
 
   const states = useMemo(
     () => [...meta.states].sort((a, b) => a.name.localeCompare(b.name)),
     [],
   );
 
-  const toggle = (name: string) =>
-    setSelected((cur) =>
-      cur.includes(name) ? cur.filter((n) => n !== name) : [...cur, name],
-    );
+  const totalsByName = useMemo(() => {
+    const abha = new Map(partners.abha.national.map((r) => [r.name, r.value]));
+    const hrl = new Map(partners.hrl.national.map((r) => [r.name, r.value]));
+    return { abha, hrl };
+  }, []);
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Partners</h1>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Tracked partners</h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
-          Every integrated partner reporting to ABDM — government programmes, HMIS vendors,
-          insurers, PHR apps — ranked by{" "}
+          A curated allowlist of {partners.allowlist.length} ABDM partners
+          (config/partners.yaml) — ranked by{" "}
           {metric === "abha" ? "ABHAs created" : "health records linked"}.
         </p>
       </div>
@@ -135,118 +136,71 @@ export function PartnersExplorer() {
           </SelectContent>
         </Select>
 
-        <Popover open={comboOpen} onOpenChange={setComboOpen}>
-          <PopoverTrigger asChild>
-            <Button variant="outline" className="w-full justify-between lg:w-64">
-              {selected.length > 0
-                ? `${selected.length} partner${selected.length > 1 ? "s" : ""} selected`
-                : "Compare partners…"}
-              <ChevronsUpDown className="size-4 opacity-50" aria-hidden />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-80 p-0" align="start">
-            <Command>
-              <CommandInput placeholder="Search partners…" />
-              <CommandList>
-                <CommandEmpty>No partner found.</CommandEmpty>
-                <CommandGroup>
-                  {rows.slice(0, 400).map((r) => (
-                    <CommandItem key={r.name} value={r.name} onSelect={() => toggle(r.name)}>
-                      <Check
-                        className={cn(
-                          "size-4",
-                          selected.includes(r.name) ? "opacity-100" : "opacity-0",
-                        )}
-                        aria-hidden
-                      />
-                      <span className="truncate">{r.name}</span>
-                      <span className="ml-auto text-xs text-placeholder-foreground tabular-nums">
-                        {fmtCompact(r.value)}
-                      </span>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </CommandList>
-            </Command>
-          </PopoverContent>
-        </Popover>
-
-        <div className="relative lg:ml-auto lg:w-72">
-          <Search className="absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-placeholder-foreground" aria-hidden />
-          <Input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Filter table by name…"
-            className="pl-8"
-            aria-label="Filter partners by name"
-          />
-        </div>
+        <Tabs
+          value={range}
+          onValueChange={(v) => setRange(v as Range)}
+          className="lg:ml-auto"
+        >
+          <TabsList>
+            <TabsTrigger value="daily">Last 30 days</TabsTrigger>
+            <TabsTrigger value="all">Full history</TabsTrigger>
+          </TabsList>
+        </Tabs>
       </div>
 
-      {selected.length > 0 && (
-        <div className="flex flex-wrap items-center gap-1.5">
-          {selected.map((name) => (
-            <Badge key={name} variant="primary" className="max-w-64 cursor-pointer" onClick={() => toggle(name)}>
-              <span className="truncate">{name}</span>
-              <X className="size-3" aria-hidden />
-            </Badge>
-          ))}
-          <Button variant="ghost" size="sm" onClick={() => setSelected([])}>
-            Clear
-          </Button>
-        </div>
-      )}
-
-      {/* Chart */}
+      {/* Comparison chart */}
       <Card>
         <CardHeader>
-          <CardTitle>
-            {selected.length > 0 ? "Selected partners" : "Top partners"} — {METRIC_LABEL[metric]}
-          </CardTitle>
+          <CardTitle>Partner comparison — {METRIC_LABEL[metric]}</CardTitle>
           <CardDescription>{scopeName(scope)} · all-time totals</CardDescription>
         </CardHeader>
         <CardContent>
-          <ChartContainer
-            config={chartConfig}
-            className="w-full"
-            style={{ height: Math.max(chartRows.length, 3) * 32 + 30 }}
-          >
-            <BarChart data={chartRows} layout="vertical" margin={{ left: 8, right: 48 }}>
-              <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-              <XAxis type="number" hide />
-              <YAxis
-                dataKey="name"
-                type="category"
-                tickLine={false}
-                axisLine={false}
-                width={210}
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v: string) => (v.length > 32 ? v.slice(0, 30) + "…" : v)}
-              />
-              <ChartTooltip content={<ChartTooltipContent />} />
-              <Bar
-                dataKey="value"
-                fill="var(--color-value)"
-                radius={[3, 6, 6, 3]}
-                barSize={18}
-                label={{
-                  position: "right",
-                  fontSize: 11,
-                  fill: "var(--muted-foreground)",
-                  formatter: (v: unknown) => fmtCompact(Number(v)),
-                }}
-              />
-            </BarChart>
-          </ChartContainer>
+          {chartRows.length === 0 ? (
+            <EmptyNote text={`No tracked partner reports ${METRIC_LABEL[metric].toLowerCase()} in ${scopeName(scope)}.`} />
+          ) : (
+            <ChartContainer
+              config={chartConfig}
+              className="w-full"
+              style={{ height: Math.max(chartRows.length, 3) * 36 + 30 }}
+            >
+              <BarChart data={chartRows} layout="vertical" margin={{ left: 8, right: 56 }}>
+                <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+                <XAxis type="number" hide />
+                <YAxis
+                  dataKey="name"
+                  type="category"
+                  tickLine={false}
+                  axisLine={false}
+                  width={230}
+                  tick={{ fontSize: 11 }}
+                  tickFormatter={(v: string) => (v.length > 34 ? v.slice(0, 32) + "…" : v)}
+                />
+                <ChartTooltip content={<ChartTooltipContent />} />
+                <Bar
+                  dataKey="value"
+                  fill="var(--color-value)"
+                  radius={[3, 6, 6, 3]}
+                  barSize={20}
+                  label={{
+                    position: "right",
+                    fontSize: 11,
+                    fill: "var(--muted-foreground)",
+                    formatter: (v: unknown) => fmtIN(Number(v)),
+                  }}
+                />
+              </BarChart>
+            </ChartContainer>
+          )}
         </CardContent>
       </Card>
 
-      {/* Table */}
+      {/* Totals table */}
       <Card>
         <CardHeader>
-          <CardTitle>All partners</CardTitle>
+          <CardTitle>Totals</CardTitle>
           <CardDescription>
-            {fmtIN(filtered.length)} of {fmtIN(rows.length)} partners · {scopeName(scope)}
+            {fmtIN(rows.length)} tracked partner{rows.length === 1 ? "" : "s"} ·{" "}
+            {scopeName(scope)}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -256,14 +210,14 @@ export function PartnersExplorer() {
                 <TableHead className="w-10">#</TableHead>
                 <TableHead>Partner</TableHead>
                 <TableHead className="text-right">{METRIC_LABEL[metric]}</TableHead>
-                <TableHead className="text-right">Share</TableHead>
+                <TableHead className="text-right">Share of tracked</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {filtered.slice(0, 100).map((r) => (
+              {rows.map((r, i) => (
                 <TableRow key={r.name}>
                   <TableCell className="text-placeholder-foreground tabular-nums">
-                    {rows.indexOf(r) + 1}
+                    {i + 1}
                   </TableCell>
                   <TableCell className="max-w-96 truncate font-medium">{r.name}</TableCell>
                   <TableCell className="text-right tabular-nums">{fmtIN(r.value)}</TableCell>
@@ -274,13 +228,101 @@ export function PartnersExplorer() {
               ))}
             </TableBody>
           </Table>
-          {filtered.length > 100 && (
-            <p className="mt-3 text-xs text-placeholder-foreground">
-              Showing first 100 — refine the search to narrow down.
-            </p>
-          )}
         </CardContent>
       </Card>
+
+      {/* Per-partner trends */}
+      <div>
+        <h2 className="text-lg font-semibold tracking-tight">
+          Partner trends — {METRIC_LABEL[metric]}
+        </h2>
+        <p className="mt-0.5 text-sm text-soft-foreground">
+          National figures, {range === "daily" ? "daily over the last 30 days" : "weekly full history"}.
+        </p>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        {trendOrder.map((name) => (
+          <PartnerTrendCard
+            key={`${metric}-${range}-${name}`}
+            name={name}
+            metric={metric}
+            range={range}
+            abhaTotal={totalsByName.abha.get(name) ?? null}
+            hrlTotal={totalsByName.hrl.get(name) ?? null}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PartnerTrendCard({
+  name,
+  metric,
+  range,
+  abhaTotal,
+  hrlTotal,
+}: {
+  name: string;
+  metric: Metric;
+  range: Range;
+  abhaTotal: number | null;
+  hrlTotal: number | null;
+}) {
+  const abhaSeries =
+    range === "daily" ? partnerTrends.abhaDaily[name] : partnerTrends.abhaWeeklyAll[name];
+  const hrlSeries =
+    range === "daily" ? partnerTrends.hrlDaily[name] : partnerTrends.hrlWeeklyAll[name];
+  const series = metric === "abha" ? abhaSeries : hrlSeries;
+  const hasData = (series?.length ?? 0) > 0;
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-base leading-snug">{name}</CardTitle>
+        <CardDescription className="flex flex-wrap gap-1.5 pt-1">
+          <Badge variant="primary">{fmtCompact(abhaTotal)} ABHAs</Badge>
+          <Badge variant="neutral">{fmtCompact(hrlTotal)} records linked</Badge>
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {hasData ? (
+          metric === "abha" ? (
+            <AbhaTrendChart
+              data={partnerTrendsSeries(name, range)}
+              id={`p-abha-${range}-${slug(name)}`}
+              className="h-48 w-full"
+            />
+          ) : (
+            <HrlTrendChart
+              data={range === "daily" ? partnerTrends.hrlDaily[name]! : partnerTrends.hrlWeeklyAll[name]!}
+              id={`p-hrl-${range}-${slug(name)}`}
+              className="h-48 w-full"
+            />
+          )
+        ) : (
+          <EmptyNote
+            text={
+              (metric === "abha" ? "No ABHA creation" : "No record-linking") +
+              (range === "daily" ? " activity in the last 30 days." : " history reported.")
+            }
+          />
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+function partnerTrendsSeries(name: string, range: Range) {
+  return (range === "daily" ? partnerTrends.abhaDaily[name] : partnerTrends.abhaWeeklyAll[name]) ?? [];
+}
+
+function EmptyNote({ text }: { text: string }) {
+  return (
+    <div className="flex h-48 flex-col items-center justify-center gap-2 rounded-md border border-dashed text-center">
+      <Activity className="size-5 text-placeholder-foreground" aria-hidden />
+      <p className="max-w-64 text-sm text-placeholder-foreground">{text}</p>
     </div>
   );
 }

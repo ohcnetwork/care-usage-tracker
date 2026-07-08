@@ -4,11 +4,12 @@
  * Usage: npm run build-data [-- --date 2026-07-08]
  *
  * Reads  data/raw/<date>/*.jsonl
- * Writes data/normalized/{meta,summary,abha,hrl,partners}.json
+ * Writes data/normalized/{meta,summary,abha,hrl,partners,partner-trends,extras}.json
  */
 import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
+import { loadAllowlist } from "../scraper/allowlist.ts";
 
 // ── Raw record envelope ───────────────────────────────────────────────────────
 
@@ -63,6 +64,17 @@ function byState(records: Envelope[]): Map<string, Envelope[]> {
     const code = r.params.state_code ?? "";
     if (!map.has(code)) map.set(code, []);
     map.get(code)!.push(r);
+  }
+  return map;
+}
+
+/** Group envelopes by partner param. */
+function byPartner(records: Envelope[]): Map<string, Envelope[]> {
+  const map = new Map<string, Envelope[]>();
+  for (const r of records) {
+    const partner = r.params.partner ?? "";
+    if (!map.has(partner)) map.set(partner, []);
+    map.get(partner)!.push(r);
   }
   return map;
 }
@@ -169,22 +181,76 @@ function quarterly(jobId: string) {
   }));
 }
 
-// partners
+// partners (restricted to the config/partners.yaml allowlist)
+const allowlist = loadAllowlist();
+const allowed = new Set(allowlist.map((n) => n.toLowerCase()));
+
 function partnerTotals(jobId: string) {
   const national: { name: string; value: number | null }[] = [];
   const perState: Record<string, { name: string; value: number | null }[]> = {};
   for (const [code, rows] of byState(readJsonl(dir, jobId))) {
     const list = rows
       .map((r) => ({ name: String(r.row.text), value: num(r.row.value) }))
+      .filter((r) => allowed.has(r.name.toLowerCase()))
       .sort((a, b) => (b.value ?? 0) - (a.value ?? 0));
     if (code === "") national.push(...list);
-    else perState[code] = list;
+    else if (list.length > 0) perState[code] = list;
   }
   return { national, perState };
 }
 
 const partnersAbha = partnerTotals("partners_abha");
 const partnersHrl = partnerTotals("partners_hrl");
+
+// per-partner trends (daily 30-day + weekly full history)
+function partnerAbhaTrend(jobId: string) {
+  const out: Record<string, { date: string; value: number | null }[]> = {};
+  for (const [partner, rows] of byPartner(readJsonl(dir, jobId))) {
+    if (!partner) continue;
+    out[partner] = rows
+      .map((r) => ({ date: isoDate(r.row.text), value: num(r.row.value) }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+  }
+  return out;
+}
+
+function partnerHrlTrend(jobId: string) {
+  const out: Record<string, { date: string; recordsLinked: number | null; abhasLinked: number | null }[]> = {};
+  for (const [partner, rows] of byPartner(readJsonl(dir, jobId))) {
+    if (!partner) continue;
+    out[partner] = rows
+      .filter((r) => r.row._list !== "list2")
+      .map((r) => ({
+        date: isoDate(r.row.name),
+        recordsLinked: num(r.row.record_count),
+        abhasLinked: num(r.row.hid_count),
+      }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+  }
+  return out;
+}
+
+const partnerAbhaDaily = partnerAbhaTrend("partner_abha_trend_daily");
+const partnerAbhaWeekly = partnerAbhaTrend("partner_abha_trend_all");
+const partnerHrlDaily = partnerHrlTrend("partner_hrl_trend_daily");
+const partnerHrlWeekly = partnerHrlTrend("partner_hrl_trend_all");
+
+// typo detection: every allowlisted name should surface somewhere
+{
+  const seen = new Set(
+    [
+      ...partnersAbha.national.map((p) => p.name),
+      ...partnersHrl.national.map((p) => p.name),
+      ...Object.keys(partnerAbhaDaily),
+      ...Object.keys(partnerHrlDaily),
+    ].map((n) => n.toLowerCase()),
+  );
+  for (const name of allowlist) {
+    if (!seen.has(name.toLowerCase())) {
+      console.warn(`  ⚠ allowlisted partner has NO data in this snapshot: "${name}" (typo?)`);
+    }
+  }
+}
 
 // simple national trend (monthly facility/professional)
 const facilityTrend = abhaTrend("facility_trend_monthly")["IN"] ?? [];
@@ -231,8 +297,16 @@ write("hrl.json", {
 });
 
 write("partners.json", {
+  allowlist,
   abha: partnersAbha,
   hrl: partnersHrl,
+});
+
+write("partner-trends.json", {
+  abhaDaily: partnerAbhaDaily,
+  abhaWeeklyAll: partnerAbhaWeekly,
+  hrlDaily: partnerHrlDaily,
+  hrlWeeklyAll: partnerHrlWeekly,
 });
 
 write("extras.json", {

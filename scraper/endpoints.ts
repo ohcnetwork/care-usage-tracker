@@ -7,6 +7,8 @@
  *
  * `scope: "per-state"` jobs are expanded over the state master (type SM) with
  * `state_code` set per state; they also run once nationally with state_code "".
+ * `scope: "per-partner"` jobs run once per allowlisted partner name from
+ * config/partners.yaml with the `partner` body field set.
  */
 import type { StatedistReq } from "./client.ts";
 
@@ -15,8 +17,10 @@ export interface Job {
   id: string;
   endpoint: string;
   body: StatedistReq;
-  scope: "national" | "per-state";
+  scope: "national" | "per-state" | "per-partner";
   description: string;
+  /** Keep only rows whose partner name (row.text) is in the allowlist. */
+  filterByAllowlist?: boolean;
 }
 
 const base: StatedistReq = {
@@ -38,7 +42,8 @@ const job = (
   body: StatedistReq,
   scope: Job["scope"],
   description: string,
-): Job => ({ id, endpoint, body: { ...base, ...body }, scope, description });
+  extra?: Partial<Job>,
+): Job => ({ id, endpoint, body: { ...base, ...body }, scope, description, ...extra });
 
 export const jobs: Job[] = [
   // ── Masters ────────────────────────────────────────────────────────────────
@@ -57,7 +62,7 @@ export const jobs: Job[] = [
   job("abha_trend_all", "healthh/1.0", { type: "HCT", rpttype: "A" }, "national",
     "ABHA creation trend, weekly since Aug 2020"),
   job("abha_partner_names", "healthh/1.0", { type: "HCT", rpttype: "P" }, "national",
-    "Partner names that create ABHAs (trend filter list)"),
+    "Partner names that create ABHAs (allowlisted only)", { filterByAllowlist: true }),
   job("abha_quarterly", "reports", { type: "ABHAQ" }, "national", "ABHA per quarter per FY"),
 
   // ── Health Records Linked (HRL) ────────────────────────────────────────────
@@ -68,14 +73,24 @@ export const jobs: Job[] = [
   job("hrl_trend_all", "healthh/1.0", { type: "ABHALT", rpttype: "A" }, "national",
     "HRL trend, weekly full history"),
   job("hrl_partner_names", "healthh/1.0", { type: "ABHALT", rpttype: "P" }, "national",
-    "Partner names that link health records (trend filter list)"),
+    "Partner names that link health records (allowlisted only)", { filterByAllowlist: true }),
   job("hrl_quarterly", "reports", { type: "HRLQ" }, "national", "HRL per quarter per FY"),
 
-  // ── Partner-wise totals ────────────────────────────────────────────────────
+  // ── Partner-wise totals (allowlisted partners only) ────────────────────────
   job("partners_abha", "adoption/linkage", { type: "TOPABHAPART" }, "per-state",
-    "ABHA created per partner (full list)"),
+    "ABHA created per partner (allowlisted only)", { filterByAllowlist: true }),
   job("partners_hrl", "adoption/linkage", { type: "TOPHRLPART" }, "per-state",
-    "Health records linked per partner (full list)"),
+    "Health records linked per partner (allowlisted only)", { filterByAllowlist: true }),
+
+  // ── Per-partner trends (expanded over config/partners.yaml) ────────────────
+  job("partner_abha_trend_daily", "healthh/1.0", { type: "HCT", rpttype: "T" }, "per-partner",
+    "ABHA creation trend per partner, daily (last 30 days)"),
+  job("partner_abha_trend_all", "healthh/1.0", { type: "HCT", rpttype: "A" }, "per-partner",
+    "ABHA creation trend per partner, weekly full history"),
+  job("partner_hrl_trend_daily", "healthh/1.0", { type: "ABHALT", rpttype: "T" }, "per-partner",
+    "HRL trend per partner, daily (last 30 days): record_count + hid_count"),
+  job("partner_hrl_trend_all", "healthh/1.0", { type: "ABHALT", rpttype: "A" }, "per-partner",
+    "HRL trend per partner, weekly full history"),
 
   // ── Facilities & professionals (cheap national extras) ─────────────────────
   job("facility_counters", "healthdata/1.0", { type: "HF" }, "national",

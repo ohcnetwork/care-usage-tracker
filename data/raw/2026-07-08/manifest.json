@@ -1,7 +1,7 @@
 {
   "snapshotDate": "2026-07-08",
   "counts": {
-    "ok": 347,
+    "ok": 383,
     "empty": 0,
     "failed": 0
   },
@@ -3775,7 +3775,7 @@
         "type": "HCT"
       },
       "outcome": "ok",
-      "rows": 417
+      "rows": 9
     },
     {
       "job": "abha_quarterly",
@@ -5273,7 +5273,7 @@
         "type": "ABHALT"
       },
       "outcome": "ok",
-      "rows": 318
+      "rows": 0
     },
     {
       "job": "hrl_quarterly",
@@ -5311,7 +5311,7 @@
         "type": "TOPABHAPART"
       },
       "outcome": "ok",
-      "rows": 417
+      "rows": 9
     },
     {
       "job": "partners_abha",
@@ -5331,7 +5331,7 @@
       },
       "state": "Andaman And Nicobar Islands",
       "outcome": "ok",
-      "rows": 84
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5351,7 +5351,7 @@
       },
       "state": "Andhra Pradesh",
       "outcome": "ok",
-      "rows": 212
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5371,7 +5371,7 @@
       },
       "state": "Arunachal Pradesh",
       "outcome": "ok",
-      "rows": 120
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5391,7 +5391,7 @@
       },
       "state": "Assam",
       "outcome": "ok",
-      "rows": 212
+      "rows": 5
     },
     {
       "job": "partners_abha",
@@ -5411,7 +5411,7 @@
       },
       "state": "Bihar",
       "outcome": "ok",
-      "rows": 274
+      "rows": 6
     },
     {
       "job": "partners_abha",
@@ -5431,7 +5431,7 @@
       },
       "state": "Chandigarh",
       "outcome": "ok",
-      "rows": 145
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5451,7 +5451,7 @@
       },
       "state": "Chhattisgarh",
       "outcome": "ok",
-      "rows": 190
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5471,7 +5471,7 @@
       },
       "state": "Delhi",
       "outcome": "ok",
-      "rows": 253
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5491,7 +5491,7 @@
       },
       "state": "Goa",
       "outcome": "ok",
-      "rows": 149
+      "rows": 2
     },
     {
       "job": "partners_abha",
@@ -5511,7 +5511,7 @@
       },
       "state": "Gujarat",
       "outcome": "ok",
-      "rows": 239
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5531,7 +5531,7 @@
       },
       "state": "Haryana",
       "outcome": "ok",
-      "rows": 239
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5551,7 +5551,7 @@
       },
       "state": "Himachal Pradesh",
       "outcome": "ok",
-      "rows": 163
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5571,7 +5571,7 @@
       },
       "state": "Jammu And Kashmir",
       "outcome": "ok",
-      "rows": 156
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5591,7 +5591,7 @@
       },
       "state": "Jharkhand",
       "outcome": "ok",
-      "rows": 243
+      "rows": 5
     },
     {
       "job": "partners_abha",
@@ -5611,7 +5611,7 @@
       },
       "state": "Karnataka",
       "outcome": "ok",
-      "rows": 271
+      "rows": 2
     },
     {
       "job": "partners_abha",
@@ -5631,7 +5631,7 @@
       },
       "state": "Kerala",
       "outcome": "ok",
-      "rows": 222
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5651,7 +5651,7 @@
       },
       "state": "Ladakh",
       "outcome": "ok",
-      "rows": 67
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5671,7 +5671,7 @@
       },
       "state": "Lakshadweep",
       "outcome": "ok",
-      "rows": 48
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5691,7 +5691,7 @@
       },
       "state": "Madhya Pradesh",
       "outcome": "ok",
-      "rows": 253
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5711,7 +5711,7 @@
       },
       "state": "Maharashtra",
       "outcome": "ok",
-      "rows": 291
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5731,7 +5731,7 @@
       },
       "state": "Manipur",
       "outcome": "ok",
-      "rows": 154
+      "rows": 3
     },
     {
       "job": "partners_abha",
@@ -5751,7 +5751,7 @@
       },
       "state": "Meghalaya",
       "outcome": "ok",
-      "rows": 117
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5771,7 +5771,7 @@
       },
       "state": "Mizoram",
       "outcome": "ok",
-      "rows": 89
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5791,7 +5791,7 @@
       },
       "state": "Nagaland",
       "outcome": "ok",
-      "rows": 117
+      "rows": 3
     },
     {
       "job": "partners_abha",
@@ -5811,7 +5811,7 @@
       },
       "state": "Odisha",
       "outcome": "ok",
-      "rows": 220
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5831,7 +5831,7 @@
       },
       "state": "Puducherry",
       "outcome": "ok",
-      "rows": 124
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5851,7 +5851,7 @@
       },
       "state": "Punjab",
       "outcome": "ok",
-      "rows": 213
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5871,7 +5871,7 @@
       },
       "state": "Rajasthan",
       "outcome": "ok",
-      "rows": 241
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5891,7 +5891,7 @@
       },
       "state": "Sikkim",
       "outcome": "ok",
-      "rows": 89
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5911,7 +5911,7 @@
       },
       "state": "Tamil Nadu",
       "outcome": "ok",
-      "rows": 262
+      "rows": 2
     },
     {
       "job": "partners_abha",
@@ -5931,7 +5931,7 @@
       },
       "state": "Telangana",
       "outcome": "ok",
-      "rows": 230
+      "rows": 1
     },
     {
       "job": "partners_abha",
@@ -5951,7 +5951,7 @@
       },
       "state": "The Dadra And Nagar Haveli And Daman And Diu",
       "outcome": "ok",
-      "rows": 114
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5971,7 +5971,7 @@
       },
       "state": "Tripura",
       "outcome": "ok",
-      "rows": 145
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -5991,7 +5991,7 @@
       },
       "state": "Uttarakhand",
       "outcome": "ok",
-      "rows": 195
+      "rows": 0
     },
     {
       "job": "partners_abha",
@@ -6011,7 +6011,7 @@
       },
       "state": "Uttar Pradesh",
       "outcome": "ok",
-      "rows": 307
+      "rows": 3
     },
     {
       "job": "partners_abha",
@@ -6031,7 +6031,7 @@
       },
       "state": "West Bengal",
       "outcome": "ok",
-      "rows": 260
+      "rows": 5
     },
     {
       "job": "partners_hrl",
@@ -6050,7 +6050,7 @@
         "type": "TOPHRLPART"
       },
       "outcome": "ok",
-      "rows": 318
+      "rows": 9
     },
     {
       "job": "partners_hrl",
@@ -6070,7 +6070,7 @@
       },
       "state": "Andaman And Nicobar Islands",
       "outcome": "ok",
-      "rows": 11
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6090,7 +6090,7 @@
       },
       "state": "Andhra Pradesh",
       "outcome": "ok",
-      "rows": 37
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6110,7 +6110,7 @@
       },
       "state": "Arunachal Pradesh",
       "outcome": "ok",
-      "rows": 12
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6130,7 +6130,7 @@
       },
       "state": "Assam",
       "outcome": "ok",
-      "rows": 31
+      "rows": 2
     },
     {
       "job": "partners_hrl",
@@ -6150,7 +6150,7 @@
       },
       "state": "Bihar",
       "outcome": "ok",
-      "rows": 59
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6170,7 +6170,7 @@
       },
       "state": "Chandigarh",
       "outcome": "ok",
-      "rows": 22
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6190,7 +6190,7 @@
       },
       "state": "Chhattisgarh",
       "outcome": "ok",
-      "rows": 32
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6210,7 +6210,7 @@
       },
       "state": "Delhi",
       "outcome": "ok",
-      "rows": 209
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6230,7 +6230,7 @@
       },
       "state": "Goa",
       "outcome": "ok",
-      "rows": 19
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6250,7 +6250,7 @@
       },
       "state": "Gujarat",
       "outcome": "ok",
-      "rows": 59
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6270,7 +6270,7 @@
       },
       "state": "Haryana",
       "outcome": "ok",
-      "rows": 47
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6290,7 +6290,7 @@
       },
       "state": "Himachal Pradesh",
       "outcome": "ok",
-      "rows": 22
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6310,7 +6310,7 @@
       },
       "state": "Jammu And Kashmir",
       "outcome": "ok",
-      "rows": 30
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6330,7 +6330,7 @@
       },
       "state": "Jharkhand",
       "outcome": "ok",
-      "rows": 48
+      "rows": 1
     },
     {
       "job": "partners_hrl",
@@ -6350,7 +6350,7 @@
       },
       "state": "Karnataka",
       "outcome": "ok",
-      "rows": 55
+      "rows": 2
     },
     {
       "job": "partners_hrl",
@@ -6370,7 +6370,7 @@
       },
       "state": "Kerala",
       "outcome": "ok",
-      "rows": 33
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6390,7 +6390,7 @@
       },
       "state": "Ladakh",
       "outcome": "ok",
-      "rows": 11
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6410,7 +6410,7 @@
       },
       "state": "Lakshadweep",
       "outcome": "ok",
-      "rows": 9
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6430,7 +6430,7 @@
       },
       "state": "Madhya Pradesh",
       "outcome": "ok",
-      "rows": 48
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6450,7 +6450,7 @@
       },
       "state": "Maharashtra",
       "outcome": "ok",
-      "rows": 76
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6470,7 +6470,7 @@
       },
       "state": "Manipur",
       "outcome": "ok",
-      "rows": 22
+      "rows": 2
     },
     {
       "job": "partners_hrl",
@@ -6490,7 +6490,7 @@
       },
       "state": "Meghalaya",
       "outcome": "ok",
-      "rows": 13
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6510,7 +6510,7 @@
       },
       "state": "Mizoram",
       "outcome": "ok",
-      "rows": 14
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6530,7 +6530,7 @@
       },
       "state": "Nagaland",
       "outcome": "ok",
-      "rows": 14
+      "rows": 1
     },
     {
       "job": "partners_hrl",
@@ -6550,7 +6550,7 @@
       },
       "state": "Odisha",
       "outcome": "ok",
-      "rows": 27
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6570,7 +6570,7 @@
       },
       "state": "Puducherry",
       "outcome": "ok",
-      "rows": 18
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6590,7 +6590,7 @@
       },
       "state": "Punjab",
       "outcome": "ok",
-      "rows": 34
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6610,7 +6610,7 @@
       },
       "state": "Rajasthan",
       "outcome": "ok",
-      "rows": 67
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6630,7 +6630,7 @@
       },
       "state": "Sikkim",
       "outcome": "ok",
-      "rows": 11
+      "rows": 1
     },
     {
       "job": "partners_hrl",
@@ -6650,7 +6650,7 @@
       },
       "state": "Tamil Nadu",
       "outcome": "ok",
-      "rows": 43
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6670,7 +6670,7 @@
       },
       "state": "Telangana",
       "outcome": "ok",
-      "rows": 37
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6690,7 +6690,7 @@
       },
       "state": "The Dadra And Nagar Haveli And Daman And Diu",
       "outcome": "ok",
-      "rows": 16
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6710,7 +6710,7 @@
       },
       "state": "Tripura",
       "outcome": "ok",
-      "rows": 21
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6730,7 +6730,7 @@
       },
       "state": "Uttarakhand",
       "outcome": "ok",
-      "rows": 36
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6750,7 +6750,7 @@
       },
       "state": "Uttar Pradesh",
       "outcome": "ok",
-      "rows": 82
+      "rows": 0
     },
     {
       "job": "partners_hrl",
@@ -6770,7 +6770,727 @@
       },
       "state": "West Bengal",
       "outcome": "ok",
-      "rows": 39
+      "rows": 0
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (CARE HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Assam (CARE HMIS)",
+      "outcome": "ok",
+      "rows": 27
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Assam (10BedICU)",
+      "outcome": "ok",
+      "rows": 0
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "Ramgarh Jharkhand (CARE-HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "Ramgarh Jharkhand (CARE-HMIS)",
+      "outcome": "ok",
+      "rows": 26
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "eGovernments Foundation",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "eGovernments Foundation",
+      "outcome": "ok",
+      "rows": 22
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFWS Karnataka (Tele-ICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFWS Karnataka (Tele-ICU)",
+      "outcome": "ok",
+      "rows": 26
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+      "outcome": "ok",
+      "rows": 16
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "DHS Manipur (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "DHS Manipur (10BedICU)",
+      "outcome": "ok",
+      "rows": 3
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Nagaland (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Nagaland (10BedICU)",
+      "outcome": "ok",
+      "rows": 1
+    },
+    {
+      "job": "partner_abha_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Sikkim (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Sikkim (10BedICU)",
+      "outcome": "ok",
+      "rows": 0
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (CARE HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Assam (CARE HMIS)",
+      "outcome": "ok",
+      "rows": 18
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Assam (10BedICU)",
+      "outcome": "ok",
+      "rows": 12
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "Ramgarh Jharkhand (CARE-HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "Ramgarh Jharkhand (CARE-HMIS)",
+      "outcome": "ok",
+      "rows": 17
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "eGovernments Foundation",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "eGovernments Foundation",
+      "outcome": "ok",
+      "rows": 12
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFWS Karnataka (Tele-ICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFWS Karnataka (Tele-ICU)",
+      "outcome": "ok",
+      "rows": 124
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+      "outcome": "ok",
+      "rows": 5
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "DHS Manipur (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "DHS Manipur (10BedICU)",
+      "outcome": "ok",
+      "rows": 55
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Nagaland (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Nagaland (10BedICU)",
+      "outcome": "ok",
+      "rows": 10
+    },
+    {
+      "job": "partner_abha_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Sikkim (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "HCT"
+      },
+      "state": "HFW Sikkim (10BedICU)",
+      "outcome": "ok",
+      "rows": 17
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (CARE HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Assam (CARE HMIS)",
+      "outcome": "ok",
+      "rows": 30
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Assam (10BedICU)",
+      "outcome": "ok",
+      "rows": 0
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "Ramgarh Jharkhand (CARE-HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "Ramgarh Jharkhand (CARE-HMIS)",
+      "outcome": "ok",
+      "rows": 31
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "eGovernments Foundation",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "eGovernments Foundation",
+      "outcome": "ok",
+      "rows": 31
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFWS Karnataka (Tele-ICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFWS Karnataka (Tele-ICU)",
+      "outcome": "ok",
+      "rows": 31
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+      "outcome": "ok",
+      "rows": 31
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "DHS Manipur (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "DHS Manipur (10BedICU)",
+      "outcome": "ok",
+      "rows": 4
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Nagaland (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Nagaland (10BedICU)",
+      "outcome": "ok",
+      "rows": 13
+    },
+    {
+      "job": "partner_hrl_trend_daily",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "T",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Sikkim (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Sikkim (10BedICU)",
+      "outcome": "ok",
+      "rows": 14
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (CARE HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Assam (CARE HMIS)",
+      "outcome": "ok",
+      "rows": 20
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Assam (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Assam (10BedICU)",
+      "outcome": "ok",
+      "rows": 19
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "Ramgarh Jharkhand (CARE-HMIS)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "Ramgarh Jharkhand (CARE-HMIS)",
+      "outcome": "ok",
+      "rows": 20
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "eGovernments Foundation",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "eGovernments Foundation",
+      "outcome": "ok",
+      "rows": 19
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFWS Karnataka (Tele-ICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFWS Karnataka (Tele-ICU)",
+      "outcome": "ok",
+      "rows": 54
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "JAWAHARLAL NEHRU INSTITUTE OF MEDICAL SCIENCES",
+      "outcome": "ok",
+      "rows": 6
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "DHS Manipur (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "DHS Manipur (10BedICU)",
+      "outcome": "ok",
+      "rows": 45
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Nagaland (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Nagaland (10BedICU)",
+      "outcome": "ok",
+      "rows": 19
+    },
+    {
+      "job": "partner_hrl_trend_all",
+      "endpoint": "healthh/1.0",
+      "params": {
+        "state_code": "",
+        "district_code": "",
+        "rpttype": "A",
+        "duration": "",
+        "fromDateHrl": "",
+        "toDateHrl": "",
+        "partner": "HFW Sikkim (10BedICU)",
+        "profType": "",
+        "document": "",
+        "facility": "",
+        "type": "ABHALT"
+      },
+      "state": "HFW Sikkim (10BedICU)",
+      "outcome": "ok",
+      "rows": 28
     },
     {
       "job": "facility_counters",

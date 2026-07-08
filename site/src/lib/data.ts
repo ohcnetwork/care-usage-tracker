@@ -4,6 +4,7 @@ import summaryJson from "@/data/summary.json";
 import abhaJson from "@/data/abha.json";
 import hrlJson from "@/data/hrl.json";
 import partnersJson from "@/data/partners.json";
+import partnerTrendsJson from "@/data/partner-trends.json";
 import extrasJson from "@/data/extras.json";
 
 export interface Counters {
@@ -80,8 +81,17 @@ export const hrl = hrlJson as {
 };
 
 export const partners = partnersJson as {
+  /** Config-driven allowlist (config/partners.yaml) — the only partners tracked. */
+  allowlist: string[];
   abha: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
   hrl: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
+};
+
+export const partnerTrends = partnerTrendsJson as {
+  abhaDaily: Record<string, TrendPoint[]>;
+  abhaWeeklyAll: Record<string, TrendPoint[]>;
+  hrlDaily: Record<string, HrlTrendPoint[]>;
+  hrlWeeklyAll: Record<string, HrlTrendPoint[]>;
 };
 
 export const extras = extrasJson as {

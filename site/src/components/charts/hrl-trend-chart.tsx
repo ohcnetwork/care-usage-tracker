@@ -17,9 +17,9 @@ const config = {
   abhasLinked: { label: "ABHAs linked", color: "var(--chart-1)" },
 } satisfies ChartConfig;
 
-export function HrlTrendChart({ data, id }: { data: HrlTrendPoint[]; id: string }) {
+export function HrlTrendChart({ data, id, className }: { data: HrlTrendPoint[]; id: string; className?: string }) {
   return (
-    <ChartContainer config={config} className="h-64 w-full sm:h-72">
+    <ChartContainer config={config} className={className ?? "h-64 w-full sm:h-72"}>
       <AreaChart data={data} margin={{ left: 4, right: 12, top: 8 }}>
         <defs>
           <linearGradient id={`fill-rec-${id}`} x1="0" y1="0" x2="0" y2="1">

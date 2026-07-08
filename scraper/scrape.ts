@@ -11,6 +11,7 @@ import { mkdirSync, writeFileSync, appendFileSync } from "node:fs";
 import { join } from "node:path";
 import { post, type ApiResponse, type StatedistReq } from "./client.ts";
 import { jobs, type Job } from "./endpoints.ts";
+import { loadAllowlist, allowlistSet } from "./allowlist.ts";
 
 interface ManifestEntry {
   job: string;
@@ -29,6 +30,9 @@ const snapshotDate =
 const outDir = join("data", "raw", snapshotDate);
 mkdirSync(outDir, { recursive: true });
 
+const allowlist = loadAllowlist();
+const allowed = allowlistSet(allowlist);
+
 const manifest: ManifestEntry[] = [];
 
 /** Flatten an API response into JSONL rows. */
@@ -44,27 +48,30 @@ function toRows(res: ApiResponse): Record<string, unknown>[] {
   return rows;
 }
 
-async function runRequest(job: Job, params: StatedistReq, stateName?: string) {
+async function runRequest(job: Job, params: StatedistReq, label2?: string) {
   const file = join(outDir, `${job.id}.jsonl`);
-  const label = `${job.id}${stateName ? ` [${stateName}]` : ""}`;
+  const label = `${job.id}${label2 ? ` [${label2}]` : ""}`;
   try {
     const res = await post(job.endpoint, params);
     if (res.status !== "true") {
-      manifest.push({ job: job.id, endpoint: job.endpoint, params, state: stateName, outcome: "empty", rows: 0 });
+      manifest.push({ job: job.id, endpoint: job.endpoint, params, state: label2, outcome: "empty", rows: 0 });
       console.warn(`  ∅ ${label}: status=${res.status}`);
       return;
     }
-    const rows = toRows(res);
+    let rows = toRows(res);
+    if (job.filterByAllowlist) {
+      rows = rows.filter((r) => allowed.has(String(r.text ?? "").toLowerCase()));
+    }
     const fetched_at = new Date().toISOString();
     const lines = rows
       .map((row) => JSON.stringify({ fetched_at, endpoint: job.endpoint, params, row }))
       .join("\n");
     if (lines) appendFileSync(file, lines + "\n");
-    manifest.push({ job: job.id, endpoint: job.endpoint, params, state: stateName, outcome: "ok", rows: rows.length });
+    manifest.push({ job: job.id, endpoint: job.endpoint, params, state: label2, outcome: "ok", rows: rows.length });
     console.log(`  ✓ ${label}: ${rows.length} rows`);
   } catch (err) {
     manifest.push({
-      job: job.id, endpoint: job.endpoint, params, state: stateName,
+      job: job.id, endpoint: job.endpoint, params, state: label2,
       outcome: "failed", rows: 0, error: String(err),
     });
     console.error(`  ✗ ${label}: ${err}`);
@@ -78,10 +85,16 @@ async function main() {
   const statesRes = await post("statedist/1.0", { type: "SM", district_code: "" });
   const states = (statesRes.list ?? []).map((s) => ({ name: s.text, code: s.value }));
   if (states.length === 0) throw new Error("State master returned no states — aborting");
-  console.log(`${states.length} states/UTs; ${jobs.length} jobs`);
+  console.log(`${states.length} states/UTs; ${jobs.length} jobs; ${allowlist.length} allowlisted partners`);
 
   for (const job of jobs) {
     console.log(`▶ ${job.id} — ${job.description}`);
+    if (job.scope === "per-partner") {
+      for (const partner of allowlist) {
+        await runRequest(job, { ...job.body, partner }, partner);
+      }
+      continue;
+    }
     await runRequest(job, job.body);
     if (job.scope === "per-state") {
       for (const state of states) {
