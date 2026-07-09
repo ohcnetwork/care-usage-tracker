@@ -9,14 +9,14 @@ export function StatCard({
   icon: Icon,
   total,
   today,
-  currentMonth,
+  last30d,
   accent = false,
 }: {
   title: string;
   icon: LucideIcon;
   total: number | null;
   today?: number | null;
-  currentMonth?: number | null;
+  last30d?: number | null;
   accent?: boolean;
 }) {
   return (
@@ -49,9 +49,9 @@ export function StatCard({
               +{fmtCompact(today)} today
             </Badge>
           )}
-          {currentMonth != null && (
+          {last30d != null && (
             <Badge variant="neutral" className="tabular-nums">
-              +{fmtCompact(currentMonth)} this month
+              +{fmtCompact(last30d)} last 30 days
             </Badge>
           )}
         </div>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s · ABDM Stats",
   },
   description:
-    "Open, static mirror of Ayushman Bharat Digital Mission (ABDM) metrics — ABHA numbers created, health records linked, partner-wise adoption — scraped from the official NHA dashboard.",
+    "Open, static mirror of Ayushman Bharat Digital Mission (ABDM) adoption metrics for a curated allowlist of partners — ABHA numbers created, health records linked, and daily trends — scraped from the official NHA dashboard.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -41,7 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href={meta.source} className="underline underline-offset-2 hover:text-foreground" target="_blank" rel="noreferrer">
                 ABDM dashboard
               </a>{" "}
-              (National Health Authority). Snapshot taken {fmtDateLong(meta.snapshotDate)}.
+              (National Health Authority). Only data for tracked partners
+              (config/partners.yaml) is collected and shown. Snapshot taken{" "}
+              {fmtDateLong(meta.snapshotDate)}.
             </p>
             <p>
               Built with{" "}

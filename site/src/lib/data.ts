@@ -1,22 +1,13 @@
-/** Typed access to the normalized snapshot artifacts (synced from ../data/normalized). */
+/**
+ * Typed access to the normalized snapshot artifacts (synced from ../data/normalized).
+ *
+ * All data is scoped to the partner allowlist (config/partners.yaml) — there are
+ * no aggregates outside the tracked partners anywhere in these artifacts.
+ */
 import metaJson from "@/data/meta.json";
 import summaryJson from "@/data/summary.json";
-import abhaJson from "@/data/abha.json";
-import hrlJson from "@/data/hrl.json";
 import partnersJson from "@/data/partners.json";
 import partnerTrendsJson from "@/data/partner-trends.json";
-import extrasJson from "@/data/extras.json";
-
-export interface Counters {
-  today: number | null;
-  total: number | null;
-  currentMonth: number | null;
-}
-
-export interface LabelValue {
-  label: string;
-  value: number | null;
-}
 
 export interface TrendPoint {
   date: string;
@@ -35,14 +26,6 @@ export interface StatewiseRow {
   value: number | null;
 }
 
-export interface QuarterRow {
-  fyStartYear: number | null;
-  q1: number | null;
-  q2: number | null;
-  q3: number | null;
-  q4: number | null;
-}
-
 export interface PartnerRow {
   name: string;
   value: number | null;
@@ -52,32 +35,16 @@ export const meta = metaJson as {
   snapshotDate: string;
   generatedAt: string;
   source: string;
+  allowlist: string[];
   states: { code: string; name: string }[];
   districts: Record<string, { code: string; name: string }[]>;
 };
 
 export const summary = summaryJson as {
-  abha: Counters;
-  hrl: Counters;
-  facilities: { today: number | null; approved: number | null; registered: number | null; currentMonth: number | null };
-  professionals: { today: number | null; approved: number | null; registered: number | null; currentMonth: number | null };
-};
-
-export const abha = abhaJson as {
-  counters: Record<string, Counters>;
-  ageGroups: Record<string, LabelValue[]>;
-  gender: Record<string, LabelValue[]>;
-  statewise: StatewiseRow[];
-  trendDaily: Record<string, TrendPoint[]>;
-  trendWeeklyAll: TrendPoint[];
-  quarterly: QuarterRow[];
-};
-
-export const hrl = hrlJson as {
-  counters: Record<string, Counters>;
-  trendDaily: Record<string, HrlTrendPoint[]>;
-  trendWeeklyAll: HrlTrendPoint[];
-  quarterly: QuarterRow[];
+  abha: { total: number; today: number; last30d: number };
+  hrl: { total: number; today: number; last30d: number };
+  partnersTracked: number;
+  statesActive: number;
 };
 
 export const partners = partnersJson as {
@@ -85,6 +52,8 @@ export const partners = partnersJson as {
   allowlist: string[];
   abha: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
   hrl: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
+  statewiseAbha: StatewiseRow[];
+  statewiseHrl: StatewiseRow[];
 };
 
 export const partnerTrends = partnerTrendsJson as {
@@ -92,13 +61,12 @@ export const partnerTrends = partnerTrendsJson as {
   abhaWeeklyAll: Record<string, TrendPoint[]>;
   hrlDaily: Record<string, HrlTrendPoint[]>;
   hrlWeeklyAll: Record<string, HrlTrendPoint[]>;
-};
-
-export const extras = extrasJson as {
-  facilityStatewise: StatewiseRow[];
-  professionalStatewise: StatewiseRow[];
-  facilityTrendMonthly: TrendPoint[];
-  professionalTrendMonthly: TrendPoint[];
+  combined: {
+    abhaDaily: TrendPoint[];
+    abhaWeeklyAll: TrendPoint[];
+    hrlDaily: HrlTrendPoint[];
+    hrlWeeklyAll: HrlTrendPoint[];
+  };
 };
 
 /** "IN" key = national scope; state codes otherwise. */

@@ -1,12 +1,15 @@
 /**
  * Normalize the latest raw JSONL snapshot into typed JSON artifacts for the site.
  *
+ * Everything is scoped to the partner allowlist (config/partners.yaml) — no
+ * aggregate metrics outside the tracked partners are ever emitted.
+ *
  * Usage: npm run build-data [-- --date 2026-07-08]
  *
  * Reads  data/raw/<date>/*.jsonl
- * Writes data/normalized/{meta,summary,abha,hrl,partners,partner-trends,extras}.json
+ * Writes data/normalized/{meta,summary,partners,partner-trends}.json
  */
-import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
 import { loadAllowlist } from "../scraper/allowlist.ts";
@@ -91,15 +94,18 @@ if (!snapshotDate) throw new Error("No raw snapshot found under data/raw/");
 
 const dir = join(rawRoot, snapshotDate);
 const outDir = join("data", "normalized");
+rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 console.log(`Normalizing ${dir} → ${outDir}`);
+
+const allowlist = loadAllowlist();
+const allowed = new Set(allowlist.map((n) => n.toLowerCase()));
 
 // meta: states + districts
 const states = readJsonl(dir, "states").map((r) => ({
   code: String(r.row.value),
   name: String(r.row.text),
 }));
-const stateNameByCode = new Map(states.map((s) => [s.code, s.name]));
 
 const districts: Record<string, { code: string; name: string }[]> = {};
 for (const [code, rows] of byState(readJsonl(dir, "districts"))) {
@@ -107,84 +113,7 @@ for (const [code, rows] of byState(readJsonl(dir, "districts"))) {
   districts[code] = rows.map((r) => ({ code: String(r.row.value), name: String(r.row.text) }));
 }
 
-// counters helper: healthdata/hrlCount style rows keyed by state
-function counters(jobId: string, fields: Record<string, string>) {
-  const out: Record<string, Record<string, number | null>> = {};
-  for (const [code, rows] of byState(readJsonl(dir, jobId))) {
-    const row = rows.at(-1)?.row ?? {};
-    out[code || "IN"] = Object.fromEntries(
-      Object.entries(fields).map(([key, src]) => [key, num(row[src])]),
-    );
-  }
-  return out;
-}
-
-const abhaCounters = counters("abha_counters", { today: "today", total: "total1", currentMonth: "total2" });
-const hrlCounters = counters("hrl_counters", { today: "today", total: "total1", currentMonth: "total2" });
-const facilityCounters = counters("facility_counters", { today: "today", approved: "total1", registered: "total2", currentMonth: "total3" });
-const professionalCounters = counters("professional_counters", { today: "today", approved: "total1", registered: "total2", currentMonth: "total3" });
-
-// distributions per state
-function distribution(jobId: string) {
-  const out: Record<string, { label: string; value: number | null }[]> = {};
-  for (const [code, rows] of byState(readJsonl(dir, jobId))) {
-    out[code || "IN"] = rows.map((r) => ({ label: String(r.row.text), value: num(r.row.value) }));
-  }
-  return out;
-}
-
-const abhaAge = distribution("abha_age");
-const abhaGender = distribution("abha_gender");
-
-// statewise totals
-function statewise(jobId: string) {
-  return readJsonl(dir, jobId).map((r) => {
-    const name = String(r.row.text);
-    const code = states.find((s) => s.name === name)?.code ?? null;
-    return { state: name, stateCode: code, value: num(r.row.value) };
-  });
-}
-
-// trends
-function abhaTrend(jobId: string) {
-  const out: Record<string, { date: string; value: number | null }[]> = {};
-  for (const [code, rows] of byState(readJsonl(dir, jobId))) {
-    out[code || "IN"] = rows
-      .map((r) => ({ date: isoDate(r.row.text), value: num(r.row.value) }))
-      .sort((a, b) => a.date.localeCompare(b.date));
-  }
-  return out;
-}
-
-function hrlTrend(jobId: string) {
-  const out: Record<string, { date: string; recordsLinked: number | null; abhasLinked: number | null }[]> = {};
-  for (const [code, rows] of byState(readJsonl(dir, jobId))) {
-    out[code || "IN"] = rows
-      .filter((r) => r.row._list !== "list2")
-      .map((r) => ({
-        date: isoDate(r.row.name),
-        recordsLinked: num(r.row.record_count),
-        abhasLinked: num(r.row.hid_count),
-      }))
-      .sort((a, b) => a.date.localeCompare(b.date));
-  }
-  return out;
-}
-
-function quarterly(jobId: string) {
-  return readJsonl(dir, jobId).map((r) => ({
-    fyStartYear: num(r.row.text),
-    q1: num(r.row.value),
-    q2: num(r.row.value2),
-    q3: num(r.row.value3),
-    q4: num(r.row.origin),
-  }));
-}
-
-// partners (restricted to the config/partners.yaml allowlist)
-const allowlist = loadAllowlist();
-const allowed = new Set(allowlist.map((n) => n.toLowerCase()));
-
+// partner totals (allowlisted only), national + per state
 function partnerTotals(jobId: string) {
   const national: { name: string; value: number | null }[] = [];
   const perState: Record<string, { name: string; value: number | null }[]> = {};
@@ -235,6 +164,77 @@ const partnerAbhaWeekly = partnerAbhaTrend("partner_abha_trend_all");
 const partnerHrlDaily = partnerHrlTrend("partner_hrl_trend_daily");
 const partnerHrlWeekly = partnerHrlTrend("partner_hrl_trend_all");
 
+// combined trends: sum across all tracked partners per date
+function combineAbha(series: Record<string, { date: string; value: number | null }[]>) {
+  const sums = new Map<string, number>();
+  for (const points of Object.values(series)) {
+    for (const p of points) sums.set(p.date, (sums.get(p.date) ?? 0) + (p.value ?? 0));
+  }
+  return [...sums.entries()]
+    .map(([date, value]) => ({ date, value }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+}
+
+function combineHrl(
+  series: Record<string, { date: string; recordsLinked: number | null; abhasLinked: number | null }[]>,
+) {
+  const sums = new Map<string, { recordsLinked: number; abhasLinked: number }>();
+  for (const points of Object.values(series)) {
+    for (const p of points) {
+      const cur = sums.get(p.date) ?? { recordsLinked: 0, abhasLinked: 0 };
+      cur.recordsLinked += p.recordsLinked ?? 0;
+      cur.abhasLinked += p.abhasLinked ?? 0;
+      sums.set(p.date, cur);
+    }
+  }
+  return [...sums.entries()]
+    .map(([date, v]) => ({ date, ...v }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+}
+
+const combinedAbhaDaily = combineAbha(partnerAbhaDaily);
+const combinedAbhaWeekly = combineAbha(partnerAbhaWeekly);
+const combinedHrlDaily = combineHrl(partnerHrlDaily);
+const combinedHrlWeekly = combineHrl(partnerHrlWeekly);
+
+// statewise totals across tracked partners
+function statewiseTotals(perState: Record<string, { name: string; value: number | null }[]>) {
+  const nameByCode = new Map(states.map((s) => [s.code, s.name]));
+  return Object.entries(perState)
+    .map(([code, list]) => ({
+      state: nameByCode.get(code) ?? code,
+      stateCode: code,
+      value: list.reduce((s, r) => s + (r.value ?? 0), 0),
+    }))
+    .filter((r) => r.value > 0)
+    .sort((a, b) => b.value - a.value);
+}
+
+// summary counters derived purely from tracked partners
+const sum = (rows: { value: number | null }[]) => rows.reduce((s, r) => s + (r.value ?? 0), 0);
+const seriesSum = (points: { value?: number | null; recordsLinked?: number | null }[], key: "value" | "recordsLinked") =>
+  points.reduce((s, p) => s + ((p[key] as number | null) ?? 0), 0);
+const onDate = <T extends { date: string }>(points: T[], date: string) =>
+  points.find((p) => p.date === date);
+
+const summary = {
+  abha: {
+    total: sum(partnersAbha.national),
+    today: onDate(combinedAbhaDaily, snapshotDate)?.value ?? 0,
+    last30d: seriesSum(combinedAbhaDaily, "value"),
+  },
+  hrl: {
+    total: sum(partnersHrl.national),
+    today: onDate(combinedHrlDaily, snapshotDate)?.recordsLinked ?? 0,
+    last30d: seriesSum(combinedHrlDaily, "recordsLinked"),
+  },
+  partnersTracked: allowlist.length,
+  statesActive: new Set([
+    ...Object.keys(partnersAbha.perState),
+    ...Object.keys(partnersHrl.perState),
+  ]).size,
+};
+
 // typo detection: every allowlisted name should surface somewhere
 {
   const seen = new Set(
@@ -252,10 +252,6 @@ const partnerHrlWeekly = partnerHrlTrend("partner_hrl_trend_all");
   }
 }
 
-// simple national trend (monthly facility/professional)
-const facilityTrend = abhaTrend("facility_trend_monthly")["IN"] ?? [];
-const professionalTrend = abhaTrend("professional_trend_monthly")["IN"] ?? [];
-
 // ── Write artifacts ───────────────────────────────────────────────────────────
 
 const write = (name: string, data: unknown) => {
@@ -268,38 +264,19 @@ write("meta.json", {
   snapshotDate,
   generatedAt: new Date().toISOString(),
   source: "https://dashboard.abdm.gov.in/abdm/",
+  allowlist,
   states,
   districts,
 });
 
-write("summary.json", {
-  abha: abhaCounters["IN"],
-  hrl: hrlCounters["IN"],
-  facilities: facilityCounters["IN"],
-  professionals: professionalCounters["IN"],
-});
-
-write("abha.json", {
-  counters: abhaCounters,
-  ageGroups: abhaAge,
-  gender: abhaGender,
-  statewise: statewise("abha_statewise"),
-  trendDaily: abhaTrend("abha_trend_daily"),
-  trendWeeklyAll: abhaTrend("abha_trend_all")["IN"] ?? [],
-  quarterly: quarterly("abha_quarterly"),
-});
-
-write("hrl.json", {
-  counters: hrlCounters,
-  trendDaily: hrlTrend("hrl_trend_daily"),
-  trendWeeklyAll: hrlTrend("hrl_trend_all")["IN"] ?? [],
-  quarterly: quarterly("hrl_quarterly"),
-});
+write("summary.json", summary);
 
 write("partners.json", {
   allowlist,
   abha: partnersAbha,
   hrl: partnersHrl,
+  statewiseAbha: statewiseTotals(partnersAbha.perState),
+  statewiseHrl: statewiseTotals(partnersHrl.perState),
 });
 
 write("partner-trends.json", {
@@ -307,18 +284,16 @@ write("partner-trends.json", {
   abhaWeeklyAll: partnerAbhaWeekly,
   hrlDaily: partnerHrlDaily,
   hrlWeeklyAll: partnerHrlWeekly,
-});
-
-write("extras.json", {
-  facilityStatewise: statewise("facility_statewise"),
-  professionalStatewise: statewise("professional_statewise"),
-  facilityTrendMonthly: facilityTrend,
-  professionalTrendMonthly: professionalTrend,
+  combined: {
+    abhaDaily: combinedAbhaDaily,
+    abhaWeeklyAll: combinedAbhaWeekly,
+    hrlDaily: combinedHrlDaily,
+    hrlWeeklyAll: combinedHrlWeekly,
+  },
 });
 
 // sanity summary
 console.log(
-  `ABHA total: ${abhaCounters["IN"]?.total?.toLocaleString("en-IN")}, ` +
-    `HRL total: ${hrlCounters["IN"]?.total?.toLocaleString("en-IN")}, ` +
-    `partners (ABHA): ${partnersAbha.national.length}, partners (HRL): ${partnersHrl.national.length}`,
+  `Tracked partners: ${allowlist.length} · ABHA total: ${summary.abha.total.toLocaleString("en-IN")} · ` +
+    `HRL total: ${summary.hrl.total.toLocaleString("en-IN")} · states active: ${summary.statesActive}`,
 );

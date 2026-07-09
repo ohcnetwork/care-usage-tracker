@@ -50,31 +50,11 @@ export const jobs: Job[] = [
   job("states", "statedist/1.0", { type: "SM" }, "national", "State master (name → code)"),
   job("districts", "statedist/1.0", { type: "DM" }, "per-state", "District master per state"),
 
-  // ── ABHA (Ayushman Bharat Health Account) ─────────────────────────────────
-  job("abha_counters", "healthdata/1.0", { type: "HI" }, "per-state",
-    "ABHA created: today / total / current month"),
-  job("abha_age", "healthh/1.0", { type: "HA" }, "per-state", "ABHA by age group"),
-  job("abha_gender", "healthh/1.0", { type: "HG" }, "per-state", "ABHA by gender"),
-  job("abha_statewise", "healthstatewise/1.0", { type: "HITS" }, "national",
-    "ABHA totals per state"),
-  job("abha_trend_daily", "healthh/1.0", { type: "HCT", rpttype: "T" }, "per-state",
-    "ABHA creation trend, daily (last 30 days)"),
-  job("abha_trend_all", "healthh/1.0", { type: "HCT", rpttype: "A" }, "national",
-    "ABHA creation trend, weekly since Aug 2020"),
+  // ── Partner name lists (allowlisted only) ──────────────────────────────────
   job("abha_partner_names", "healthh/1.0", { type: "HCT", rpttype: "P" }, "national",
     "Partner names that create ABHAs (allowlisted only)", { filterByAllowlist: true }),
-  job("abha_quarterly", "reports", { type: "ABHAQ" }, "national", "ABHA per quarter per FY"),
-
-  // ── Health Records Linked (HRL) ────────────────────────────────────────────
-  job("hrl_counters", "hrlCount/1.0", {}, "per-state",
-    "Health records linked: today / total / current month"),
-  job("hrl_trend_daily", "healthh/1.0", { type: "ABHALT", rpttype: "T" }, "per-state",
-    "HRL trend, daily (last 30 days): record_count + hid_count"),
-  job("hrl_trend_all", "healthh/1.0", { type: "ABHALT", rpttype: "A" }, "national",
-    "HRL trend, weekly full history"),
   job("hrl_partner_names", "healthh/1.0", { type: "ABHALT", rpttype: "P" }, "national",
     "Partner names that link health records (allowlisted only)", { filterByAllowlist: true }),
-  job("hrl_quarterly", "reports", { type: "HRLQ" }, "national", "HRL per quarter per FY"),
 
   // ── Partner-wise totals (allowlisted partners only) ────────────────────────
   job("partners_abha", "adoption/linkage", { type: "TOPABHAPART" }, "per-state",
@@ -91,18 +71,4 @@ export const jobs: Job[] = [
     "HRL trend per partner, daily (last 30 days): record_count + hid_count"),
   job("partner_hrl_trend_all", "healthh/1.0", { type: "ABHALT", rpttype: "A" }, "per-partner",
     "HRL trend per partner, weekly full history"),
-
-  // ── Facilities & professionals (cheap national extras) ─────────────────────
-  job("facility_counters", "healthdata/1.0", { type: "HF" }, "national",
-    "Health facilities: today / approved / registered / month"),
-  job("professional_counters", "healthdata/1.0", { type: "HP" }, "national",
-    "Healthcare professionals: today / approved / registered / month"),
-  job("facility_statewise", "healthstatewise/1.0", { type: "HFTS" }, "national",
-    "Facilities per state"),
-  job("professional_statewise", "healthstatewise/1.0", { type: "HPTS" }, "national",
-    "Professionals per state"),
-  job("facility_trend_monthly", "healthh/1.0", { type: "FCT", rpttype: "M" }, "national",
-    "Facility registration trend, monthly"),
-  job("professional_trend_monthly", "healthh/1.0", { type: "PCT", rpttype: "M" }, "national",
-    "Professional registration trend, monthly"),
 ];
