@@ -49,8 +49,8 @@ export function Overview() {
         </h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
           ABHA identities created and health records linked by the{" "}
-          {summary.partnersTracked} partners in our allowlist
-          (config/abdm/partners.yaml), mirrored from the official NHA dashboard.
+          {summary.partnersTracked} partners we track, mirrored from the
+          official NHA dashboard.
         </p>
       </div>
 

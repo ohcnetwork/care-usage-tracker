@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s · CARE Usage Tracker",
   },
   description:
-    "Usage metrics for the CARE ecosystem across public health dashboards — static mirrors of adoption data for a curated allowlist of partners.",
+    "Usage metrics for the CARE ecosystem across public health dashboards — static mirrors of adoption data for tracked partners.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -34,9 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-border py-6">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 text-xs text-placeholder-foreground sm:px-6">
             <p>
-              Unofficial, read-only mirrors of public dashboard data. Only data
-              for tracked partners (config/&lt;tracker&gt;/partners.yaml) is
-              collected and shown.
+              Unofficial, read-only mirrors of public dashboard data for
+              partners in the CARE ecosystem.
             </p>
             <p>
               Built with{" "}

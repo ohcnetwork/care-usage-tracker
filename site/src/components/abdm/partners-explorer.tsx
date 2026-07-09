@@ -107,8 +107,7 @@ export function PartnersExplorer() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Tracked partners</h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
-          A curated allowlist of {partners.allowlist.length} ABDM partners
-          (config/abdm/partners.yaml) — ranked by{" "}
+          {partners.allowlist.length} tracked ABDM partners — ranked by{" "}
           {metric === "abha" ? "ABHAs created" : "health records linked"}.
         </p>
       </div>

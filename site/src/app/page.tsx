@@ -25,8 +25,8 @@ export default function Home() {
         <h1 className="text-3xl font-semibold tracking-tight">CARE Usage Tracker</h1>
         <p className="mt-2 text-soft-foreground">
           Usage and adoption metrics for the CARE ecosystem, mirrored from
-          public health dashboards for a curated allowlist of partners. Pick a
-          tracker to explore.
+          public health dashboards for tracked partners. Pick a tracker to
+          explore.
         </p>
       </div>
       <div className="grid gap-6 sm:grid-cols-2">
