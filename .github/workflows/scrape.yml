@@ -1,0 +1,65 @@
+name: Scrape ABDM
+
+# Mirrors the public ABDM dashboard into dated JSONL snapshots + normalized
+# artifacts, then commits them. Cloudflare Pages rebuilds the site on push.
+
+on:
+  schedule:
+    # 20:30 UTC == 02:00 IST daily
+    - cron: "30 20 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Snapshot date override (YYYY-MM-DD). Defaults to today (UTC)."
+        required: false
+        type: string
+
+concurrency:
+  group: scrape-abdm
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape ABDM
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            npm run scrape:abdm -- --date "${{ inputs.date }}"
+          else
+            npm run scrape:abdm
+          fi
+
+      - name: Normalize
+        run: npm run build-data:abdm
+
+      - name: Sync site data
+        working-directory: site
+        run: npm run sync-data
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/abdm site/src/data/abdm
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          SNAPSHOT=$(node -p "require('./data/abdm/normalized/meta.json').snapshotDate")
+          git commit -m "chore(abdm): daily snapshot ${SNAPSHOT}"
+          git push
