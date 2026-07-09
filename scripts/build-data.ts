@@ -197,6 +197,18 @@ const combinedAbhaWeekly = combineAbha(partnerAbhaWeekly);
 const combinedHrlDaily = combineHrl(partnerHrlDaily);
 const combinedHrlWeekly = combineHrl(partnerHrlWeekly);
 
+// cumulative growth curves from the weekly full-history series
+function cumulative<T extends { date: string }>(points: T[], key: keyof T) {
+  let running = 0;
+  return points.map((p) => {
+    running += (p[key] as number | null) ?? 0;
+    return { date: p.date, value: running };
+  });
+}
+
+const cumulativeAbha = cumulative(combinedAbhaWeekly, "value");
+const cumulativeHrl = cumulative(combinedHrlWeekly, "recordsLinked");
+
 // statewise totals across tracked partners
 function statewiseTotals(perState: Record<string, { name: string; value: number | null }[]>) {
   const nameByCode = new Map(states.map((s) => [s.code, s.name]));
@@ -217,22 +229,93 @@ const seriesSum = (points: { value?: number | null; recordsLinked?: number | nul
 const onDate = <T extends { date: string }>(points: T[], date: string) =>
   points.find((p) => p.date === date);
 
+/** ISO date `days` before the snapshot date (inclusive-window helper). */
+function daysAgo(days: number): string {
+  const d = new Date(`${snapshotDate}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - days);
+  return d.toISOString().slice(0, 10);
+}
+
+/** Sum a numeric field over points with from <= date <= to (series are sparse). */
+function windowSum<T extends { date: string }>(
+  points: T[],
+  key: keyof T,
+  from: string,
+  to: string,
+): number {
+  return points.reduce(
+    (s, p) => (p.date >= from && p.date <= to ? s + ((p[key] as number | null) ?? 0) : s),
+    0,
+  );
+}
+
+/** % change of cur vs prev; null when prev is 0 (avoids ∞). */
+const growthPct = (cur: number, prev: number) =>
+  prev > 0 ? ((cur - prev) / prev) * 100 : null;
+
+function metricInsights<T extends { date: string }>(daily: T[], key: keyof T) {
+  const last7d = windowSum(daily, key, daysAgo(6), snapshotDate);
+  const prev7d = windowSum(daily, key, daysAgo(13), daysAgo(7));
+  const last30d = windowSum(daily, key, daysAgo(29), snapshotDate);
+  return {
+    last7d,
+    prev7d,
+    weekGrowthPct: growthPct(last7d, prev7d),
+    perDay7d: last7d / 7,
+    perDay30d: last30d / 30,
+  };
+}
+
+/** Partners with any activity in the window, across both metrics. */
+function activePartners(from: string, to: string): number {
+  const active = new Set<string>();
+  for (const [name, points] of Object.entries(partnerAbhaDaily)) {
+    if (points.some((p) => p.date >= from && p.date <= to && (p.value ?? 0) > 0)) active.add(name);
+  }
+  for (const [name, points] of Object.entries(partnerHrlDaily)) {
+    if (points.some((p) => p.date >= from && p.date <= to && (p.recordsLinked ?? 0) > 0))
+      active.add(name);
+  }
+  return active.size;
+}
+
+// linkage depth: records linked per ABHA linked, over the last 30 days combined
+const linkageRecords30d = windowSum(combinedHrlDaily, "recordsLinked", daysAgo(29), snapshotDate);
+const linkageAbhas30d = windowSum(combinedHrlDaily, "abhasLinked", daysAgo(29), snapshotDate);
+
+// per-partner linkage depth (30 days), only where there is signal
+const partnerLinkageDepth = Object.entries(partnerHrlDaily)
+  .map(([name, points]) => {
+    const records = windowSum(points, "recordsLinked", daysAgo(29), snapshotDate);
+    const abhas = windowSum(points, "abhasLinked", daysAgo(29), snapshotDate);
+    return { name, records, abhas, depth: abhas > 0 ? records / abhas : null };
+  })
+  .filter((p) => p.depth != null && p.abhas >= 10)
+  .sort((a, b) => (b.depth ?? 0) - (a.depth ?? 0))
+  .map(({ name, depth }) => ({ name, depth }));
+
 const summary = {
   abha: {
     total: sum(partnersAbha.national),
     today: onDate(combinedAbhaDaily, snapshotDate)?.value ?? 0,
     last30d: seriesSum(combinedAbhaDaily, "value"),
+    ...metricInsights(combinedAbhaDaily, "value"),
   },
   hrl: {
     total: sum(partnersHrl.national),
     today: onDate(combinedHrlDaily, snapshotDate)?.recordsLinked ?? 0,
     last30d: seriesSum(combinedHrlDaily, "recordsLinked"),
+    ...metricInsights(combinedHrlDaily, "recordsLinked"),
   },
   partnersTracked: allowlist.length,
   statesActive: new Set([
     ...Object.keys(partnersAbha.perState),
     ...Object.keys(partnersHrl.perState),
   ]).size,
+  activePartners7d: activePartners(daysAgo(6), snapshotDate),
+  activePartners30d: activePartners(daysAgo(29), snapshotDate),
+  linkageDepth30d: linkageAbhas30d > 0 ? linkageRecords30d / linkageAbhas30d : null,
+  partnerLinkageDepth,
 };
 
 // typo detection: every allowlisted name should surface somewhere
@@ -289,6 +372,8 @@ write("partner-trends.json", {
     abhaWeeklyAll: combinedAbhaWeekly,
     hrlDaily: combinedHrlDaily,
     hrlWeeklyAll: combinedHrlWeekly,
+    abhaCumulative: cumulativeAbha,
+    hrlCumulative: cumulativeHrl,
   },
 });
 

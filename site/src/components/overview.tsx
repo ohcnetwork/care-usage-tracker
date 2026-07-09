@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { FileHeart, IdCard, MapPinned, Users } from "lucide-react";
+import { FileHeart, Gauge, IdCard, Layers, Users } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import {
   Card,
@@ -20,9 +20,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/careui/ta
 import { StatCard } from "@/components/stat-card";
 import { AbhaTrendChart } from "@/components/charts/abha-trend-chart";
 import { HrlTrendChart } from "@/components/charts/hrl-trend-chart";
+import { CumulativeChart } from "@/components/charts/cumulative-chart";
 import { StatewiseChart } from "@/components/charts/statewise-chart";
 import { partners, partnerTrends, summary } from "@/lib/data";
-import { fmtCompact } from "@/lib/format";
+import { fmtCompact, fmtRate } from "@/lib/format";
 
 const partnerChartConfig = {
   value: { label: "Total", color: "var(--chart-2)" },
@@ -54,13 +55,16 @@ export function Overview() {
       </div>
 
       {/* Headline stats — all figures are sums over tracked partners only */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <StatCard
           title="ABHA numbers created"
           icon={IdCard}
           total={summary.abha.total}
           today={summary.abha.today}
           last30d={summary.abha.last30d}
+          weekGrowthPct={summary.abha.weekGrowthPct}
+          sparkline={combined.abhaDaily}
+          sparklineId="abha"
           accent
         />
         <StatCard
@@ -69,10 +73,44 @@ export function Overview() {
           total={summary.hrl.total}
           today={summary.hrl.today}
           last30d={summary.hrl.last30d}
+          weekGrowthPct={summary.hrl.weekGrowthPct}
+          sparkline={combined.hrlDaily.map((p) => ({ date: p.date, value: p.recordsLinked }))}
+          sparklineId="hrl"
           accent
         />
-        <StatCard title="Partners tracked" icon={Users} total={summary.partnersTracked} />
-        <StatCard title="States with activity" icon={MapPinned} total={summary.statesActive} />
+      </div>
+
+      {/* Insight cards */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <InsightCard
+          icon={Users}
+          title="Active partners"
+          value={`${summary.activePartners7d} of ${summary.partnersTracked}`}
+          detail={`active this week · ${summary.activePartners30d} of ${summary.partnersTracked} in the last 30 days, across ${summary.statesActive} states`}
+        />
+        <InsightCard
+          icon={Gauge}
+          title="Daily run-rate"
+          value={fmtRate(summary.abha.perDay7d).replace("~", "~") + " ABHAs"}
+          detail={`7-day average · records linked at ${fmtRate(summary.hrl.perDay7d)} (30-day: ${fmtRate(
+            summary.hrl.perDay30d,
+          )})`}
+        />
+        <InsightCard
+          icon={Layers}
+          title="Linkage depth"
+          value={
+            summary.linkageDepth30d != null
+              ? `${summary.linkageDepth30d.toLocaleString("en-IN", { maximumFractionDigits: 2 })}×`
+              : "—"
+          }
+          detail={
+            "records linked per ABHA (30 days)" +
+            (summary.partnerLinkageDepth[0]
+              ? ` · deepest: ${summary.partnerLinkageDepth[0].name} at ${summary.partnerLinkageDepth[0].depth.toLocaleString("en-IN", { maximumFractionDigits: 1 })}×`
+              : "")
+          }
+        />
       </div>
 
       {/* Combined trends across tracked partners */}
@@ -119,6 +157,38 @@ export function Overview() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Cumulative growth */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Cumulative growth</CardTitle>
+          <CardDescription>
+            Running totals across tracked partners, from weekly history
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Tabs defaultValue="hrl">
+            <TabsList className="mb-3">
+              <TabsTrigger value="hrl">Health records linked</TabsTrigger>
+              <TabsTrigger value="abha">ABHAs created</TabsTrigger>
+            </TabsList>
+            <TabsContent value="hrl">
+              <CumulativeChart
+                data={combined.hrlCumulative}
+                id="cum-hrl"
+                label="Records linked (cumulative)"
+              />
+            </TabsContent>
+            <TabsContent value="abha">
+              <CumulativeChart
+                data={combined.abhaCumulative}
+                id="cum-abha"
+                label="ABHAs created (cumulative)"
+              />
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
 
       {/* Partner breakdown + statewise */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -188,5 +258,30 @@ export function Overview() {
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+function InsightCard({
+  icon: Icon,
+  title,
+  value,
+  detail,
+}: {
+  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+  title: string;
+  value: string;
+  detail: string;
+}) {
+  return (
+    <Card>
+      <CardContent className="flex flex-col gap-2 p-5">
+        <div className="flex items-center gap-2 text-sm font-medium text-soft-foreground">
+          <Icon className="size-4" aria-hidden />
+          {title}
+        </div>
+        <div className="text-2xl font-bold tracking-tight tabular-nums">{value}</div>
+        <p className="text-xs leading-relaxed text-placeholder-foreground">{detail}</p>
+      </CardContent>
+    </Card>
   );
 }

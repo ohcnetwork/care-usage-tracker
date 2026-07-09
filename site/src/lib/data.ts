@@ -41,11 +41,26 @@ export const meta = metaJson as {
 };
 
 export const summary = summaryJson as {
-  abha: { total: number; today: number; last30d: number };
-  hrl: { total: number; today: number; last30d: number };
+  abha: MetricSummary;
+  hrl: MetricSummary;
   partnersTracked: number;
   statesActive: number;
+  activePartners7d: number;
+  activePartners30d: number;
+  linkageDepth30d: number | null;
+  partnerLinkageDepth: { name: string; depth: number }[];
 };
+
+export interface MetricSummary {
+  total: number;
+  today: number;
+  last30d: number;
+  last7d: number;
+  prev7d: number;
+  weekGrowthPct: number | null;
+  perDay7d: number;
+  perDay30d: number;
+}
 
 export const partners = partnersJson as {
   /** Config-driven allowlist (config/partners.yaml) — the only partners tracked. */
@@ -66,6 +81,8 @@ export const partnerTrends = partnerTrendsJson as {
     abhaWeeklyAll: TrendPoint[];
     hrlDaily: HrlTrendPoint[];
     hrlWeeklyAll: HrlTrendPoint[];
+    abhaCumulative: TrendPoint[];
+    hrlCumulative: TrendPoint[];
   };
 };
 

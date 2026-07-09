@@ -31,3 +31,17 @@ export function pct(part: number | null, whole: number | null): string {
   if (part == null || whole == null || whole === 0) return "—";
   return `${((part / whole) * 100).toLocaleString("en-IN", { maximumFractionDigits: 1 })}%`;
 }
+
+/** Signed percentage: "+23%" / "−8.9%". */
+export function fmtSignedPct(n: number | null | undefined): string {
+  if (n == null) return "—";
+  const s = n.toLocaleString("en-IN", { maximumFractionDigits: 1 });
+  return n > 0 ? `+${s}%` : `${s}%`;
+}
+
+/** Rate like "~29/day" using compact units above 1000. */
+export function fmtRate(n: number | null | undefined): string {
+  if (n == null) return "—";
+  const v = n >= 1000 ? fmtCompact(Math.round(n)) : n.toLocaleString("en-IN", { maximumFractionDigits: n < 10 ? 1 : 0 });
+  return `~${v}/day`;
+}
