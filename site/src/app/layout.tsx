@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Activity } from "lucide-react";
 import { NavLinks } from "@/components/nav-links";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "CARE Usage Tracker",
     template: "%s · CARE Usage Tracker",
