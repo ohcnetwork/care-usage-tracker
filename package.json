@@ -1,16 +1,14 @@
 {
-  "name": "abdm_stats",
+  "name": "care-usage-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Track CARE ecosystem adoption across public health dashboards (ABDM, …) — scrape, normalize, and publish as a static site.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "tsx scraper/scrape.ts",
-    "build-data": "tsx scripts/build-data.ts"
+    "scrape": "npm run scrape:abdm",
+    "build-data": "npm run build-data:abdm",
+    "scrape:abdm": "tsx trackers/abdm/scrape.ts",
+    "build-data:abdm": "tsx trackers/abdm/build-data.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "private": "true",
   "devDependencies": {

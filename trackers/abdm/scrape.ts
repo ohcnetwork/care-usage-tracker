@@ -3,7 +3,7 @@
  *
  * Usage: npm run scrape [-- --date 2026-07-08]
  *
- * Output: data/raw/<date>/<job_id>.jsonl — one line per record:
+ * Output: data/abdm/raw/<date>/<job_id>.jsonl — one line per record:
  *   { fetched_at, endpoint, params, row }
  * plus manifest.json summarising every request (ok / empty / failed).
  */
@@ -27,7 +27,7 @@ const dateArg = process.argv.indexOf("--date");
 const snapshotDate =
   dateArg !== -1 ? process.argv[dateArg + 1] : new Date().toISOString().slice(0, 10);
 
-const outDir = join("data", "raw", snapshotDate);
+const outDir = join("data", "abdm", "raw", snapshotDate);
 mkdirSync(outDir, { recursive: true });
 
 const allowlist = loadAllowlist();

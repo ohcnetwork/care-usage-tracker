@@ -17,12 +17,12 @@ import {
   type ChartConfig,
 } from "@/components/careui/chart";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/careui/tabs";
-import { StatCard } from "@/components/stat-card";
-import { AbhaTrendChart } from "@/components/charts/abha-trend-chart";
-import { HrlTrendChart } from "@/components/charts/hrl-trend-chart";
-import { CumulativeChart } from "@/components/charts/cumulative-chart";
-import { StatewiseChart } from "@/components/charts/statewise-chart";
-import { partners, partnerTrends, summary } from "@/lib/data";
+import { StatCard } from "@/components/abdm/stat-card";
+import { AbhaTrendChart } from "@/components/abdm/charts/abha-trend-chart";
+import { HrlTrendChart } from "@/components/abdm/charts/hrl-trend-chart";
+import { CumulativeChart } from "@/components/abdm/charts/cumulative-chart";
+import { StatewiseChart } from "@/components/abdm/charts/statewise-chart";
+import { partners, partnerTrends, summary } from "@/lib/abdm/data";
 import { fmtCompact, fmtRate } from "@/lib/format";
 
 const partnerChartConfig = {
@@ -50,7 +50,7 @@ export function Overview() {
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
           ABHA identities created and health records linked by the{" "}
           {summary.partnersTracked} partners in our allowlist
-          (config/partners.yaml), mirrored from the official NHA dashboard.
+          (config/abdm/partners.yaml), mirrored from the official NHA dashboard.
         </p>
       </div>
 

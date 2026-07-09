@@ -1,5 +1,5 @@
 /**
- * Partner allowlist loader — config/partners.yaml.
+ * Partner allowlist loader — config/abdm/partners.yaml.
  *
  * Shared by the scraper (limits which partner data is collected) and the
  * normalizer (filters/validates the artifacts fed to the site).
@@ -13,7 +13,7 @@ const Config = z.object({
   partners: z.array(z.string().min(1)).min(1),
 });
 
-const CONFIG_PATH = join("config", "partners.yaml");
+const CONFIG_PATH = join("config", "abdm", "partners.yaml");
 
 /** Allowlisted partner names, in config order (deduplicated). */
 export function loadAllowlist(): string[] {

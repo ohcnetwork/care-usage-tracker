@@ -7,7 +7,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/careui/chart";
-import type { StatewiseRow } from "@/lib/data";
+import type { StatewiseRow } from "@/lib/abdm/data";
 import { fmtCompact } from "@/lib/format";
 
 const config = {

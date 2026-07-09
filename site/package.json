@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync-data": "cp ../data/normalized/*.json src/data/",
+    "sync-data": "mkdir -p src/data/abdm && cp ../data/abdm/normalized/*.json src/data/abdm/",
     "prebuild": "npm run sync-data"
   },
   "dependencies": {

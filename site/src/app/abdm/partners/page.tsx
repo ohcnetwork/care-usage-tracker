@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PartnersExplorer } from "@/components/partners-explorer";
+import { PartnersExplorer } from "@/components/abdm/partners-explorer";
 
 export const metadata: Metadata = {
   title: "Partners",

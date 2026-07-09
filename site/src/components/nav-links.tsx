@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "/", label: "Overview" },
-  { href: "/partners/", label: "Partners" },
+  { href: "/", label: "Trackers", exact: true },
+  { href: "/abdm/", label: "ABDM", exact: true },
+  { href: "/abdm/partners/", label: "ABDM Partners", exact: false },
 ];
 
 export function NavLinks() {
@@ -14,7 +15,9 @@ export function NavLinks() {
   return (
     <nav className="flex items-center gap-1 text-sm">
       {links.map((l) => {
-        const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href.replace(/\/$/, ""));
+        const normalized = pathname.replace(/\/$/, "") || "/";
+        const target = l.href.replace(/\/$/, "") || "/";
+        const active = l.exact ? normalized === target : normalized.startsWith(target);
         return (
           <Link
             key={l.href}

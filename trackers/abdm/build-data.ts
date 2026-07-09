@@ -1,18 +1,18 @@
 /**
  * Normalize the latest raw JSONL snapshot into typed JSON artifacts for the site.
  *
- * Everything is scoped to the partner allowlist (config/partners.yaml) — no
+ * Everything is scoped to the partner allowlist (config/abdm/partners.yaml) — no
  * aggregate metrics outside the tracked partners are ever emitted.
  *
  * Usage: npm run build-data [-- --date 2026-07-08]
  *
- * Reads  data/raw/<date>/*.jsonl
- * Writes data/normalized/{meta,summary,partners,partner-trends}.json
+ * Reads  data/abdm/raw/<date>/*.jsonl
+ * Writes data/abdm/normalized/{meta,summary,partners,partner-trends}.json
  */
 import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
-import { loadAllowlist } from "../scraper/allowlist.ts";
+import { loadAllowlist } from "./allowlist.ts";
 
 // ── Raw record envelope ───────────────────────────────────────────────────────
 
@@ -85,15 +85,15 @@ function byPartner(records: Envelope[]): Map<string, Envelope[]> {
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 const dateArg = process.argv.indexOf("--date");
-const rawRoot = join("data", "raw");
+const rawRoot = join("data", "abdm", "raw");
 const snapshotDate =
   dateArg !== -1
     ? process.argv[dateArg + 1]
     : readdirSync(rawRoot).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().at(-1);
-if (!snapshotDate) throw new Error("No raw snapshot found under data/raw/");
+if (!snapshotDate) throw new Error("No raw snapshot found under data/abdm/raw/");
 
 const dir = join(rawRoot, snapshotDate);
-const outDir = join("data", "normalized");
+const outDir = join("data", "abdm", "normalized");
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 console.log(`Normalizing ${dir} → ${outDir}`);

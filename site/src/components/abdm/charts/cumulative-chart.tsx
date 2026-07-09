@@ -7,7 +7,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/careui/chart";
-import type { TrendPoint } from "@/lib/data";
+import type { TrendPoint } from "@/lib/abdm/data";
 import { fmtCompact, fmtDate, fmtDateLong } from "@/lib/format";
 
 export function CumulativeChart({

@@ -9,7 +9,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/careui/chart";
-import type { HrlTrendPoint } from "@/lib/data";
+import type { HrlTrendPoint } from "@/lib/abdm/data";
 import { fmtCompact, fmtDate, fmtDateLong } from "@/lib/format";
 
 const config = {

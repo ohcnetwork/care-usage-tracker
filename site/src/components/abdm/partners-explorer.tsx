@@ -33,8 +33,8 @@ import {
   TableRow,
 } from "@/components/careui/table";
 import { Tabs, TabsList, TabsTrigger } from "@/components/careui/tabs";
-import { AbhaTrendChart } from "@/components/charts/abha-trend-chart";
-import { HrlTrendChart } from "@/components/charts/hrl-trend-chart";
+import { AbhaTrendChart } from "@/components/abdm/charts/abha-trend-chart";
+import { HrlTrendChart } from "@/components/abdm/charts/hrl-trend-chart";
 import {
   meta,
   partners,
@@ -42,7 +42,7 @@ import {
   NATIONAL,
   scopeName,
   type PartnerRow,
-} from "@/lib/data";
+} from "@/lib/abdm/data";
 import { fmtCompact, fmtIN, pct } from "@/lib/format";
 
 type Metric = "abha" | "hrl";
@@ -108,7 +108,7 @@ export function PartnersExplorer() {
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Tracked partners</h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
           A curated allowlist of {partners.allowlist.length} ABDM partners
-          (config/partners.yaml) — ranked by{" "}
+          (config/abdm/partners.yaml) — ranked by{" "}
           {metric === "abha" ? "ABHAs created" : "health records linked"}.
         </p>
       </div>

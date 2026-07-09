@@ -6,7 +6,7 @@ import { Area, AreaChart } from "recharts";
 import { Card, CardContent } from "@/components/careui/card";
 import { Badge } from "@/components/careui/badge";
 import { ChartContainer, type ChartConfig } from "@/components/careui/chart";
-import type { TrendPoint } from "@/lib/data";
+import type { TrendPoint } from "@/lib/abdm/data";
 import { fmtCompact, fmtIN, fmtSignedPct } from "@/lib/format";
 import { cn } from "@/lib/utils";
 

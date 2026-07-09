@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Activity } from "lucide-react";
-import { meta } from "@/lib/data";
-import { fmtDateLong } from "@/lib/format";
 import { NavLinks } from "@/components/nav-links";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "ABDM Stats — Ayushman Bharat Digital Mission metrics",
-    template: "%s · ABDM Stats",
+    default: "CARE Usage Tracker",
+    template: "%s · CARE Usage Tracker",
   },
   description:
-    "Open, static mirror of Ayushman Bharat Digital Mission (ABDM) adoption metrics for a curated allowlist of partners — ABHA numbers created, health records linked, and daily trends — scraped from the official NHA dashboard.",
+    "Usage metrics for the CARE ecosystem across public health dashboards — static mirrors of adoption data for a curated allowlist of partners.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -25,25 +23,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <Activity className="size-4" aria-hidden />
               </span>
-              ABDM Stats
+              CARE Usage Tracker
             </Link>
             <NavLinks />
-            <span className="ml-auto hidden text-xs text-placeholder-foreground sm:block">
-              snapshot · {fmtDateLong(meta.snapshotDate)}
-            </span>
           </div>
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-border py-6">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 text-xs text-placeholder-foreground sm:px-6">
             <p>
-              Unofficial, read-only mirror of public data from the{" "}
-              <a href={meta.source} className="underline underline-offset-2 hover:text-foreground" target="_blank" rel="noreferrer">
-                ABDM dashboard
-              </a>{" "}
-              (National Health Authority). Only data for tracked partners
-              (config/partners.yaml) is collected and shown. Snapshot taken{" "}
-              {fmtDateLong(meta.snapshotDate)}.
+              Unofficial, read-only mirrors of public dashboard data. Only data
+              for tracked partners (config/&lt;tracker&gt;/partners.yaml) is
+              collected and shown.
             </p>
             <p>
               Built with{" "}

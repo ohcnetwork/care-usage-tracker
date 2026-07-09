@@ -1,13 +1,13 @@
 /**
- * Typed access to the normalized snapshot artifacts (synced from ../data/normalized).
+ * Typed access to the normalized snapshot artifacts (synced from ../data/abdm/normalized).
  *
- * All data is scoped to the partner allowlist (config/partners.yaml) — there are
+ * All data is scoped to the partner allowlist (config/abdm/partners.yaml) — there are
  * no aggregates outside the tracked partners anywhere in these artifacts.
  */
-import metaJson from "@/data/meta.json";
-import summaryJson from "@/data/summary.json";
-import partnersJson from "@/data/partners.json";
-import partnerTrendsJson from "@/data/partner-trends.json";
+import metaJson from "@/data/abdm/meta.json";
+import summaryJson from "@/data/abdm/summary.json";
+import partnersJson from "@/data/abdm/partners.json";
+import partnerTrendsJson from "@/data/abdm/partner-trends.json";
 
 export interface TrendPoint {
   date: string;
@@ -63,7 +63,7 @@ export interface MetricSummary {
 }
 
 export const partners = partnersJson as {
-  /** Config-driven allowlist (config/partners.yaml) — the only partners tracked. */
+  /** Config-driven allowlist (config/abdm/partners.yaml) — the only partners tracked. */
   allowlist: string[];
   abha: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
   hrl: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
