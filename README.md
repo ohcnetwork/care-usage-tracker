@@ -11,7 +11,7 @@ Next.js site (built with [care·ui](https://careui.ohc.network)) presents them.
 
 | Tracker | Source | Metrics |
 | --- | --- | --- |
-| [ABDM](https://usage.ohc.network/abdm/) | [NHA ABDM dashboard](https://dashboard.abdm.gov.in/abdm/) | ABHA numbers created, health records linked, daily/weekly trends, statewise splits |
+| [ABDM](https://usage.ohc.network/abdm/) | [NHA ABDM dashboard](https://dashboard.abdm.gov.in/abdm/) | ABHA numbers created, health records linked, ABHAs linked, Scan & Share tokens, daily/weekly trends, statewise splits |
 
 Only data for partners listed in `config/<tracker>/partners.yaml` is collected
 and published — nothing else is scraped or aggregated.

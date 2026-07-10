@@ -21,6 +21,12 @@ export interface Job {
   description: string;
   /** Keep only rows whose partner name (row.text) is in the allowlist. */
   filterByAllowlist?: boolean;
+  /**
+   * Body field carrying the partner name for per-partner jobs.
+   * healthh/adoption jobs use `partner`; facilitytoken (scan & share) jobs
+   * identify the partner by bridge name in `profType`. Default: "partner".
+   */
+  partnerField?: "partner" | "profType";
 }
 
 const base: StatedistReq = {
@@ -71,4 +77,16 @@ export const jobs: Job[] = [
     "HRL trend per partner, daily (last 30 days): record_count + hid_count"),
   job("partner_hrl_trend_all", "healthh/1.0", { type: "ABHALT", rpttype: "A" }, "per-partner",
     "HRL trend per partner, weekly full history"),
+
+  // ── Scan & Share (facilitytoken/1.0 — partner = bridge name in profType) ────
+  job("sas_bridge_names", "facilitytoken/1.0", { type: "BRDGNM" }, "national",
+    "Scan & Share bridge/partner names (allowlisted only)", { filterByAllowlist: true }),
+  job("partner_sas_trend_daily", "facilitytoken/1.0", { type: "FGT", rpttype: "M" }, "per-partner",
+    "Scan & Share tokens per partner, daily (last 30 days)", { partnerField: "profType" }),
+  job("partner_sas_trend_all", "facilitytoken/1.0", { type: "FGT", rpttype: "A" }, "per-partner",
+    "Scan & Share tokens per partner, daily full history", { partnerField: "profType" }),
+  job("partner_sas_states", "facilitytoken/1.0", { type: "STN" }, "per-partner",
+    "States with Scan & Share activity per partner", { partnerField: "profType" }),
+  job("partner_sas_facilities", "facilitytoken/1.0", { type: "FN" }, "per-partner",
+    "Facilities generating Scan & Share tokens per partner", { partnerField: "profType" }),
 ];

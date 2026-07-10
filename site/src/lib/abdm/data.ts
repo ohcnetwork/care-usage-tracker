@@ -43,6 +43,8 @@ export const meta = metaJson as {
 export const summary = summaryJson as {
   abha: MetricSummary;
   hrl: MetricSummary;
+  abhaLinked: MetricSummary;
+  sas: MetricSummary & { facilities: number; activePartners: number };
   partnersTracked: number;
   statesActive: number;
   activePartners7d: number;
@@ -62,6 +64,16 @@ export interface MetricSummary {
   perDay30d: number;
 }
 
+export interface PartnerSasRow {
+  name: string;
+  total: number;
+  last30d: number;
+  today: number;
+  states: number;
+  facilities: number;
+  since: string | null;
+}
+
 export const partners = partnersJson as {
   /** Config-driven allowlist (config/abdm/partners.yaml) — the only partners tracked. */
   allowlist: string[];
@@ -69,6 +81,7 @@ export const partners = partnersJson as {
   hrl: { national: PartnerRow[]; perState: Record<string, PartnerRow[]> };
   statewiseAbha: StatewiseRow[];
   statewiseHrl: StatewiseRow[];
+  sas: PartnerSasRow[];
 };
 
 export const partnerTrends = partnerTrendsJson as {
@@ -76,13 +89,19 @@ export const partnerTrends = partnerTrendsJson as {
   abhaWeeklyAll: Record<string, TrendPoint[]>;
   hrlDaily: Record<string, HrlTrendPoint[]>;
   hrlWeeklyAll: Record<string, HrlTrendPoint[]>;
+  sasDaily: Record<string, TrendPoint[]>;
+  sasAll: Record<string, TrendPoint[]>;
   combined: {
     abhaDaily: TrendPoint[];
     abhaWeeklyAll: TrendPoint[];
     hrlDaily: HrlTrendPoint[];
     hrlWeeklyAll: HrlTrendPoint[];
+    sasDaily: TrendPoint[];
+    sasAll: TrendPoint[];
     abhaCumulative: TrendPoint[];
     hrlCumulative: TrendPoint[];
+    abhaLinkedCumulative: TrendPoint[];
+    sasCumulative: TrendPoint[];
   };
 };
 

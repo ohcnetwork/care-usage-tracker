@@ -90,8 +90,9 @@ async function main() {
   for (const job of jobs) {
     console.log(`▶ ${job.id} — ${job.description}`);
     if (job.scope === "per-partner") {
+      const field = job.partnerField ?? "partner";
       for (const partner of allowlist) {
-        await runRequest(job, { ...job.body, partner }, partner);
+        await runRequest(job, { ...job.body, [field]: partner }, partner);
       }
       continue;
     }

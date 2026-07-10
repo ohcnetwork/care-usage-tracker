@@ -71,11 +71,11 @@ function byState(records: Envelope[]): Map<string, Envelope[]> {
   return map;
 }
 
-/** Group envelopes by partner param. */
+/** Group envelopes by partner param (scan & share jobs carry it in profType). */
 function byPartner(records: Envelope[]): Map<string, Envelope[]> {
   const map = new Map<string, Envelope[]>();
   for (const r of records) {
-    const partner = r.params.partner ?? "";
+    const partner = r.params.partner || r.params.profType || "";
     if (!map.has(partner)) map.set(partner, []);
     map.get(partner)!.push(r);
   }
@@ -164,6 +164,22 @@ const partnerAbhaWeekly = partnerAbhaTrend("partner_abha_trend_all");
 const partnerHrlDaily = partnerHrlTrend("partner_hrl_trend_daily");
 const partnerHrlWeekly = partnerHrlTrend("partner_hrl_trend_all");
 
+// scan & share token trends ({date,value} — same row shape as ABHA trends)
+const partnerSasDaily = partnerAbhaTrend("partner_sas_trend_daily");
+const partnerSasAll = partnerAbhaTrend("partner_sas_trend_all");
+
+// scan & share footprint per partner: active states + facilities
+function partnerRowTexts(jobId: string) {
+  const out: Record<string, string[]> = {};
+  for (const [partner, rows] of byPartner(readJsonl(dir, jobId))) {
+    if (!partner) continue;
+    out[partner] = rows.map((r) => String(r.row.text)).filter(Boolean);
+  }
+  return out;
+}
+const partnerSasStates = partnerRowTexts("partner_sas_states");
+const partnerSasFacilities = partnerRowTexts("partner_sas_facilities");
+
 // combined trends: sum across all tracked partners per date
 function combineAbha(series: Record<string, { date: string; value: number | null }[]>) {
   const sums = new Map<string, number>();
@@ -196,6 +212,8 @@ const combinedAbhaDaily = combineAbha(partnerAbhaDaily);
 const combinedAbhaWeekly = combineAbha(partnerAbhaWeekly);
 const combinedHrlDaily = combineHrl(partnerHrlDaily);
 const combinedHrlWeekly = combineHrl(partnerHrlWeekly);
+const combinedSasDaily = combineAbha(partnerSasDaily);
+const combinedSasAll = combineAbha(partnerSasAll);
 
 // cumulative growth curves from the weekly full-history series
 function cumulative<T extends { date: string }>(points: T[], key: keyof T) {
@@ -208,6 +226,8 @@ function cumulative<T extends { date: string }>(points: T[], key: keyof T) {
 
 const cumulativeAbha = cumulative(combinedAbhaWeekly, "value");
 const cumulativeHrl = cumulative(combinedHrlWeekly, "recordsLinked");
+const cumulativeAbhaLinked = cumulative(combinedHrlWeekly, "abhasLinked");
+const cumulativeSas = cumulative(combinedSasAll, "value");
 
 // statewise totals across tracked partners
 function statewiseTotals(perState: Record<string, { name: string; value: number | null }[]>) {
@@ -276,6 +296,9 @@ function activePartners(from: string, to: string): number {
     if (points.some((p) => p.date >= from && p.date <= to && (p.recordsLinked ?? 0) > 0))
       active.add(name);
   }
+  for (const [name, points] of Object.entries(partnerSasDaily)) {
+    if (points.some((p) => p.date >= from && p.date <= to && (p.value ?? 0) > 0)) active.add(name);
+  }
   return active.size;
 }
 
@@ -294,6 +317,33 @@ const partnerLinkageDepth = Object.entries(partnerHrlDaily)
   .sort((a, b) => (b.depth ?? 0) - (a.depth ?? 0))
   .map(({ name, depth }) => ({ name, depth }));
 
+// scan & share per-partner rollup: lifetime tokens (full A series) + footprint
+const partnerSas = allowlist
+  .map((name) => {
+    const all = partnerSasAll[name] ?? [];
+    const daily = partnerSasDaily[name] ?? [];
+    return {
+      name,
+      total: seriesSum(all, "value"),
+      last30d: windowSum(daily, "value", daysAgo(29), snapshotDate),
+      today: onDate(daily, snapshotDate)?.value ?? 0,
+      states: partnerSasStates[name]?.length ?? 0,
+      facilities: partnerSasFacilities[name]?.length ?? 0,
+      since: all.find((p) => (p.value ?? 0) > 0)?.date ?? null,
+    };
+  })
+  .sort((a, b) => b.total - a.total);
+
+const sasTotal = partnerSas.reduce((s, p) => s + p.total, 0);
+const sasFacilities = partnerSas.reduce((s, p) => s + p.facilities, 0);
+const sasActivePartners = partnerSas.filter((p) => p.total > 0).length;
+
+// ABHAs linked (patients with records linked) — derived from the HRL series
+const abhaLinkedTotal = seriesSum(
+  combinedHrlWeekly.map((p) => ({ value: p.abhasLinked })),
+  "value",
+);
+
 const summary = {
   abha: {
     total: sum(partnersAbha.national),
@@ -306,6 +356,23 @@ const summary = {
     today: onDate(combinedHrlDaily, snapshotDate)?.recordsLinked ?? 0,
     last30d: seriesSum(combinedHrlDaily, "recordsLinked"),
     ...metricInsights(combinedHrlDaily, "recordsLinked"),
+  },
+  abhaLinked: {
+    total: abhaLinkedTotal,
+    today: onDate(combinedHrlDaily, snapshotDate)?.abhasLinked ?? 0,
+    last30d: windowSum(combinedHrlDaily, "abhasLinked", daysAgo(29), snapshotDate),
+    ...metricInsights(
+      combinedHrlDaily.map((p) => ({ date: p.date, value: p.abhasLinked })),
+      "value",
+    ),
+  },
+  sas: {
+    total: sasTotal,
+    today: onDate(combinedSasDaily, snapshotDate)?.value ?? 0,
+    last30d: windowSum(combinedSasDaily, "value", daysAgo(29), snapshotDate),
+    ...metricInsights(combinedSasDaily, "value"),
+    facilities: sasFacilities,
+    activePartners: sasActivePartners,
   },
   partnersTracked: allowlist.length,
   statesActive: new Set([
@@ -360,6 +427,7 @@ write("partners.json", {
   hrl: partnersHrl,
   statewiseAbha: statewiseTotals(partnersAbha.perState),
   statewiseHrl: statewiseTotals(partnersHrl.perState),
+  sas: partnerSas,
 });
 
 write("partner-trends.json", {
@@ -367,18 +435,25 @@ write("partner-trends.json", {
   abhaWeeklyAll: partnerAbhaWeekly,
   hrlDaily: partnerHrlDaily,
   hrlWeeklyAll: partnerHrlWeekly,
+  sasDaily: partnerSasDaily,
+  sasAll: partnerSasAll,
   combined: {
     abhaDaily: combinedAbhaDaily,
     abhaWeeklyAll: combinedAbhaWeekly,
     hrlDaily: combinedHrlDaily,
     hrlWeeklyAll: combinedHrlWeekly,
+    sasDaily: combinedSasDaily,
+    sasAll: combinedSasAll,
     abhaCumulative: cumulativeAbha,
     hrlCumulative: cumulativeHrl,
+    abhaLinkedCumulative: cumulativeAbhaLinked,
+    sasCumulative: cumulativeSas,
   },
 });
 
 // sanity summary
 console.log(
   `Tracked partners: ${allowlist.length} · ABHA total: ${summary.abha.total.toLocaleString("en-IN")} · ` +
-    `HRL total: ${summary.hrl.total.toLocaleString("en-IN")} · states active: ${summary.statesActive}`,
+    `HRL total: ${summary.hrl.total.toLocaleString("en-IN")} · S&S tokens: ${sasTotal.toLocaleString("en-IN")} · ` +
+    `states active: ${summary.statesActive}`,
 );

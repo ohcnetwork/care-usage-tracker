@@ -10,11 +10,20 @@ import {
 import type { TrendPoint } from "@/lib/abdm/data";
 import { fmtCompact, fmtDate, fmtDateLong } from "@/lib/format";
 
-const config = {
-  value: { label: "ABHAs created", color: "var(--chart-2)" },
-} satisfies ChartConfig;
-
-export function AbhaTrendChart({ data, id, className }: { data: TrendPoint[]; id: string; className?: string }) {
+export function AbhaTrendChart({
+  data,
+  id,
+  className,
+  label = "ABHAs created",
+}: {
+  data: TrendPoint[];
+  id: string;
+  className?: string;
+  label?: string;
+}) {
+  const config = {
+    value: { label, color: "var(--chart-2)" },
+  } satisfies ChartConfig;
   return (
     <ChartContainer config={config} className={className ?? "h-64 w-full sm:h-72"}>
       <AreaChart data={data} margin={{ left: 4, right: 12, top: 8 }}>

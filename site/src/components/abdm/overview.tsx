@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { FileHeart, Gauge, IdCard, Layers, Users } from "lucide-react";
+import { FileHeart, Gauge, HeartPulse, IdCard, Layers, QrCode, Users } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import {
   Card,
@@ -40,6 +40,14 @@ export function Overview() {
     [],
   );
 
+  const topPartnersSas = useMemo(
+    () =>
+      partners.sas
+        .filter((r) => r.total > 0)
+        .map((r) => ({ name: r.name, value: r.total })),
+    [],
+  );
+
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6">
       {/* Hero */}
@@ -48,14 +56,14 @@ export function Overview() {
           ABDM adoption — tracked partners
         </h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
-          ABHA identities created and health records linked by the{" "}
-          {summary.partnersTracked} partners we track, mirrored from the
-          official NHA dashboard.
+          ABHA identities created, health records linked, and Scan &amp; Share
+          activity by the {summary.partnersTracked} partners we track, mirrored
+          from the official NHA dashboard.
         </p>
       </div>
 
       {/* Headline stats — all figures are sums over tracked partners only */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <StatCard
           title="ABHA numbers created"
           icon={IdCard}
@@ -78,10 +86,30 @@ export function Overview() {
           sparklineId="hrl"
           accent
         />
+        <StatCard
+          title="ABHAs linked to records"
+          icon={HeartPulse}
+          total={summary.abhaLinked.total}
+          today={summary.abhaLinked.today}
+          last30d={summary.abhaLinked.last30d}
+          weekGrowthPct={summary.abhaLinked.weekGrowthPct}
+          sparkline={combined.hrlDaily.map((p) => ({ date: p.date, value: p.abhasLinked }))}
+          sparklineId="abha-linked"
+        />
+        <StatCard
+          title="Scan & Share tokens"
+          icon={QrCode}
+          total={summary.sas.total}
+          today={summary.sas.today}
+          last30d={summary.sas.last30d}
+          weekGrowthPct={summary.sas.weekGrowthPct}
+          sparkline={combined.sasDaily}
+          sparklineId="sas"
+        />
       </div>
 
       {/* Insight cards */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <InsightCard
           icon={Users}
           title="Active partners"
@@ -110,6 +138,12 @@ export function Overview() {
               ? ` · deepest: ${summary.partnerLinkageDepth[0].name} at ${summary.partnerLinkageDepth[0].depth.toLocaleString("en-IN", { maximumFractionDigits: 1 })}×`
               : "")
           }
+        />
+        <InsightCard
+          icon={QrCode}
+          title="Scan & Share footprint"
+          value={`${summary.sas.facilities} facilities`}
+          detail={`generating tokens across ${summary.sas.activePartners} of ${summary.partnersTracked} partners · ${fmtRate(summary.sas.perDay7d)} tokens (7-day avg)`}
         />
       </div>
 
@@ -158,6 +192,38 @@ export function Overview() {
         </Card>
       </div>
 
+      {/* Scan & Share trend */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Scan &amp; Share tokens trend</CardTitle>
+          <CardDescription>
+            OPD registration tokens generated via Scan &amp; Share, all tracked partners combined
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Tabs defaultValue="daily">
+            <TabsList className="mb-3">
+              <TabsTrigger value="daily">Last 30 days</TabsTrigger>
+              <TabsTrigger value="all">Full history (daily)</TabsTrigger>
+            </TabsList>
+            <TabsContent value="daily">
+              <AbhaTrendChart
+                data={combined.sasDaily}
+                id="sas-daily"
+                label="Tokens generated"
+              />
+            </TabsContent>
+            <TabsContent value="all">
+              <AbhaTrendChart
+                data={combined.sasAll}
+                id="sas-all"
+                label="Tokens generated"
+              />
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
+
       {/* Cumulative growth */}
       <Card>
         <CardHeader>
@@ -171,6 +237,8 @@ export function Overview() {
             <TabsList className="mb-3">
               <TabsTrigger value="hrl">Health records linked</TabsTrigger>
               <TabsTrigger value="abha">ABHAs created</TabsTrigger>
+              <TabsTrigger value="abha-linked">ABHAs linked</TabsTrigger>
+              <TabsTrigger value="sas">Scan &amp; Share</TabsTrigger>
             </TabsList>
             <TabsContent value="hrl">
               <CumulativeChart
@@ -184,6 +252,20 @@ export function Overview() {
                 data={combined.abhaCumulative}
                 id="cum-abha"
                 label="ABHAs created (cumulative)"
+              />
+            </TabsContent>
+            <TabsContent value="abha-linked">
+              <CumulativeChart
+                data={combined.abhaLinkedCumulative}
+                id="cum-abha-linked"
+                label="ABHAs linked (cumulative)"
+              />
+            </TabsContent>
+            <TabsContent value="sas">
+              <CumulativeChart
+                data={combined.sasCumulative}
+                id="cum-sas"
+                label="Tokens generated (cumulative)"
               />
             </TabsContent>
           </Tabs>
@@ -248,15 +330,62 @@ export function Overview() {
         </Card>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>States — health records linked</CardTitle>
-          <CardDescription>Summed across tracked partners</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <StatewiseChart data={partners.statewiseHrl} top={15} />
-        </CardContent>
-      </Card>
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Partner breakdown — Scan &amp; Share tokens</CardTitle>
+            <CardDescription>All-time totals per tracked partner</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ChartContainer
+              config={partnerChartConfig}
+              className="w-full"
+              style={{ height: Math.max(topPartnersSas.length, 3) * 34 + 30 }}
+            >
+              <BarChart
+                data={topPartnersSas}
+                layout="vertical"
+                margin={{ left: 8, right: 52 }}
+              >
+                <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+                <XAxis type="number" hide />
+                <YAxis
+                  dataKey="name"
+                  type="category"
+                  tickLine={false}
+                  axisLine={false}
+                  width={190}
+                  tick={{ fontSize: 11 }}
+                  tickFormatter={(v: string) => (v.length > 28 ? v.slice(0, 26) + "…" : v)}
+                />
+                <ChartTooltip content={<ChartTooltipContent />} />
+                <Bar
+                  dataKey="value"
+                  fill="var(--color-value)"
+                  radius={[3, 6, 6, 3]}
+                  barSize={18}
+                  label={{
+                    position: "right",
+                    fontSize: 11,
+                    fill: "var(--muted-foreground)",
+                    formatter: (v: unknown) => fmtCompact(Number(v)),
+                  }}
+                />
+              </BarChart>
+            </ChartContainer>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>States — health records linked</CardTitle>
+            <CardDescription>Summed across tracked partners</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <StatewiseChart data={partners.statewiseHrl} top={15} />
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
