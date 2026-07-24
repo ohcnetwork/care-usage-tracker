@@ -11,6 +11,7 @@ import summaryJson from "@/data/tngh/summary.json";
 import partnersJson from "@/data/tngh/partners.json";
 import trendsJson from "@/data/tngh/trends.json";
 import facilitiesJson from "@/data/tngh/facilities.json";
+import facilityTrendsJson from "@/data/tngh/facility-trends.json";
 import type { MetricSummary, TrendPoint, HrlTrendPoint } from "@/lib/abdm/data";
 
 export const meta = metaJson as {
@@ -85,6 +86,20 @@ export interface TopHrlFacilityRow {
   records: number;
 }
 
+export interface HrlFacilityRow {
+  name: string;
+  district: string;
+  /** Derived from the facility name — the upstream API exposes no type field. */
+  class: string;
+  partner: string;
+  records: number;
+  records30d: number;
+  recordsToday: number;
+  abhasLinked: number;
+  abhasLinked30d: number;
+  abhasLinkedToday: number;
+}
+
 export const facilities = facilitiesJson as {
   sas: FacilityRow[];
   topHrl: {
@@ -92,4 +107,11 @@ export const facilities = facilitiesJson as {
     last30d: TopHrlFacilityRow[];
     today: TopHrlFacilityRow[];
   };
+  hrl: HrlFacilityRow[];
 };
+
+/** Per-facility linkage trend series, keyed by facility display name. */
+export const facilityTrends = facilityTrendsJson as unknown as Record<
+  string,
+  { all: HrlTrendPoint[]; daily: HrlTrendPoint[] }
+>;

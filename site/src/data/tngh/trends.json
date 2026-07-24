@@ -123,7 +123,7 @@
    },
    {
     "date": "2026-07-24",
-    "value": 11152
+    "value": 15353
    }
   ],
   "abhaWeeklyAll": [
@@ -985,7 +985,7 @@
    },
    {
     "date": "2026-07-20",
-    "value": 85091
+    "value": 89292
    }
   ],
   "hrlDaily": [
@@ -1141,8 +1141,8 @@
    },
    {
     "date": "2026-07-24",
-    "recordsLinked": 981,
-    "abhasLinked": 980
+    "recordsLinked": 1010,
+    "abhasLinked": 1009
    }
   ],
   "hrlWeeklyAll": [
@@ -2063,8 +2063,8 @@
    },
    {
     "date": "2026-07-20",
-    "recordsLinked": 128096,
-    "abhasLinked": 126969
+    "recordsLinked": 128125,
+    "abhasLinked": 126998
    }
   ],
   "sasDaily": [
@@ -5974,7 +5974,7 @@
    },
    {
     "date": "2026-07-20",
-    "value": 1842196
+    "value": 1846397
    }
   ],
   "hrlCumulative": [
@@ -6712,7 +6712,7 @@
    },
    {
     "date": "2026-07-20",
-    "value": 3965146
+    "value": 3965175
    }
   ],
   "abhaLinkedCumulative": [
@@ -7450,7 +7450,7 @@
    },
    {
     "date": "2026-07-20",
-    "value": 3709660
+    "value": 3709689
    }
   ],
   "sasCumulative": [
@@ -10501,7 +10501,7 @@
     },
     {
      "date": "2026-07-24",
-     "value": 11151
+     "value": 15349
     }
    ],
    "abhaWeeklyAll": [
@@ -11175,7 +11175,7 @@
     },
     {
      "date": "2026-07-20",
-     "value": 85068
+     "value": 89266
     }
    ],
    "hrlDaily": [
@@ -15097,7 +15097,7 @@
     },
     {
      "date": "2026-07-24",
-     "value": 1
+     "value": 2
     }
    ],
    "abhaWeeklyAll": [
@@ -15847,7 +15847,7 @@
     },
     {
      "date": "2026-07-20",
-     "value": 7
+     "value": 8
     }
    ],
    "hrlDaily": [
@@ -16003,8 +16003,8 @@
     },
     {
      "date": "2026-07-24",
-     "recordsLinked": 192,
-     "abhasLinked": 192
+     "recordsLinked": 221,
+     "abhasLinked": 221
     }
    ],
    "hrlWeeklyAll": [
@@ -16230,8 +16230,8 @@
     },
     {
      "date": "2026-07-20",
-     "recordsLinked": 1397,
-     "abhasLinked": 1397
+     "recordsLinked": 1426,
+     "abhasLinked": 1426
     }
    ],
    "sasDaily": [
@@ -16368,6 +16368,10 @@
     {
      "date": "2026-07-23",
      "value": 5
+    },
+    {
+     "date": "2026-07-24",
+     "value": 2
     }
    ],
    "abhaWeeklyAll": [
@@ -16901,7 +16905,7 @@
     },
     {
      "date": "2026-07-20",
-     "value": 16
+     "value": 18
     }
    ],
    "hrlDaily": [

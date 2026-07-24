@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
-import { Activity } from "lucide-react";
+import { Activity, Search } from "lucide-react";
 import { Badge } from "@/components/careui/badge";
 import {
   Card,
@@ -33,53 +33,137 @@ import {
   TableRow,
 } from "@/components/careui/table";
 import { Tabs, TabsList, TabsTrigger } from "@/components/careui/tabs";
-import { facilities, summary } from "@/lib/tngh/data";
+import { Input } from "@/components/careui/input";
+import { HrlTrendChart } from "@/components/abdm/charts/hrl-trend-chart";
+import { facilities, facilityTrends, summary } from "@/lib/tngh/data";
 import { fmtCompact, fmtIN, pct } from "@/lib/format";
 
-type Window = "total" | "month" | "today";
+type Metric = "sas" | "hrl" | "abhasLinked";
+type Window = "total" | "recent" | "today";
 
 const ALL = "__all__";
 
-const WINDOW_LABEL: Record<Window, string> = {
-  total: "All-time",
-  month: "This month",
-  today: "Today",
+/** Unified row shape across metrics. */
+interface Row {
+  name: string;
+  district: string;
+  class: string;
+  total: number;
+  recent: number;
+  today: number;
+}
+
+const METRIC: Record<
+  Metric,
+  { label: string; unit: string; recentLabel: string; color: string; empty: string }
+> = {
+  sas: {
+    label: "Scan & Share",
+    unit: "Tokens",
+    recentLabel: "This month",
+    color: "var(--chart-2)",
+    empty: "No facility generated Scan & Share tokens",
+  },
+  hrl: {
+    label: "Records linked",
+    unit: "Records",
+    recentLabel: "Last 30 days",
+    color: "var(--chart-1)",
+    empty: "No facility linked health records",
+  },
+  abhasLinked: {
+    label: "ABHAs linked",
+    unit: "ABHAs",
+    recentLabel: "Last 30 days",
+    color: "var(--chart-3)",
+    empty: "No facility linked ABHAs",
+  },
 };
 
-const chartConfig = {
-  value: { label: "Tokens", color: "var(--chart-2)" },
-} satisfies ChartConfig;
+const WINDOW_LABEL = (metric: Metric): Record<Window, string> => ({
+  total: "All-time",
+  recent: METRIC[metric].recentLabel,
+  today: "Today",
+});
+
+const sasRows: Row[] = facilities.sas.map((f) => ({
+  name: f.name,
+  district: f.district,
+  class: f.class,
+  total: f.total,
+  recent: f.month,
+  today: f.today,
+}));
+
+const hrlRows: Row[] = facilities.hrl.map((f) => ({
+  name: f.name,
+  district: f.district,
+  class: f.class,
+  total: f.records,
+  recent: f.records30d,
+  today: f.recordsToday,
+}));
+
+const abhasLinkedRows: Row[] = facilities.hrl.map((f) => ({
+  name: f.name,
+  district: f.district,
+  class: f.class,
+  total: f.abhasLinked,
+  recent: f.abhasLinked30d,
+  today: f.abhasLinkedToday,
+}));
+
+const METRIC_ROWS: Record<Metric, Row[]> = {
+  sas: sasRows,
+  hrl: hrlRows,
+  abhasLinked: abhasLinkedRows,
+};
+
+/** Stable slug for chart gradient ids. */
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+const TREND_CARD_LIMIT = 12;
 
 export function TnghFacilitiesExplorer() {
+  const [metric, setMetric] = useState<Metric>("sas");
   const [window, setWindow] = useState<Window>("total");
   const [district, setDistrict] = useState(ALL);
   const [klass, setKlass] = useState(ALL);
+  const [search, setSearch] = useState("");
+  const [trendRange, setTrendRange] = useState<"daily" | "all">("daily");
 
   const districts = useMemo(
     () =>
-      [...new Set(facilities.sas.map((f) => f.district).filter(Boolean))].sort((a, b) =>
-        a.localeCompare(b),
-      ),
+      [
+        ...new Set(
+          [...sasRows, ...hrlRows].map((f) => f.district).filter(Boolean),
+        ),
+      ].sort((a, b) => a.localeCompare(b)),
     [],
   );
   const classes = useMemo(
     () =>
-      [...new Set(facilities.sas.map((f) => f.class))].sort((a, b) => a.localeCompare(b)),
+      [...new Set([...sasRows, ...hrlRows].map((f) => f.class))].sort((a, b) =>
+        a.localeCompare(b),
+      ),
     [],
   );
 
-  const rows = useMemo(
-    () =>
-      facilities.sas
-        .filter(
-          (f) =>
-            (district === ALL || f.district === district) &&
-            (klass === ALL || f.class === klass) &&
-            f[window] > 0,
-        )
-        .sort((a, b) => b[window] - a[window]),
-    [window, district, klass],
-  );
+  const m = METRIC[metric];
+  const windowLabel = WINDOW_LABEL(metric)[window];
+
+  const rows = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return METRIC_ROWS[metric]
+      .filter(
+        (f) =>
+          (district === ALL || f.district === district) &&
+          (klass === ALL || f.class === klass) &&
+          (!q || f.name.toLowerCase().includes(q)) &&
+          f[window] > 0,
+      )
+      .sort((a, b) => b[window] - a[window]);
+  }, [metric, window, district, klass, search]);
 
   const windowTotal = useMemo(() => rows.reduce((s, r) => s + r[window], 0), [rows, window]);
 
@@ -92,31 +176,68 @@ export function TnghFacilitiesExplorer() {
     [rows, window],
   );
 
+  const chartConfig = {
+    value: { label: m.unit, color: m.color },
+  } satisfies ChartConfig;
+
+  // Per-facility linkage trend cards. When any filter narrows the set
+  // (search / district / class), show every match; otherwise cap the list so
+  // the unfiltered page stays light.
+  const filtersActive =
+    search.trim() !== "" || district !== ALL || klass !== ALL;
+  const trendCards = useMemo(() => {
+    const hrlByName = new Map(facilities.hrl.map((f) => [f.name, f]));
+    const eligible = rows.filter((r) => {
+      const t = facilityTrends[r.name];
+      return t && (trendRange === "daily" ? t.daily.length : t.all.length) > 0;
+    });
+    return (filtersActive ? eligible : eligible.slice(0, TREND_CARD_LIMIT)).map((r) => ({
+      row: r,
+      hrl: hrlByName.get(r.name),
+      series: trendRange === "daily" ? facilityTrends[r.name].daily : facilityTrends[r.name].all,
+    }));
+  }, [rows, trendRange, filtersActive]);
+
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6">
       <div>
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-          Government facilities — Scan &amp; Share
+          Government facilities
         </h1>
         <p className="mt-1 max-w-2xl text-sm text-soft-foreground">
-          {fmtIN(summary.sas.facilities)} Tamil Nadu government facilities generating OPD
-          registration tokens, across {summary.districtsCovered} districts. Facility class is
-          derived from the facility name.
+          Scan &amp; Share tokens, health-record linkage and ABHA linkage across{" "}
+          {fmtIN(Math.max(summary.sas.facilities, facilities.hrl.length))} Tamil Nadu government
+          facilities in {summary.districtsCovered} districts. Facility class is derived from the
+          facility name.
         </p>
       </div>
 
       {/* Controls */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+        <Tabs
+          value={metric}
+          onValueChange={(v) => {
+            setMetric(v as Metric);
+            setWindow("total");
+          }}
+        >
+          <TabsList>
+            <TabsTrigger value="sas">Scan &amp; Share</TabsTrigger>
+            <TabsTrigger value="hrl">Records linked</TabsTrigger>
+            <TabsTrigger value="abhasLinked">ABHAs linked</TabsTrigger>
+          </TabsList>
+        </Tabs>
+
         <Tabs value={window} onValueChange={(v) => setWindow(v as Window)}>
           <TabsList>
             <TabsTrigger value="total">All-time</TabsTrigger>
-            <TabsTrigger value="month">This month</TabsTrigger>
+            <TabsTrigger value="recent">{m.recentLabel}</TabsTrigger>
             <TabsTrigger value="today">Today</TabsTrigger>
           </TabsList>
         </Tabs>
 
         <Select value={district} onValueChange={setDistrict}>
-          <SelectTrigger className="w-full lg:w-56" aria-label="Filter by district">
+          <SelectTrigger className="w-full lg:w-52" aria-label="Filter by district">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -130,7 +251,7 @@ export function TnghFacilitiesExplorer() {
         </Select>
 
         <Select value={klass} onValueChange={setKlass}>
-          <SelectTrigger className="w-full lg:w-64" aria-label="Filter by facility class">
+          <SelectTrigger className="w-full lg:w-60" aria-label="Filter by facility class">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -142,12 +263,29 @@ export function TnghFacilitiesExplorer() {
             ))}
           </SelectContent>
         </Select>
+
+        <div className="relative w-full lg:w-64">
+          <Search
+            className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-placeholder-foreground"
+            aria-hidden
+          />
+          <Input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search facilities…"
+            aria-label="Search facilities by name"
+            className="pl-8"
+          />
+        </div>
       </div>
 
       {/* Top facilities chart */}
       <Card>
         <CardHeader>
-          <CardTitle>Top facilities — tokens generated ({WINDOW_LABEL[window].toLowerCase()})</CardTitle>
+          <CardTitle>
+            Top facilities — {m.label.toLowerCase()} ({windowLabel.toLowerCase()})
+          </CardTitle>
           <CardDescription>
             {district === ALL ? "All districts" : district}
             {klass === ALL ? "" : ` · ${klass}`} · top {Math.min(chartRows.length, 15)} of{" "}
@@ -156,7 +294,9 @@ export function TnghFacilitiesExplorer() {
         </CardHeader>
         <CardContent>
           {chartRows.length === 0 ? (
-            <EmptyNote text={`No facility generated Scan & Share tokens ${WINDOW_LABEL[window].toLowerCase() === "all-time" ? "yet" : WINDOW_LABEL[window].toLowerCase()} for this filter.`} />
+            <EmptyNote
+              text={`${m.empty} ${window === "total" ? "yet" : windowLabel.toLowerCase()} for this filter.`}
+            />
           ) : (
             <ChartContainer
               config={chartConfig}
@@ -199,10 +339,11 @@ export function TnghFacilitiesExplorer() {
         <CardHeader>
           <CardTitle>Facilities</CardTitle>
           <CardDescription>
-            {fmtIN(rows.length)} facilit{rows.length === 1 ? "y" : "ies"} with tokens{" "}
-            {WINDOW_LABEL[window].toLowerCase()} ·{" "}
+            {fmtIN(rows.length)} facilit{rows.length === 1 ? "y" : "ies"} with{" "}
+            {m.label.toLowerCase()} {windowLabel.toLowerCase()} ·{" "}
             {district === ALL ? "all districts" : district}
-            {klass === ALL ? "" : ` · ${klass}`} · {fmtCompact(windowTotal)} tokens
+            {klass === ALL ? "" : ` · ${klass}`} · {fmtCompact(windowTotal)}{" "}
+            {m.unit.toLowerCase()}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -213,7 +354,7 @@ export function TnghFacilitiesExplorer() {
                 <TableHead>Facility</TableHead>
                 <TableHead>Class</TableHead>
                 <TableHead>District</TableHead>
-                <TableHead className="text-right">{WINDOW_LABEL[window]}</TableHead>
+                <TableHead className="text-right">{windowLabel}</TableHead>
                 <TableHead className="text-right">Share</TableHead>
               </TableRow>
             </TableHeader>
@@ -240,6 +381,67 @@ export function TnghFacilitiesExplorer() {
           </Table>
         </CardContent>
       </Card>
+
+      {/* Per-facility linkage trends */}
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 className="text-lg font-semibold tracking-tight">
+            Facility trends — record linkage
+          </h2>
+          <p className="mt-0.5 text-sm text-soft-foreground">
+            Health records &amp; ABHAs linked,{" "}
+            {trendRange === "daily" ? "daily over the last 30 days" : "full history"} —{" "}
+            {filtersActive
+              ? `all ${fmtIN(trendCards.length)} matching facilit${trendCards.length === 1 ? "y" : "ies"}`
+              : `top ${Math.min(trendCards.length, TREND_CARD_LIMIT)} facilities`}
+            .
+          </p>
+        </div>
+        <Tabs
+          value={trendRange}
+          onValueChange={(v) => setTrendRange(v as "daily" | "all")}
+        >
+          <TabsList>
+            <TabsTrigger value="daily">Last 30 days</TabsTrigger>
+            <TabsTrigger value="all">Full history</TabsTrigger>
+          </TabsList>
+        </Tabs>
+      </div>
+
+      {trendCards.length === 0 ? (
+        <Card>
+          <CardContent>
+            <EmptyNote text="No facility in the current filter has record-linkage activity to chart." />
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="grid gap-6 lg:grid-cols-2">
+          {trendCards.map(({ row, hrl, series }) => (
+            <Card key={`${trendRange}-${row.name}`}>
+              <CardHeader>
+                <CardTitle className="text-base leading-snug">{row.name}</CardTitle>
+                <CardDescription className="flex flex-wrap gap-1.5 pt-1">
+                  <Badge variant="primary">
+                    {fmtCompact(hrl?.records ?? 0)} records linked
+                  </Badge>
+                  <Badge variant="neutral">
+                    {fmtCompact(hrl?.abhasLinked ?? 0)} ABHAs linked
+                  </Badge>
+                  <Badge variant="neutral">{row.class}</Badge>
+                  {row.district && <Badge variant="neutral">{row.district}</Badge>}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <HrlTrendChart
+                  data={series}
+                  id={`fac-${trendRange}-${slug(row.name)}`}
+                  className="h-48 w-full"
+                />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
