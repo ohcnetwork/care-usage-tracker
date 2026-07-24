@@ -35,6 +35,7 @@ import {
 import { Tabs, TabsList, TabsTrigger } from "@/components/careui/tabs";
 import { Input } from "@/components/careui/input";
 import { HrlTrendChart } from "@/components/abdm/charts/hrl-trend-chart";
+import { AbhaTrendChart } from "@/components/abdm/charts/abha-trend-chart";
 import { facilities, facilityTrends, summary } from "@/lib/tngh/data";
 import { fmtCompact, fmtIN, pct } from "@/lib/format";
 
@@ -180,23 +181,31 @@ export function TnghFacilitiesExplorer() {
     value: { label: m.unit, color: m.color },
   } satisfies ChartConfig;
 
-  // Per-facility linkage trend cards. When any filter narrows the set
+  // Per-facility linkage trend cards (records/ABHAs linked — upstream has no
+  // per-facility Scan & Share time-series). When any filter narrows the set
   // (search / district / class), show every match; otherwise cap the list so
   // the unfiltered page stays light.
   const filtersActive =
     search.trim() !== "" || district !== ALL || klass !== ALL;
   const trendCards = useMemo(() => {
-    const hrlByName = new Map(facilities.hrl.map((f) => [f.name, f]));
+    if (metric === "sas") return [];
+    const hrlByName = new Map(facilities.hrl.map((f) => [f.name.toLowerCase(), f]));
+    const trendsByName = new Map(
+      Object.entries(facilityTrends).map(([k, v]) => [k.toLowerCase(), v]),
+    );
     const eligible = rows.filter((r) => {
-      const t = facilityTrends[r.name];
+      const t = trendsByName.get(r.name.toLowerCase());
       return t && (trendRange === "daily" ? t.daily.length : t.all.length) > 0;
     });
-    return (filtersActive ? eligible : eligible.slice(0, TREND_CARD_LIMIT)).map((r) => ({
-      row: r,
-      hrl: hrlByName.get(r.name),
-      series: trendRange === "daily" ? facilityTrends[r.name].daily : facilityTrends[r.name].all,
-    }));
-  }, [rows, trendRange, filtersActive]);
+    return (filtersActive ? eligible : eligible.slice(0, TREND_CARD_LIMIT)).map((r) => {
+      const t = trendsByName.get(r.name.toLowerCase())!;
+      return {
+        row: r,
+        hrl: hrlByName.get(r.name.toLowerCase()),
+        series: trendRange === "daily" ? t.daily : t.all,
+      };
+    });
+  }, [metric, rows, trendRange, filtersActive]);
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6">
@@ -382,33 +391,42 @@ export function TnghFacilitiesExplorer() {
         </CardContent>
       </Card>
 
-      {/* Per-facility linkage trends */}
+      {/* Per-facility trends — follows the active metric tab */}
       <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-lg font-semibold tracking-tight">
-            Facility trends — record linkage
+            Facility trends — {m.label}
           </h2>
           <p className="mt-0.5 text-sm text-soft-foreground">
-            Health records &amp; ABHAs linked,{" "}
-            {trendRange === "daily" ? "daily over the last 30 days" : "full history"} —{" "}
-            {filtersActive
-              ? `all ${fmtIN(trendCards.length)} matching facilit${trendCards.length === 1 ? "y" : "ies"}`
-              : `top ${Math.min(trendCards.length, TREND_CARD_LIMIT)} facilities`}
-            .
+            {metric === "sas"
+              ? "Per-facility Scan & Share history is not published upstream."
+              : `${m.label}, ${trendRange === "daily" ? "daily over the last 30 days" : "full history"} — ${
+                  filtersActive
+                    ? `all ${fmtIN(trendCards.length)} matching facilit${trendCards.length === 1 ? "y" : "ies"}`
+                    : `top ${Math.min(trendCards.length, TREND_CARD_LIMIT)} facilities`
+                }.`}
           </p>
         </div>
-        <Tabs
-          value={trendRange}
-          onValueChange={(v) => setTrendRange(v as "daily" | "all")}
-        >
-          <TabsList>
-            <TabsTrigger value="daily">Last 30 days</TabsTrigger>
-            <TabsTrigger value="all">Full history</TabsTrigger>
-          </TabsList>
-        </Tabs>
+        {metric !== "sas" && (
+          <Tabs
+            value={trendRange}
+            onValueChange={(v) => setTrendRange(v as "daily" | "all")}
+          >
+            <TabsList>
+              <TabsTrigger value="daily">Last 30 days</TabsTrigger>
+              <TabsTrigger value="all">Full history</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        )}
       </div>
 
-      {trendCards.length === 0 ? (
+      {metric === "sas" ? (
+        <Card>
+          <CardContent>
+            <EmptyNote text="The source dashboard only publishes all-time, this-month and today totals per facility for Scan & Share — no time-series. Switch to Records linked or ABHAs linked for facility trend charts." />
+          </CardContent>
+        </Card>
+      ) : trendCards.length === 0 ? (
         <Card>
           <CardContent>
             <EmptyNote text="No facility in the current filter has record-linkage activity to chart." />
@@ -417,26 +435,39 @@ export function TnghFacilitiesExplorer() {
       ) : (
         <div className="grid gap-6 lg:grid-cols-2">
           {trendCards.map(({ row, hrl, series }) => (
-            <Card key={`${trendRange}-${row.name}`}>
+            <Card key={`${metric}-${trendRange}-${row.name}`}>
               <CardHeader>
                 <CardTitle className="text-base leading-snug">{row.name}</CardTitle>
                 <CardDescription className="flex flex-wrap gap-1.5 pt-1">
                   <Badge variant="primary">
-                    {fmtCompact(hrl?.records ?? 0)} records linked
+                    {metric === "abhasLinked"
+                      ? `${fmtCompact(hrl?.abhasLinked ?? 0)} ABHAs linked`
+                      : `${fmtCompact(hrl?.records ?? 0)} records linked`}
                   </Badge>
                   <Badge variant="neutral">
-                    {fmtCompact(hrl?.abhasLinked ?? 0)} ABHAs linked
+                    {metric === "abhasLinked"
+                      ? `${fmtCompact(hrl?.records ?? 0)} records linked`
+                      : `${fmtCompact(hrl?.abhasLinked ?? 0)} ABHAs linked`}
                   </Badge>
                   <Badge variant="neutral">{row.class}</Badge>
                   {row.district && <Badge variant="neutral">{row.district}</Badge>}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <HrlTrendChart
-                  data={series}
-                  id={`fac-${trendRange}-${slug(row.name)}`}
-                  className="h-48 w-full"
-                />
+                {metric === "abhasLinked" ? (
+                  <AbhaTrendChart
+                    data={series.map((p) => ({ date: p.date, value: p.abhasLinked }))}
+                    id={`fac-abl-${trendRange}-${slug(row.name)}`}
+                    className="h-48 w-full"
+                    label="ABHAs linked"
+                  />
+                ) : (
+                  <HrlTrendChart
+                    data={series}
+                    id={`fac-${trendRange}-${slug(row.name)}`}
+                    className="h-48 w-full"
+                  />
+                )}
               </CardContent>
             </Card>
           ))}
