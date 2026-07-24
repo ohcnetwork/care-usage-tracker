@@ -1,0 +1,86 @@
+{
+  "list": [
+    {
+      "districtName": "Tuticorin",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "KOVILPATTI GOVERNMENT DISTRICT HEADQUARTERS HOSPITAL",
+      "value": "37",
+      "status": "New Road, Kovilpatti, Thoothukudi District, Tamil Nadu - 628501"
+    },
+    {
+      "districtName": "Ramanathapuram",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "P.Kodikulam",
+      "value": "35",
+      "status": "P.Kodikulam to Pottagavayal road, P.Kodikulam, Paramakudi Tk, Ramanathapuram"
+    },
+    {
+      "districtName": "Thiruvallur",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "GOVERMENT HOSPITAL AVADI",
+      "value": "35",
+      "status": "GOVERMENT HOSPITAL,NEW MILTARY ROAD,AVADI-600054"
+    },
+    {
+      "districtName": "Ranipet",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Primary Health Centre Govt Thimiri",
+      "value": "34",
+      "status": "Kalavai road, Thimiri, Arcot Taluk, Ranipet, Tamilnadu"
+    },
+    {
+      "districtName": "Thiruvallur",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Urban Primary Health Center, Poonamallee",
+      "value": "33",
+      "status": "Church road, Poonamallee high road, Poonamallee"
+    },
+    {
+      "districtName": "Ranipet",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Musiri",
+      "value": "27",
+      "status": "toll gate Road opp ,Near bus stop"
+    },
+    {
+      "districtName": "Thiruvallur",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Goverment Taluk Hospital Poonamallee",
+      "value": "24",
+      "status": "Government Taluk Hospital Trunk Road  Poonamalee "
+    },
+    {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "PMNDP",
+      "text": "TAMIL NADU GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL",
+      "value": "21",
+      "status": "OMANDHURAR GOVERNMENT ESTATE "
+    },
+    {
+      "districtName": "Ranipet",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Arakkonam",
+      "value": "20",
+      "status": "Attupakkam Road Street Attupakkam"
+    },
+    {
+      "districtName": "Ranipet",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Kaveripakkam",
+      "value": "20",
+      "status": "Santhai Mettu Street, Kaveripakkam"
+    }
+  ],
+  "ts": "2026-07-24T14:16:49.422+05:49",
+  "status": "true"
+}

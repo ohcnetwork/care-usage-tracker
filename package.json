@@ -6,6 +6,7 @@
     "scrape": "npm run scrape:abdm",
     "build-data": "npm run build-data:abdm",
     "scrape:abdm": "tsx trackers/abdm/scrape.ts",
+    "scrape:tngh": "tsx trackers/tngh/scrape.ts",
     "build-data:abdm": "tsx trackers/abdm/build-data.ts"
   },
   "license": "MIT",

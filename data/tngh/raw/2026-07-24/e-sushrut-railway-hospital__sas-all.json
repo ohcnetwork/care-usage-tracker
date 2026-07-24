@@ -1,0 +1,30 @@
+{
+  "list": [
+    {
+      "date": "",
+      "value2": "",
+      "districtName": "",
+      "hospitalId": "",
+      "stateName": "",
+      "partnerName": "",
+      "origin": "",
+      "text": "30-Aug-2024",
+      "hospitalName": "",
+      "value": "2"
+    },
+    {
+      "date": "",
+      "value2": "",
+      "districtName": "",
+      "hospitalId": "",
+      "stateName": "",
+      "partnerName": "",
+      "origin": "",
+      "text": "03-Jun-2025",
+      "hospitalName": "",
+      "value": "2"
+    }
+  ],
+  "ts": "2026-07-24T14:16:44.889+05:44",
+  "status": "true"
+}

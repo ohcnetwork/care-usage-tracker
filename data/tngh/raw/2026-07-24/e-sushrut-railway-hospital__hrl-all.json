@@ -1,0 +1,682 @@
+{
+  "list2": [],
+  "list": [
+    {
+      "record_count": "5",
+      "name": "31-Jan-2022",
+      "hid_count": "5"
+    },
+    {
+      "record_count": "4",
+      "name": "07-Feb-2022",
+      "hid_count": "4"
+    },
+    {
+      "record_count": "149",
+      "name": "30-May-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "46",
+      "name": "06-Jun-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "3",
+      "name": "13-Jun-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "72",
+      "name": "20-Jun-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "41",
+      "name": "27-Jun-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "112",
+      "name": "04-Jul-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "575",
+      "name": "11-Jul-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "47",
+      "name": "18-Jul-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "68",
+      "name": "15-Aug-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "64",
+      "name": "22-Aug-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "90",
+      "name": "05-Sep-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "254",
+      "name": "10-Oct-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "518",
+      "name": "17-Oct-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "350",
+      "name": "24-Oct-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2",
+      "name": "31-Oct-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "387",
+      "name": "14-Nov-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "666",
+      "name": "21-Nov-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "283",
+      "name": "05-Dec-2022",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "315",
+      "name": "09-Jan-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "286",
+      "name": "23-Jan-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "101",
+      "name": "30-Jan-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "260",
+      "name": "13-Feb-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "667",
+      "name": "20-Feb-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "143",
+      "name": "27-Feb-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "223",
+      "name": "17-Apr-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "706",
+      "name": "24-Apr-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "509",
+      "name": "01-May-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "578",
+      "name": "08-May-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "430",
+      "name": "15-May-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "454",
+      "name": "22-May-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "410",
+      "name": "29-May-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "602",
+      "name": "05-Jun-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "588",
+      "name": "12-Jun-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "645",
+      "name": "19-Jun-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "427",
+      "name": "26-Jun-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1",
+      "name": "28-Aug-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1608",
+      "name": "25-Sep-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2363",
+      "name": "02-Oct-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2458",
+      "name": "09-Oct-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "3238",
+      "name": "16-Oct-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "5022",
+      "name": "23-Oct-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2735",
+      "name": "30-Oct-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2196",
+      "name": "06-Nov-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2144",
+      "name": "13-Nov-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1239",
+      "name": "20-Nov-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1824",
+      "name": "27-Nov-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "948",
+      "name": "04-Dec-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2613",
+      "name": "11-Dec-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2196",
+      "name": "18-Dec-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1881",
+      "name": "25-Dec-2023",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "33",
+      "name": "01-Jan-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1749",
+      "name": "22-Jan-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2773",
+      "name": "29-Jan-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2750",
+      "name": "05-Feb-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2757",
+      "name": "12-Feb-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1280",
+      "name": "19-Feb-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2764",
+      "name": "26-Feb-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2629",
+      "name": "04-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2611",
+      "name": "11-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2517",
+      "name": "18-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1936",
+      "name": "25-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2589",
+      "name": "01-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2252",
+      "name": "08-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2307",
+      "name": "15-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2559",
+      "name": "22-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1614",
+      "name": "29-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "892",
+      "name": "06-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1750",
+      "name": "13-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2395",
+      "name": "20-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2611",
+      "name": "27-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2716",
+      "name": "03-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2482",
+      "name": "10-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2694",
+      "name": "17-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2552",
+      "name": "24-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1474",
+      "name": "01-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2243",
+      "name": "08-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1288",
+      "name": "15-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1288",
+      "name": "22-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "325",
+      "name": "12-Aug-2024",
+      "hid_count": "325"
+    },
+    {
+      "record_count": "640",
+      "name": "19-Aug-2024",
+      "hid_count": "640"
+    },
+    {
+      "record_count": "962",
+      "name": "26-Aug-2024",
+      "hid_count": "962"
+    },
+    {
+      "record_count": "617",
+      "name": "02-Sep-2024",
+      "hid_count": "617"
+    },
+    {
+      "record_count": "660",
+      "name": "09-Sep-2024",
+      "hid_count": "660"
+    },
+    {
+      "record_count": "632",
+      "name": "16-Sep-2024",
+      "hid_count": "632"
+    },
+    {
+      "record_count": "8",
+      "name": "23-Sep-2024",
+      "hid_count": "8"
+    },
+    {
+      "record_count": "301",
+      "name": "07-Oct-2024",
+      "hid_count": "301"
+    },
+    {
+      "record_count": "297",
+      "name": "14-Oct-2024",
+      "hid_count": "297"
+    },
+    {
+      "record_count": "1410",
+      "name": "26-May-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "33",
+      "name": "02-Jun-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "600",
+      "name": "09-Jun-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "1192",
+      "name": "07-Jul-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "3078",
+      "name": "14-Jul-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "3426",
+      "name": "21-Jul-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "3282",
+      "name": "28-Jul-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "2545",
+      "name": "04-Aug-2025",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "4092",
+      "name": "06-Oct-2025",
+      "hid_count": "3410"
+    },
+    {
+      "record_count": "4554",
+      "name": "13-Oct-2025",
+      "hid_count": "3862"
+    },
+    {
+      "record_count": "2912",
+      "name": "20-Oct-2025",
+      "hid_count": "2447"
+    },
+    {
+      "record_count": "3919",
+      "name": "27-Oct-2025",
+      "hid_count": "3300"
+    },
+    {
+      "record_count": "767",
+      "name": "03-Nov-2025",
+      "hid_count": "621"
+    },
+    {
+      "record_count": "4449",
+      "name": "10-Nov-2025",
+      "hid_count": "3731"
+    },
+    {
+      "record_count": "4169",
+      "name": "17-Nov-2025",
+      "hid_count": "3546"
+    },
+    {
+      "record_count": "4098",
+      "name": "24-Nov-2025",
+      "hid_count": "3501"
+    },
+    {
+      "record_count": "3620",
+      "name": "01-Dec-2025",
+      "hid_count": "3075"
+    },
+    {
+      "record_count": "4325",
+      "name": "08-Dec-2025",
+      "hid_count": "3658"
+    },
+    {
+      "record_count": "4135",
+      "name": "15-Dec-2025",
+      "hid_count": "3496"
+    },
+    {
+      "record_count": "3204",
+      "name": "22-Dec-2025",
+      "hid_count": "2698"
+    },
+    {
+      "record_count": "3057",
+      "name": "29-Dec-2025",
+      "hid_count": "2577"
+    },
+    {
+      "record_count": "4308",
+      "name": "05-Jan-2026",
+      "hid_count": "3666"
+    },
+    {
+      "record_count": "2762",
+      "name": "12-Jan-2026",
+      "hid_count": "2300"
+    },
+    {
+      "record_count": "4294",
+      "name": "19-Jan-2026",
+      "hid_count": "3629"
+    },
+    {
+      "record_count": "3130",
+      "name": "26-Jan-2026",
+      "hid_count": "2647"
+    },
+    {
+      "record_count": "3382",
+      "name": "02-Feb-2026",
+      "hid_count": "2874"
+    },
+    {
+      "record_count": "4294",
+      "name": "09-Feb-2026",
+      "hid_count": "3638"
+    },
+    {
+      "record_count": "4062",
+      "name": "16-Feb-2026",
+      "hid_count": "3388"
+    },
+    {
+      "record_count": "4138",
+      "name": "23-Feb-2026",
+      "hid_count": "3482"
+    },
+    {
+      "record_count": "3486",
+      "name": "02-Mar-2026",
+      "hid_count": "2871"
+    },
+    {
+      "record_count": "4007",
+      "name": "09-Mar-2026",
+      "hid_count": "3388"
+    },
+    {
+      "record_count": "3277",
+      "name": "16-Mar-2026",
+      "hid_count": "2683"
+    },
+    {
+      "record_count": "3845",
+      "name": "23-Mar-2026",
+      "hid_count": "3186"
+    },
+    {
+      "record_count": "23",
+      "name": "30-Mar-2026",
+      "hid_count": "21"
+    },
+    {
+      "record_count": "3687",
+      "name": "04-May-2026",
+      "hid_count": "3124"
+    },
+    {
+      "record_count": "16204",
+      "name": "11-May-2026",
+      "hid_count": "13510"
+    },
+    {
+      "record_count": "284634",
+      "name": "18-May-2026",
+      "hid_count": "240484"
+    },
+    {
+      "record_count": "16111",
+      "name": "25-May-2026",
+      "hid_count": "14258"
+    },
+    {
+      "record_count": "906",
+      "name": "01-Jun-2026",
+      "hid_count": "766"
+    },
+    {
+      "record_count": "30086",
+      "name": "08-Jun-2026",
+      "hid_count": "24840"
+    },
+    {
+      "record_count": "8582",
+      "name": "15-Jun-2026",
+      "hid_count": "7068"
+    },
+    {
+      "record_count": "13668",
+      "name": "22-Jun-2026",
+      "hid_count": "11488"
+    },
+    {
+      "record_count": "10747",
+      "name": "29-Jun-2026",
+      "hid_count": "9099"
+    },
+    {
+      "record_count": "9186",
+      "name": "06-Jul-2026",
+      "hid_count": "8978"
+    },
+    {
+      "record_count": "8487",
+      "name": "13-Jul-2026",
+      "hid_count": "8487"
+    },
+    {
+      "record_count": "5537",
+      "name": "20-Jul-2026",
+      "hid_count": "5537"
+    }
+  ],
+  "ts": "2026-07-24T14:16:44.290+05:44",
+  "status": "true"
+}

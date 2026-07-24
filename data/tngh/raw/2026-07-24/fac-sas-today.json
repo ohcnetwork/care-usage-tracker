@@ -1,0 +1,86 @@
+{
+  "list": [
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL, TIRUNELVELI",
+      "value": "46"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "COMPOSITE HOSPITAL CRPF, THIRUVALLUR",
+      "value": "36"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Ranipet, Ranipet",
+      "value": "22"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI, KALLAKURICHI",
+      "value": "9"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Rajiv Gandhi Government General Hospital, CHENNAI",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Kilpauk Medical College And Hospital, CHENNAI",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "SUDAR HOSPITAL AND RESEARCH INSTITUTE, THANJAVUR",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Medical College Ramanathapuram, RAMANATHAPURAM",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Ammoor, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Guruvarajapet, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HEADQUARTERS HOSPITAL HOSUR, KRISHNAGIRI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "District Head Quarters Hospital Vallioor, TIRUNELVELI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Pudupadi, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Arakkonam, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "ARAKKONAM GH, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kalavai GH, Ranipet",
+      "value": "1"
+    }
+  ],
+  "ts": "2026-07-24T14:16:48.547+05:48",
+  "status": "true"
+}
