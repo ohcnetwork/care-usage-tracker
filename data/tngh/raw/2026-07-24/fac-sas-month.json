@@ -3,7 +3,7 @@
     {
       "stateName": "TAMIL NADU",
       "hospitalName": "Rajiv Gandhi Government General Hospital, CHENNAI",
-      "value": "1315"
+      "value": "1316"
     },
     {
       "stateName": "TAMIL NADU",
@@ -506,6 +506,6 @@
       "value": "1"
     }
   ],
-  "ts": "2026-07-24T14:16:48.255+05:48",
+  "ts": "2026-07-24T14:40:51.481+05:51",
   "status": "true"
 }

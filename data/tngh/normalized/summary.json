@@ -1,33 +1,33 @@
 {
  "abha": {
-  "total": 1842196,
-  "today": 11152,
-  "last30d": 434436,
-  "last7d": 101729,
+  "total": 1846397,
+  "today": 15353,
+  "last30d": 438637,
+  "last7d": 105930,
   "prev7d": 100307,
-  "weekGrowthPct": 1.4,
-  "perDay7d": 14532.7,
-  "perDay30d": 14481.2
+  "weekGrowthPct": 5.6,
+  "perDay7d": 15132.9,
+  "perDay30d": 14621.2
  },
  "hrl": {
-  "total": 3965146,
-  "today": 981,
-  "last30d": 685580,
-  "last7d": 148790,
+  "total": 3965175,
+  "today": 1010,
+  "last30d": 685609,
+  "last7d": 148819,
   "prev7d": 171363,
   "weekGrowthPct": -13.2,
-  "perDay7d": 21255.7,
-  "perDay30d": 22852.7
+  "perDay7d": 21259.9,
+  "perDay30d": 22853.6
  },
  "abhaLinked": {
-  "total": 3709660,
-  "today": 980,
-  "last30d": 676382,
-  "last7d": 147516,
+  "total": 3709689,
+  "today": 1009,
+  "last30d": 676411,
+  "last7d": 147545,
   "prev7d": 169642,
   "weekGrowthPct": -13,
-  "perDay7d": 21073.7,
-  "perDay30d": 22546.1
+  "perDay7d": 21077.9,
+  "perDay30d": 22547
  },
  "sas": {
   "total": 56229,

@@ -49,20 +49,20 @@
       "status": "toll gate Road opp ,Near bus stop"
     },
     {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "PMNDP",
+      "text": "TAMIL NADU GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL",
+      "value": "24",
+      "status": "OMANDHURAR GOVERNMENT ESTATE "
+    },
+    {
       "districtName": "Thiruvallur",
       "stateName": "Tamil Nadu",
       "partnerName": "C-DAC e-Sushrut",
       "text": "Goverment Taluk Hospital Poonamallee",
       "value": "24",
       "status": "Government Taluk Hospital Trunk Road  Poonamalee "
-    },
-    {
-      "districtName": "Chennai",
-      "stateName": "Tamil Nadu",
-      "partnerName": "PMNDP",
-      "text": "TAMIL NADU GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL",
-      "value": "21",
-      "status": "OMANDHURAR GOVERNMENT ESTATE "
     },
     {
       "districtName": "Ranipet",
@@ -81,6 +81,6 @@
       "status": "Santhai Mettu Street, Kaveripakkam"
     }
   ],
-  "ts": "2026-07-24T14:16:49.422+05:49",
+  "ts": "2026-07-24T14:40:52.910+05:52",
   "status": "true"
 }
