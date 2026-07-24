@@ -1,0 +1,46 @@
+[
+ {
+  "name": "C-DAC e-Sushrut",
+  "abhaTotal": 1824039,
+  "abhaLast30d": 438504,
+  "hrlTotal": 3281608,
+  "hrlLast30d": 639221,
+  "abhaLinkedTotal": 3219540,
+  "sasTotal": 56181,
+  "sasLast30d": 3292,
+  "sasFacilities": 102
+ },
+ {
+  "name": "PMNDP",
+  "abhaTotal": 7232,
+  "abhaLast30d": 61,
+  "hrlTotal": 60362,
+  "hrlLast30d": 7526,
+  "abhaLinkedTotal": 60362,
+  "sasTotal": 42,
+  "sasLast30d": 3,
+  "sasFacilities": 17
+ },
+ {
+  "name": "E-Sushrut Railway Hospital",
+  "abhaTotal": 15122,
+  "abhaLast30d": 69,
+  "hrlTotal": 623203,
+  "hrlLast30d": 38860,
+  "abhaLinkedTotal": 429785,
+  "sasTotal": 4,
+  "sasLast30d": 0,
+  "sasFacilities": 1
+ },
+ {
+  "name": "eSushrut@Clinic",
+  "abhaTotal": 4,
+  "abhaLast30d": 3,
+  "hrlTotal": 2,
+  "hrlLast30d": 2,
+  "abhaLinkedTotal": 2,
+  "sasTotal": 2,
+  "sasLast30d": 2,
+  "sasFacilities": 1
+ }
+]

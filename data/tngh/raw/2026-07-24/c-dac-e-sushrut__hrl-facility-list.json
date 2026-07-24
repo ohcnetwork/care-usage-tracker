@@ -1,0 +1,911 @@
+{
+  "list2": [],
+  "list": [
+    {
+      "hospId": "IN3310002545",
+      "hospitalName": "Alangayam Tirupathur"
+    },
+    {
+      "hospId": "IN3310005507",
+      "hospitalName": "Alapatti"
+    },
+    {
+      "hospId": "IN3310027681",
+      "hospitalName": "Amballi APHC"
+    },
+    {
+      "hospId": "IN3310002527",
+      "hospitalName": "Ambur Tirupathur"
+    },
+    {
+      "hospId": "IN3310006520",
+      "hospitalName": "Ammoor"
+    },
+    {
+      "hospId": "IN3310006368",
+      "hospitalName": "Anchetti"
+    },
+    {
+      "hospId": "IN3310002491",
+      "hospitalName": "Andiyapanur Tirupathur"
+    },
+    {
+      "hospId": "IN3310006032",
+      "hospitalName": "Arakkonam"
+    },
+    {
+      "hospId": "IN3310002261",
+      "hospitalName": "ARAKKONAM GH"
+    },
+    {
+      "hospId": "IN3310002523",
+      "hospitalName": "Arangaldurgam Tirupathur"
+    },
+    {
+      "hospId": "IN3310006896",
+      "hospitalName": "Arikalpadi"
+    },
+    {
+      "hospId": "IN3310002535",
+      "hospitalName": "Athanavur Tirupathur"
+    },
+    {
+      "hospId": "IN3310006898",
+      "hospitalName": "Attupakkam"
+    },
+    {
+      "hospId": "IN3310002559",
+      "hospitalName": "Authurkuppam Tirupathur"
+    },
+    {
+      "hospId": "IN3310006369",
+      "hospitalName": "Balathoddanapalli"
+    },
+    {
+      "hospId": "IN3310005655",
+      "hospitalName": "Banavaram"
+    },
+    {
+      "hospId": "IN3310002207",
+      "hospitalName": "BARGUR GOVERNMENT HOSPITAL"
+    },
+    {
+      "hospId": "IN3310006530",
+      "hospitalName": "Barur"
+    },
+    {
+      "hospId": "IN3310006401",
+      "hospitalName": "Bellampalli"
+    },
+    {
+      "hospId": "IN3310006402",
+      "hospitalName": "Bellarampalli"
+    },
+    {
+      "hospId": "IN3310002539",
+      "hospitalName": "Chinnamottur Tirupathur"
+    },
+    {
+      "hospId": "IN3310002263",
+      "hospitalName": "CHINNASALEM SUB DISTRICT HOSPITAL"
+    },
+    {
+      "hospId": "IN3310006261",
+      "hospitalName": "Chinthagampalli"
+    },
+    {
+      "hospId": "IN3310006368",
+      "hospitalName": "Community Health Centre Anchetti"
+    },
+    {
+      "hospId": "IN3310002406",
+      "hospitalName": "District Head Quarters Hospital Vallioor"
+    },
+    {
+      "hospId": "IN3310002507",
+      "hospitalName": "Gajalnaickenpatti Tirupathur"
+    },
+    {
+      "hospId": "IN3310001890",
+      "hospitalName": "GHPALLIPALAYAM"
+    },
+    {
+      "hospId": "IN3310002339",
+      "hospitalName": "GH SANKARAPURAM"
+    },
+    {
+      "hospId": "IN3310001792",
+      "hospitalName": "GOVERMENT HOSPITAL AVADI"
+    },
+    {
+      "hospId": "IN3310002564",
+      "hospitalName": "Goverment Hospital Sendurai"
+    },
+    {
+      "hospId": "IN3310002029",
+      "hospitalName": "Goverment Taluk Hospital Poonamallee"
+    },
+    {
+      "hospId": "IN3310002213",
+      "hospitalName": "Government District Headquarters Hospital"
+    },
+    {
+      "hospId": "IN3310002309",
+      "hospitalName": "GOVERNMENT DISTRICT HEAD QUARTERS HOSPITAL TENKASI"
+    },
+    {
+      "hospId": "IN3310002415",
+      "hospitalName": "GOVERNMENT HEADQUARTERS HOSPITAL HOSUR"
+    },
+    {
+      "hospId": "IN3310002338",
+      "hospitalName": "GOVERNMENT HEADQUARTERS HOSPITAL PERAMBALUR"
+    },
+    {
+      "hospId": "IN3310002186",
+      "hospitalName": "GOVERNMENT HEAD QUARTERS HOSPITAL THRIUKOVILUR"
+    },
+    {
+      "hospId": "IN3310002259",
+      "hospitalName": "GOVERNMENT HEAD QUARTERS HOSPITAL WALAJAPET"
+    },
+    {
+      "hospId": "IN3310002323",
+      "hospitalName": "GOVERNMENT HOSPITAL ALANGULAM"
+    },
+    {
+      "hospId": "IN3310002422",
+      "hospitalName": "GOVERNMENT HOSPITAL AMBASAMUDRAM"
+    },
+    {
+      "hospId": "IN3310002185",
+      "hospitalName": "Government Hospital Arcot"
+    },
+    {
+      "hospId": "IN3310002328",
+      "hospitalName": "GOVERNMENT HOSPITAL AYIKUDI"
+    },
+    {
+      "hospId": "IN3310002302",
+      "hospitalName": "GOVERNMENT HOSPITAL KADAYANALLUR"
+    },
+    {
+      "hospId": "IN3310000816",
+      "hospitalName": "GOVERNMENTHOSPITAL KALLAMANAYAKANPATI"
+    },
+    {
+      "hospId": "IN3310002386",
+      "hospitalName": "GOVERNMENT HOSPITAL KARAI "
+    },
+    {
+      "hospId": "IN3310002337",
+      "hospitalName": "GOVERNMENT HOSPITAL KRISHNAPURAM"
+    },
+    {
+      "hospId": "IN3310002436",
+      "hospitalName": "Government Hospital Kudankulam"
+    },
+    {
+      "hospId": "IN3310002460",
+      "hospitalName": "Government Hospital Melapalayam"
+    },
+    {
+      "hospId": "IN3310002250",
+      "hospitalName": "GOVERNMENT HOSPITAL NATRAMPALLI"
+    },
+    {
+      "hospId": "IN3310001841",
+      "hospitalName": "GOVERNMENT HOSPITAL PARAMATHYVELUR"
+    },
+    {
+      "hospId": "IN3310002212",
+      "hospitalName": "GOVERNMENT HOSPITAL POCHAMPALLI"
+    },
+    {
+      "hospId": "IN3310002315",
+      "hospitalName": "GOVERNMENT HOSPITAL PULIANGUDI"
+    },
+    {
+      "hospId": "IN3310002439",
+      "hospitalName": "Government Hospital Radhapuram"
+    },
+    {
+      "hospId": "IN3310002379",
+      "hospitalName": "Government Hospital Rajapalayam"
+    },
+    {
+      "hospId": "IN3310002322",
+      "hospitalName": "GOVERNMENT HOSPITAL SANKARANKOIL"
+    },
+    {
+      "hospId": "IN3310002074",
+      "hospitalName": "Government Hospital Sattur"
+    },
+    {
+      "hospId": "IN3310002317",
+      "hospitalName": "GOVERNMENT HOSPITAL SHENCOTTAI"
+    },
+    {
+      "hospId": "IN3310030151",
+      "hospitalName": "GOVERNMENT HOSPITAL SHOLINGHUR RANIPET TN"
+    },
+    {
+      "hospId": "IN3310002312",
+      "hospitalName": "GOVERNMENT HOSPITAL SIVAGIRI"
+    },
+    {
+      "hospId": "IN3310002352",
+      "hospitalName": "GOVERNMENTHOSPITAL SRIVILLIPUTHUR"
+    },
+    {
+      "hospId": "IN3310002375",
+      "hospitalName": "Government Hospital Thiruthangal"
+    },
+    {
+      "hospId": "IN3310002643",
+      "hospitalName": "Government Hospital Udyarpalyam"
+    },
+    {
+      "hospId": "IN3310002237",
+      "hospitalName": "GOVERNMENT HOSPITAL ULUNDURPET"
+    },
+    {
+      "hospId": "IN3310002233",
+      "hospitalName": "GOVERNMENT HOSPITAL VANIYAMBADI "
+    },
+    {
+      "hospId": "IN3310002326",
+      "hospitalName": "GOVERNMENT HOSPITAL VEERAKERALAM PUDUR"
+    },
+    {
+      "hospId": "IN3310002619",
+      "hospitalName": "Government Hospital Veppur"
+    },
+    {
+      "hospId": "IN3310000178",
+      "hospitalName": "Government Kilpauk Medical College And Hospital"
+    },
+    {
+      "hospId": "IN3310000196",
+      "hospitalName": "Government Medical College "
+    },
+    {
+      "hospId": "IN3310000254",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI"
+    },
+    {
+      "hospId": "IN3310000248",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE KRISHNAGIRI"
+    },
+    {
+      "hospId": "IN3310000239",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE NAMAKKAL"
+    },
+    {
+      "hospId": "IN3310004438",
+      "hospitalName": "Government Medical College Ramanathapuram"
+    },
+    {
+      "hospId": "IN3310000230",
+      "hospitalName": "Government medical college Virudhunagar"
+    },
+    {
+      "hospId": "IN3310004506",
+      "hospitalName": "Government Peripheral Hospital Periyar Nagar"
+    },
+    {
+      "hospId": "IN3310002078",
+      "hospitalName": "Government Primary Health Center Sorancherry"
+    },
+    {
+      "hospId": "IN3310002286",
+      "hospitalName": "GOVERNMENT SUBDISTRICT HOSPITAL VENNANDUR"
+    },
+    {
+      "hospId": "IN3310002288",
+      "hospitalName": "Government taluk Hospital Sendamangalam"
+    },
+    {
+      "hospId": "IN3310002069",
+      "hospitalName": "Government taluk hospital Valavanthinadu "
+    },
+    {
+      "hospId": "IN3310002422",
+      "hospitalName": "govt hospital"
+    },
+    {
+      "hospId": "IN3310002436",
+      "hospitalName": "govt hospital"
+    },
+    {
+      "hospId": "IN3310002439",
+      "hospitalName": "govt hospital"
+    },
+    {
+      "hospId": "IN3310002571",
+      "hospitalName": "govt hospital"
+    },
+    {
+      "hospId": "IN3310002223",
+      "hospitalName": "GOVT HOSPITAL DENKANIKOTTAI"
+    },
+    {
+      "hospId": "IN3310002101",
+      "hospitalName": "GOVT HOSPITAL KARIAPATTI VIRUDHUNAGAR TN"
+    },
+    {
+      "hospId": "IN3310001796",
+      "hospitalName": "Govt Hospital Kumarapalayam Namakkal TN."
+    },
+    {
+      "hospId": "IN3310002086",
+      "hospitalName": "Govt Hospital Sivakasi"
+    },
+    {
+      "hospId": "IN3310000209",
+      "hospitalName": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL"
+    },
+    {
+      "hospId": "IN3310030717",
+      "hospitalName": "Govt Primary Health Centre Karadikuppam"
+    },
+    {
+      "hospId": "IN3310030923",
+      "hospitalName": "Govt Primary Health Centre Kodaikkal"
+    },
+    {
+      "hospId": "IN3310030986",
+      "hospitalName": "Govt Primary Health Centre Melvisharam"
+    },
+    {
+      "hospId": "IN3310030987",
+      "hospitalName": "Govt Primary Health Centre Pudupadi"
+    },
+    {
+      "hospId": "IN3310031021",
+      "hospitalName": "Govt Primary Health Centre Valayathur"
+    },
+    {
+      "hospId": "IN3310030895",
+      "hospitalName": "Govt Primary Health Centre Vengupattu"
+    },
+    {
+      "hospId": "IN3310030938",
+      "hospitalName": "Govt Primary Health Centre Vilapakkam"
+    },
+    {
+      "hospId": "IN3310001728",
+      "hospitalName": "GOVT THIRUVANNAMALAI MEDICAL COLLEGE HOSPITAL"
+    },
+    {
+      "hospId": "IN3310030930",
+      "hospitalName": "Govt Urban Primary Health Centre Arcot"
+    },
+    {
+      "hospId": "IN3310006370",
+      "hospitalName": "Gumalapuram"
+    },
+    {
+      "hospId": "IN3310006728",
+      "hospitalName": "Guruparahalli"
+    },
+    {
+      "hospId": "IN3310006028",
+      "hospitalName": "Guruvarajapet"
+    },
+    {
+      "hospId": "IN3310027361",
+      "hospitalName": "Hanumantheertham APHC"
+    },
+    {
+      "hospId": "IN3310002603",
+      "hospitalName": "Jayankondam Government Hospital"
+    },
+    {
+      "hospId": "IN3310006262",
+      "hospitalName": "Jegadevi"
+    },
+    {
+      "hospId": "IN3310002533",
+      "hospitalName": "Jolarpet Tirupathur"
+    },
+    {
+      "hospId": "IN3310002577",
+      "hospitalName": "kadaladi Government Hospital"
+    },
+    {
+      "hospId": "IN3310002495",
+      "hospitalName": "kakanampalayam Tirupathur"
+    },
+    {
+      "hospId": "IN3310006371",
+      "hospitalName": "Kakkadasam"
+    },
+    {
+      "hospId": "IN3310002513",
+      "hospitalName": "Kakkankarai Tirupathur"
+    },
+    {
+      "hospId": "IN3310029531",
+      "hospitalName": "Kalavai GH"
+    },
+    {
+      "hospId": "IN3310027362",
+      "hospitalName": "Kallavi Upgraded PHC"
+    },
+    {
+      "hospId": "IN3310002580",
+      "hospitalName": "Kamuthi Government Hospital"
+    },
+    {
+      "hospId": "IN3310000215",
+      "hospitalName": "Kanyakumari Government Medical College Hospital"
+    },
+    {
+      "hospId": "IN3310006263",
+      "hospitalName": "Kappalavadi"
+    },
+    {
+      "hospId": "IN3310027363",
+      "hospitalName": "Karapattu APHC"
+    },
+    {
+      "hospId": "IN3310002529",
+      "hospitalName": "Kaspa Tirupathur"
+    },
+    {
+      "hospId": "IN3310002493",
+      "hospitalName": "Kathirampatti Tirupathur"
+    },
+    {
+      "hospId": "IN3310002547",
+      "hospitalName": "Kavalurchatram Tirupathur"
+    },
+    {
+      "hospId": "IN3310005656",
+      "hospitalName": "Kaveripakkam"
+    },
+    {
+      "hospId": "IN3310006531",
+      "hospitalName": "Kaveripattinam"
+    },
+    {
+      "hospId": "IN3310002432",
+      "hospitalName": "Kilakarai Government Hospital"
+    },
+    {
+      "hospId": "IN3310002511",
+      "hospitalName": "Koratti Tirupathur"
+    },
+    {
+      "hospId": "IN3310002251",
+      "hospitalName": "KOVILPATTI"
+    },
+    {
+      "hospId": "IN3310002251",
+      "hospitalName": "KOVILPATTI GOVERNMENT DISTRICT HEADQUARTERS HOSPITAL"
+    },
+    {
+      "hospId": "IN3310006403",
+      "hospitalName": "Krishnagiri"
+    },
+    {
+      "hospId": "IN3310002505",
+      "hospitalName": "Kunichi Tirupathur"
+    },
+    {
+      "hospId": "IN3310006519",
+      "hospitalName": "Lalapet"
+    },
+    {
+      "hospId": "IN3310006372",
+      "hospitalName": "Madhakandapalli"
+    },
+    {
+      "hospId": "IN3310002515",
+      "hospitalName": "Madhanur Tirupathur"
+    },
+    {
+      "hospId": "IN3310027364",
+      "hospitalName": "Maganurpatti APHC"
+    },
+    {
+      "hospId": "IN3310002483",
+      "hospitalName": "Mandapam camp Government Hospital"
+    },
+    {
+      "hospId": "IN3310002416",
+      "hospitalName": "MATHUR GOVERNMENT HOSPITAL"
+    },
+    {
+      "hospId": "IN3310006404",
+      "hospitalName": "M.C.Palli"
+    },
+    {
+      "hospId": "IN3310006897",
+      "hospitalName": "Melkalathur"
+    },
+    {
+      "hospId": "IN3310002521",
+      "hospitalName": "Melsanankuppam Tirupathur"
+    },
+    {
+      "hospId": "IN3310006029",
+      "hospitalName": "Minnal"
+    },
+    {
+      "hospId": "IN3310002517",
+      "hospitalName": "Minnur Tirupathur"
+    },
+    {
+      "hospId": "IN3310001770",
+      "hospitalName": "MITTINAMALLE uphc"
+    },
+    {
+      "hospId": "IN3310006027",
+      "hospitalName": "Mudhur"
+    },
+    {
+      "hospId": "IN3310002428",
+      "hospitalName": "Mudukulathur Government Hospital"
+    },
+    {
+      "hospId": "IN3310005583",
+      "hospitalName": "Musiri"
+    },
+    {
+      "hospId": "IN3310006729",
+      "hospitalName": "Nachikuppam"
+    },
+    {
+      "hospId": "IN3310006532",
+      "hospitalName": "Nagarasampatti"
+    },
+    {
+      "hospId": "IN3310006899",
+      "hospitalName": "Nagavedu"
+    },
+    {
+      "hospId": "IN3310002519",
+      "hospitalName": "Nariyampattu Tirupathur"
+    },
+    {
+      "hospId": "IN3310006533",
+      "hospitalName": "Nedungal"
+    },
+    {
+      "hospId": "IN3310002068",
+      "hospitalName": "Nemam Government primary health centre"
+    },
+    {
+      "hospId": "IN3310002489",
+      "hospitalName": "Newtown Tirupathur"
+    },
+    {
+      "hospId": "IN3310002549",
+      "hospitalName": "Nimmiyampattu Tirupathur"
+    },
+    {
+      "hospId": "IN3310005584",
+      "hospitalName": "Nowlack"
+    },
+    {
+      "hospId": "IN3310006264",
+      "hospitalName": "Orappam"
+    },
+    {
+      "hospId": "IN3310002557",
+      "hospitalName": "Pachur Tirupathur"
+    },
+    {
+      "hospId": "IN3310006534",
+      "hospitalName": "Panagamutlu"
+    },
+    {
+      "hospId": "IN3310002469",
+      "hospitalName": "Panaikulam Government Hospital"
+    },
+    {
+      "hospId": "IN3310005917",
+      "hospitalName": "Panapakkam"
+    },
+    {
+      "hospId": "IN3310006535",
+      "hospitalName": "Pannandhur"
+    },
+    {
+      "hospId": "IN3310002438",
+      "hospitalName": "Paramakudi GHQH"
+    },
+    {
+      "hospId": "IN3310006031",
+      "hospitalName": "Paranchi"
+    },
+    {
+      "hospId": "IN3310002025",
+      "hospitalName": "Parivakkam Primary Health Centre"
+    },
+    {
+      "hospId": "IN3310001772",
+      "hospitalName": "Paruthipattu UPHC"
+    },
+    {
+      "hospId": "IN3310006536",
+      "hospitalName": "Pendarahalli"
+    },
+    {
+      "hospId": "IN3310002509",
+      "hospitalName": "Perampattu Tirupathur"
+    },
+    {
+      "hospId": "IN3310006405",
+      "hospitalName": "Periyamuthur"
+    },
+    {
+      "hospId": "IN3310002006",
+      "hospitalName": "periyar nagar uphc"
+    },
+    {
+      "hospId": "IN3310006265",
+      "hospitalName": "Perugopanapalli"
+    },
+    {
+      "hospId": "IN3310006030",
+      "hospitalName": "Perumuchi"
+    },
+    {
+      "hospId": "IN3310002497",
+      "hospitalName": "Pichanur Tirupathur"
+    },
+    {
+      "hospId": "IN3310005729",
+      "hospitalName": "P.Kodikulam"
+    },
+    {
+      "hospId": "IN3310029765",
+      "hospitalName": "Primary Health Centre Anna Nagar UPHC"
+    },
+    {
+      "hospId": "IN3310006369",
+      "hospitalName": "Primary Health Centre Balathoddanapalli"
+    },
+    {
+      "hospId": "IN3310006530",
+      "hospitalName": "Primary Health Centre Barur"
+    },
+    {
+      "hospId": "IN3310006261",
+      "hospitalName": "Primary Health Centre Chinthagampalli"
+    },
+    {
+      "hospId": "IN3310031111",
+      "hospitalName": "Primary Health Centre Govt Arumbakkam"
+    },
+    {
+      "hospId": "IN3310031110",
+      "hospitalName": "Primary Health Centre Govt Kavanur"
+    },
+    {
+      "hospId": "IN3310034595",
+      "hospitalName": "Primary Health Centre GOVT LADAVARAM"
+    },
+    {
+      "hospId": "IN3310031109",
+      "hospitalName": "Primary Health Centre Govt Mambakkam"
+    },
+    {
+      "hospId": "IN3310031131",
+      "hospitalName": "Primary Health Centre Govt Thimiri"
+    },
+    {
+      "hospId": "IN3310006370",
+      "hospitalName": "Primary Health Centre Gumalapuram"
+    },
+    {
+      "hospId": "IN3310006262",
+      "hospitalName": "Primary Health Centre Jegadevi"
+    },
+    {
+      "hospId": "IN3310006371",
+      "hospitalName": "Primary Health Centre Kakkadasam"
+    },
+    {
+      "hospId": "IN3310006263",
+      "hospitalName": "Primary Health Centre Kappalavadi"
+    },
+    {
+      "hospId": "IN3310006372",
+      "hospitalName": "Primary Health Centre Madhakandapalli"
+    },
+    {
+      "hospId": "IN3310006532",
+      "hospitalName": "Primary Health Centre Nagarasampatti"
+    },
+    {
+      "hospId": "IN3310006264",
+      "hospitalName": "Primary Health Centre Orappam"
+    },
+    {
+      "hospId": "IN3310006535",
+      "hospitalName": "Primary Health Centre Pannandhur"
+    },
+    {
+      "hospId": "IN3310006536",
+      "hospitalName": "Primary Health Centre Pendarahalli"
+    },
+    {
+      "hospId": "IN3310006265",
+      "hospitalName": "Primary Health Centre Perugopanapalli"
+    },
+    {
+      "hospId": "IN3310006266",
+      "hospitalName": "Primary Health Centre Santhur"
+    },
+    {
+      "hospId": "IN3310006552",
+      "hospitalName": "Primary Health Centre Shoolagiri"
+    },
+    {
+      "hospId": "IN3310006373",
+      "hospitalName": "Primary Health Centre Thally"
+    },
+    {
+      "hospId": "IN3310006374",
+      "hospitalName": "Primary Health Centre Urigam"
+    },
+    {
+      "hospId": "IN3310005657",
+      "hospitalName": "Pudupattu"
+    },
+    {
+      "hospId": "IN3310002531",
+      "hospitalName": "Pudupettai Tirupathur"
+    },
+    {
+      "hospId": "IN3310002501",
+      "hospitalName": "Pudurnadu Tirupathur"
+    },
+    {
+      "hospId": "IN3310002499",
+      "hospitalName": "Pungampattunadu Tirupathur"
+    },
+    {
+      "hospId": "IN3310005916",
+      "hospitalName": "Punnai"
+    },
+    {
+      "hospId": "IN3310000217",
+      "hospitalName": "Rajiv Gandhi Government General Hospital"
+    },
+    {
+      "hospId": "IN3310002543",
+      "hospitalName": "Ramanaickanpet Tirupathur"
+    },
+    {
+      "hospId": "IN3310002434",
+      "hospitalName": "Rameshwaram Government Hospital"
+    },
+    {
+      "hospId": "IN3310006518",
+      "hospitalName": "Ranipet"
+    },
+    {
+      "hospId": "IN3310006266",
+      "hospitalName": "Santhur"
+    },
+    {
+      "hospId": "IN3310006552",
+      "hospitalName": "Shoolagiri"
+    },
+    {
+      "hospId": "IN3310027365",
+      "hospitalName": "Singarapettai BPHC"
+    },
+    {
+      "hospId": "IN3310001978",
+      "hospitalName": "Solambedu Urban Primary Health Centre"
+    },
+    {
+      "hospId": "IN3310005585",
+      "hospitalName": "Sumaithangi"
+    },
+    {
+      "hospId": "IN3310007007",
+      "hospitalName": "Thakkolam"
+    },
+    {
+      "hospId": "IN3310006373",
+      "hospitalName": "Thally"
+    },
+    {
+      "hospId": "IN3310002541",
+      "hospitalName": "Thamalerimuthur Tirupathur"
+    },
+    {
+      "hospId": "IN3310005508",
+      "hospitalName": "Thanampatti"
+    },
+    {
+      "hospId": "IN3310001698",
+      "hospitalName": "Thandarai"
+    },
+    {
+      "hospId": "IN3310002076",
+      "hospitalName": "Thirumazhisai Government Primary Health Center"
+    },
+    {
+      "hospId": "IN3310002075",
+      "hospitalName": "Thirumullaivoyal Urban Primary Health Centre"
+    },
+    {
+      "hospId": "IN3310002047",
+      "hospitalName": "Thirunindravur PHC"
+    },
+    {
+      "hospId": "IN3310002424",
+      "hospitalName": "Thiruvadanai"
+    },
+    {
+      "hospId": "IN3310000180",
+      "hospitalName": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL"
+    },
+    {
+      "hospId": "IN3310002503",
+      "hospitalName": "Tirupathur Tirupathur"
+    },
+    {
+      "hospId": "IN3310005913",
+      "hospitalName": "T.Kunnathur"
+    },
+    {
+      "hospId": "IN3310002553",
+      "hospitalName": "Udayendram Tirupathur"
+    },
+    {
+      "hospId": "IN3310001702",
+      "hospitalName": "Urban Primary Health Center, Poonamallee"
+    },
+    {
+      "hospId": "IN3310029837",
+      "hospitalName": "Urban Primary Health Centre"
+    },
+    {
+      "hospId": "IN3310006374",
+      "hospitalName": "Urigam"
+    },
+    {
+      "hospId": "IN3310002411",
+      "hospitalName": "UTHANGARAI GOVERNMENT HOSPITAL"
+    },
+    {
+      "hospId": "IN3310002551",
+      "hospitalName": "Vallipattu Tirupathur"
+    },
+    {
+      "hospId": "IN3310002487",
+      "hospitalName": "Vaniyambadi Tirupathur"
+    },
+    {
+      "hospId": "IN3310002537",
+      "hospitalName": "Velakalnatham Tirupathur"
+    },
+    {
+      "hospId": "IN3310002525",
+      "hospitalName": "Venkatasamuthram Tirupathur"
+    },
+    {
+      "hospId": "IN3310006731",
+      "hospitalName": "Veppanapalli"
+    },
+    {
+      "hospId": "IN3310001990",
+      "hospitalName": "Villinjiampakkam urban primary helath center"
+    },
+    {
+      "hospId": "IN3310000804",
+      "hospitalName": "Watrap GH"
+    }
+  ],
+  "ts": "2026-07-24T14:40:53.192+05:53",
+  "status": "true"
+}

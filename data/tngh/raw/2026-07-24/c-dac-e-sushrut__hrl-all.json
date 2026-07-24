@@ -1,0 +1,622 @@
+{
+  "list2": [],
+  "list": [
+    {
+      "record_count": "8",
+      "name": "18-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "4",
+      "name": "25-Mar-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "10",
+      "name": "01-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "14",
+      "name": "08-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "7",
+      "name": "15-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "7",
+      "name": "22-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "51",
+      "name": "29-Apr-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "4",
+      "name": "06-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "7",
+      "name": "13-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "13",
+      "name": "20-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "4",
+      "name": "27-May-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "17",
+      "name": "03-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "23",
+      "name": "10-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "15",
+      "name": "17-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "20",
+      "name": "24-Jun-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "126",
+      "name": "01-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "202",
+      "name": "08-Jul-2024",
+      "hid_count": "0"
+    },
+    {
+      "record_count": "281",
+      "name": "15-Jul-2024",
+      "hid_count": "215"
+    },
+    {
+      "record_count": "397",
+      "name": "22-Jul-2024",
+      "hid_count": "397"
+    },
+    {
+      "record_count": "450",
+      "name": "29-Jul-2024",
+      "hid_count": "450"
+    },
+    {
+      "record_count": "379",
+      "name": "05-Aug-2024",
+      "hid_count": "379"
+    },
+    {
+      "record_count": "329",
+      "name": "12-Aug-2024",
+      "hid_count": "329"
+    },
+    {
+      "record_count": "401",
+      "name": "19-Aug-2024",
+      "hid_count": "401"
+    },
+    {
+      "record_count": "1045",
+      "name": "26-Aug-2024",
+      "hid_count": "1045"
+    },
+    {
+      "record_count": "2132",
+      "name": "02-Sep-2024",
+      "hid_count": "2132"
+    },
+    {
+      "record_count": "2930",
+      "name": "09-Sep-2024",
+      "hid_count": "2930"
+    },
+    {
+      "record_count": "3166",
+      "name": "16-Sep-2024",
+      "hid_count": "3166"
+    },
+    {
+      "record_count": "3887",
+      "name": "23-Sep-2024",
+      "hid_count": "3887"
+    },
+    {
+      "record_count": "3737",
+      "name": "30-Sep-2024",
+      "hid_count": "3737"
+    },
+    {
+      "record_count": "3857",
+      "name": "07-Oct-2024",
+      "hid_count": "3857"
+    },
+    {
+      "record_count": "4864",
+      "name": "14-Oct-2024",
+      "hid_count": "4864"
+    },
+    {
+      "record_count": "4732",
+      "name": "21-Oct-2024",
+      "hid_count": "4732"
+    },
+    {
+      "record_count": "2979",
+      "name": "28-Oct-2024",
+      "hid_count": "2979"
+    },
+    {
+      "record_count": "4682",
+      "name": "04-Nov-2024",
+      "hid_count": "4682"
+    },
+    {
+      "record_count": "7793",
+      "name": "11-Nov-2024",
+      "hid_count": "7793"
+    },
+    {
+      "record_count": "5120",
+      "name": "18-Nov-2024",
+      "hid_count": "5099"
+    },
+    {
+      "record_count": "4614",
+      "name": "25-Nov-2024",
+      "hid_count": "4478"
+    },
+    {
+      "record_count": "4613",
+      "name": "02-Dec-2024",
+      "hid_count": "4481"
+    },
+    {
+      "record_count": "4581",
+      "name": "09-Dec-2024",
+      "hid_count": "4441"
+    },
+    {
+      "record_count": "5153",
+      "name": "16-Dec-2024",
+      "hid_count": "4964"
+    },
+    {
+      "record_count": "5186",
+      "name": "23-Dec-2024",
+      "hid_count": "5072"
+    },
+    {
+      "record_count": "4618",
+      "name": "30-Dec-2024",
+      "hid_count": "4494"
+    },
+    {
+      "record_count": "5266",
+      "name": "06-Jan-2025",
+      "hid_count": "5120"
+    },
+    {
+      "record_count": "2853",
+      "name": "13-Jan-2025",
+      "hid_count": "2780"
+    },
+    {
+      "record_count": "5741",
+      "name": "20-Jan-2025",
+      "hid_count": "5573"
+    },
+    {
+      "record_count": "5089",
+      "name": "27-Jan-2025",
+      "hid_count": "4971"
+    },
+    {
+      "record_count": "5229",
+      "name": "03-Feb-2025",
+      "hid_count": "5099"
+    },
+    {
+      "record_count": "5782",
+      "name": "10-Feb-2025",
+      "hid_count": "5679"
+    },
+    {
+      "record_count": "6390",
+      "name": "17-Feb-2025",
+      "hid_count": "6269"
+    },
+    {
+      "record_count": "5545",
+      "name": "24-Feb-2025",
+      "hid_count": "5455"
+    },
+    {
+      "record_count": "5538",
+      "name": "03-Mar-2025",
+      "hid_count": "5419"
+    },
+    {
+      "record_count": "6032",
+      "name": "10-Mar-2025",
+      "hid_count": "5937"
+    },
+    {
+      "record_count": "6236",
+      "name": "17-Mar-2025",
+      "hid_count": "6111"
+    },
+    {
+      "record_count": "5562",
+      "name": "24-Mar-2025",
+      "hid_count": "5470"
+    },
+    {
+      "record_count": "10791",
+      "name": "31-Mar-2025",
+      "hid_count": "10631"
+    },
+    {
+      "record_count": "12587",
+      "name": "07-Apr-2025",
+      "hid_count": "12408"
+    },
+    {
+      "record_count": "13216",
+      "name": "14-Apr-2025",
+      "hid_count": "13038"
+    },
+    {
+      "record_count": "14114",
+      "name": "21-Apr-2025",
+      "hid_count": "13923"
+    },
+    {
+      "record_count": "12245",
+      "name": "28-Apr-2025",
+      "hid_count": "12020"
+    },
+    {
+      "record_count": "12532",
+      "name": "05-May-2025",
+      "hid_count": "12105"
+    },
+    {
+      "record_count": "13216",
+      "name": "12-May-2025",
+      "hid_count": "12741"
+    },
+    {
+      "record_count": "16137",
+      "name": "19-May-2025",
+      "hid_count": "15687"
+    },
+    {
+      "record_count": "15293",
+      "name": "26-May-2025",
+      "hid_count": "14730"
+    },
+    {
+      "record_count": "14445",
+      "name": "02-Jun-2025",
+      "hid_count": "13833"
+    },
+    {
+      "record_count": "13696",
+      "name": "09-Jun-2025",
+      "hid_count": "13289"
+    },
+    {
+      "record_count": "18562",
+      "name": "16-Jun-2025",
+      "hid_count": "17847"
+    },
+    {
+      "record_count": "16379",
+      "name": "23-Jun-2025",
+      "hid_count": "15754"
+    },
+    {
+      "record_count": "18417",
+      "name": "30-Jun-2025",
+      "hid_count": "17150"
+    },
+    {
+      "record_count": "13274",
+      "name": "07-Jul-2025",
+      "hid_count": "12063"
+    },
+    {
+      "record_count": "14649",
+      "name": "14-Jul-2025",
+      "hid_count": "12948"
+    },
+    {
+      "record_count": "15127",
+      "name": "21-Jul-2025",
+      "hid_count": "12596"
+    },
+    {
+      "record_count": "19072",
+      "name": "28-Jul-2025",
+      "hid_count": "17245"
+    },
+    {
+      "record_count": "15999",
+      "name": "04-Aug-2025",
+      "hid_count": "14052"
+    },
+    {
+      "record_count": "13435",
+      "name": "11-Aug-2025",
+      "hid_count": "12114"
+    },
+    {
+      "record_count": "14548",
+      "name": "18-Aug-2025",
+      "hid_count": "13352"
+    },
+    {
+      "record_count": "13433",
+      "name": "25-Aug-2025",
+      "hid_count": "12542"
+    },
+    {
+      "record_count": "12759",
+      "name": "01-Sep-2025",
+      "hid_count": "12078"
+    },
+    {
+      "record_count": "14935",
+      "name": "08-Sep-2025",
+      "hid_count": "14216"
+    },
+    {
+      "record_count": "16517",
+      "name": "15-Sep-2025",
+      "hid_count": "15730"
+    },
+    {
+      "record_count": "19294",
+      "name": "22-Sep-2025",
+      "hid_count": "18588"
+    },
+    {
+      "record_count": "20480",
+      "name": "29-Sep-2025",
+      "hid_count": "19892"
+    },
+    {
+      "record_count": "23625",
+      "name": "06-Oct-2025",
+      "hid_count": "22934"
+    },
+    {
+      "record_count": "19006",
+      "name": "13-Oct-2025",
+      "hid_count": "18442"
+    },
+    {
+      "record_count": "16167",
+      "name": "20-Oct-2025",
+      "hid_count": "15703"
+    },
+    {
+      "record_count": "21767",
+      "name": "27-Oct-2025",
+      "hid_count": "21171"
+    },
+    {
+      "record_count": "23260",
+      "name": "03-Nov-2025",
+      "hid_count": "22619"
+    },
+    {
+      "record_count": "22744",
+      "name": "10-Nov-2025",
+      "hid_count": "21987"
+    },
+    {
+      "record_count": "22971",
+      "name": "17-Nov-2025",
+      "hid_count": "22386"
+    },
+    {
+      "record_count": "23344",
+      "name": "24-Nov-2025",
+      "hid_count": "22742"
+    },
+    {
+      "record_count": "19128",
+      "name": "01-Dec-2025",
+      "hid_count": "18675"
+    },
+    {
+      "record_count": "21238",
+      "name": "08-Dec-2025",
+      "hid_count": "20708"
+    },
+    {
+      "record_count": "19074",
+      "name": "15-Dec-2025",
+      "hid_count": "18530"
+    },
+    {
+      "record_count": "20544",
+      "name": "22-Dec-2025",
+      "hid_count": "19790"
+    },
+    {
+      "record_count": "20340",
+      "name": "29-Dec-2025",
+      "hid_count": "19810"
+    },
+    {
+      "record_count": "28530",
+      "name": "05-Jan-2026",
+      "hid_count": "27680"
+    },
+    {
+      "record_count": "17327",
+      "name": "12-Jan-2026",
+      "hid_count": "16948"
+    },
+    {
+      "record_count": "35868",
+      "name": "19-Jan-2026",
+      "hid_count": "35171"
+    },
+    {
+      "record_count": "37297",
+      "name": "26-Jan-2026",
+      "hid_count": "36631"
+    },
+    {
+      "record_count": "50036",
+      "name": "02-Feb-2026",
+      "hid_count": "49278"
+    },
+    {
+      "record_count": "53597",
+      "name": "09-Feb-2026",
+      "hid_count": "52785"
+    },
+    {
+      "record_count": "50847",
+      "name": "16-Feb-2026",
+      "hid_count": "50089"
+    },
+    {
+      "record_count": "56687",
+      "name": "23-Feb-2026",
+      "hid_count": "55967"
+    },
+    {
+      "record_count": "60079",
+      "name": "02-Mar-2026",
+      "hid_count": "59408"
+    },
+    {
+      "record_count": "67568",
+      "name": "09-Mar-2026",
+      "hid_count": "66833"
+    },
+    {
+      "record_count": "67225",
+      "name": "16-Mar-2026",
+      "hid_count": "66477"
+    },
+    {
+      "record_count": "89618",
+      "name": "23-Mar-2026",
+      "hid_count": "88673"
+    },
+    {
+      "record_count": "69146",
+      "name": "30-Mar-2026",
+      "hid_count": "68227"
+    },
+    {
+      "record_count": "99775",
+      "name": "06-Apr-2026",
+      "hid_count": "98403"
+    },
+    {
+      "record_count": "93444",
+      "name": "13-Apr-2026",
+      "hid_count": "92329"
+    },
+    {
+      "record_count": "91441",
+      "name": "20-Apr-2026",
+      "hid_count": "90394"
+    },
+    {
+      "record_count": "73765",
+      "name": "27-Apr-2026",
+      "hid_count": "72947"
+    },
+    {
+      "record_count": "67976",
+      "name": "04-May-2026",
+      "hid_count": "67333"
+    },
+    {
+      "record_count": "77746",
+      "name": "11-May-2026",
+      "hid_count": "76935"
+    },
+    {
+      "record_count": "96062",
+      "name": "18-May-2026",
+      "hid_count": "95046"
+    },
+    {
+      "record_count": "87839",
+      "name": "25-May-2026",
+      "hid_count": "86824"
+    },
+    {
+      "record_count": "119149",
+      "name": "01-Jun-2026",
+      "hid_count": "117900"
+    },
+    {
+      "record_count": "132972",
+      "name": "08-Jun-2026",
+      "hid_count": "131648"
+    },
+    {
+      "record_count": "143980",
+      "name": "15-Jun-2026",
+      "hid_count": "142299"
+    },
+    {
+      "record_count": "116542",
+      "name": "22-Jun-2026",
+      "hid_count": "115311"
+    },
+    {
+      "record_count": "126671",
+      "name": "29-Jun-2026",
+      "hid_count": "125215"
+    },
+    {
+      "record_count": "170896",
+      "name": "06-Jul-2026",
+      "hid_count": "169088"
+    },
+    {
+      "record_count": "152282",
+      "name": "13-Jul-2026",
+      "hid_count": "150710"
+    },
+    {
+      "record_count": "121162",
+      "name": "20-Jul-2026",
+      "hid_count": "120035"
+    }
+  ],
+  "ts": "2026-07-24T14:40:42.180+05:42",
+  "status": "true"
+}

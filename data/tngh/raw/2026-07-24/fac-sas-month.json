@@ -1,0 +1,511 @@
+{
+  "list": [
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Rajiv Gandhi Government General Hospital, CHENNAI",
+      "value": "1316"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "COMPOSITE HOSPITAL CRPF, THIRUVALLUR",
+      "value": "934"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL, TIRUNELVELI",
+      "value": "348"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Kilpauk Medical College And Hospital, CHENNAI",
+      "value": "176"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI, KALLAKURICHI",
+      "value": "97"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Ranipet, Ranipet",
+      "value": "85"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HEADQUARTERS HOSPITAL HOSUR, KRISHNAGIRI",
+      "value": "64"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT MEDICAL COLLEGE NAMAKKAL, NAMAKKAL",
+      "value": "38"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HOSPITAL AMBASAMUDRAM, TIRUNELVELI",
+      "value": "29"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "ARAKKONAM GH, Ranipet",
+      "value": "16"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Medical College , THIRUVALLUR",
+      "value": "16"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Goverment Taluk Hospital Poonamallee, THIRUVALLUR",
+      "value": "16"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "District Head Quarters Hospital Vallioor, TIRUNELVELI",
+      "value": "12"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Parivakkam Primary Health Centre, THIRUVALLUR",
+      "value": "11"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government medical college Virudhunagar, VIRUDHUNAGAR",
+      "value": "11"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "SUDAR HOSPITAL AND RESEARCH INSTITUTE, THANJAVUR",
+      "value": "11"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HOSPITAL SHOLINGHUR RANIPET TN, Ranipet",
+      "value": "10"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVT THIRUVANNAMALAI MEDICAL COLLEGE HOSPITAL, TIRUVANNAMALAI",
+      "value": "9"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Melvisharam, Ranipet",
+      "value": "8"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HEAD QUARTERS HOSPITAL WALAJAPET, Ranipet",
+      "value": "7"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kanyakumari Government Medical College Hospital, KANNIYAKUMARI",
+      "value": "6"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Medical College Ramanathapuram, RAMANATHAPURAM",
+      "value": "6"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL, SALEM",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Pudupadi, Ranipet",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Attupakkam, Ranipet",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Arikalpadi, Ranipet",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government District Headquarters Hospital, Tirupathur",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Hospital Udyarpalyam, Ariyalur",
+      "value": "5"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Hospital Arcot, Ranipet",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "govt hospital, TIRUNELVELI",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Jayankondam Government Hospital, Ariyalur",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kilakarai Government Hospital, RAMANATHAPURAM",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Raj Hospital Tiruvannamalai TN, TIRUVANNAMALAI",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Mudhur, Ranipet",
+      "value": "4"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "THE SALVATION ARMY CATHERINE BOOTH HOSPITAL, KANNIYAKUMARI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT DISTRICT HEAD QUARTERS HOSPITAL TENKASI, TENKASI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Hospital Melapalayam, TIRUNELVELI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Swamiyarmadam Rathna Memorial Hospital, KANNIYAKUMARI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Peripheral Hospital Periyar Nagar, CHENNAI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Greater Chennai corporation RCME TANKER DIALYSIS UNIT, CHENNAI",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kalavai GH, Ranipet",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "KUMARARANI Dr MEENA MUTHIAH HOSPITAL, SIVAGANGA",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre Govt Arumbakkam, Ranipet",
+      "value": "3"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Goverment Hospital Sendurai, Ariyalur",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Hospital Veppur, PERAMBALUR",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HEADQUARTERS HOSPITAL PERAMBALUR, PERAMBALUR",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HOSPITAL KRISHNAPURAM, PERAMBALUR",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "SRI RAJU HEART AND SKIN HOSPITAL LLP, KALLAKURICHI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "BALAJI HOSPITAL, TIRUNELVELI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Banavaram, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Guruvarajapet, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Arakkonam, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "BARGUR GOVERNMENT HOSPITAL, KRISHNAGIRI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Lalapet, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Ammoor, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Nagavedu, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "TANISHA CLINIC, CHENNAI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "RAMBONE AND JOINT HOSPITAL MAYILADUTHURAI, Mayiladuthurai",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kewalchand Mohanabai Daga Dialysis Centre, CHENNAI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre Anna Nagar UPHC, Tirupathur",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Urban Primary Health Centre, Ranipet",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "ANCHI BAI HEMARAJ KATARIYA DIALYSIS CENTRE, CHENNAI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Suriyan Hospital Tiruvannamalai TN, TIRUVANNAMALAI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HOSPITAL KARAI , PERAMBALUR",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Government Hospital Radhapuram, TIRUNELVELI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "KHIVRAJ CHORDIA MEMORIAL DIALYSIS CENTRE, CHENNAI",
+      "value": "2"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Hospital Sivakasi, VIRUDHUNAGAR",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Vilapakkam, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERMENT HOSPITAL AVADI, THIRUVALLUR",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Punagai Dental Clinic, CHENNAI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Sri kauvery medical care limited Dialysis, TIRUCHIRAPPALLI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Dr.Malas Hospital, TIRUCHIRAPPALLI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre Govt Mambakkam, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "THE DEIVATHIRU BALAMANI KRISHNASAMI MEMORIAL TANKER FOUNDATION DIALYSIS CENTER,, DINDIGUL",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "TIRUPPUR NORTH ROTARY CLUB,TIRUPPUR CORPORATION TANKER DIALYSIS UNIT, TIRUPPUR",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GCC RCMW KCS Tanker PADI DIALYSIS UNIT, CHENNAI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "CORPORATION U.P.H.C,RCCT and TANKER DIALYSIS UNIT, CHENNAI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Tamilnad Kidney Research Foundation Dindigul, DINDIGUL",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre GOVT LADAVARAM, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENTHOSPITAL SRIVILLIPUTHUR, VIRUDHUNAGAR",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Mudukulathur Government Hospital, RAMANATHAPURAM",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Kaspa Tirupathur, Tirupathur",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Rameshwaram Government Hospital, RAMANATHAPURAM",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "TANKER FOUNDATION DIALYSIS CENTRE, CHENNAI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre Govt Thimiri, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "chitra multispeciality hospitals private limited, VIRUDHUNAGAR",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVERNMENT HOSPITAL ALANGULAM, TENKASI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Primary Health Centre GOVT ARUNKUNDRAM, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Nowlack, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Sumaithangi, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Karadikuppam, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "T.Kunnathur, KALLAKURICHI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Punnai, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "KOVILPATTI GOVERNMENT DISTRICT HEADQUARTERS HOSPITAL, THOOTHUKKUDI",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Vengupattu, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Perumuchi, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Primary Health Centre Kodaikkal, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Paramakudi GHQH, RAMANATHAPURAM",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Hospital Kumarapalayam Namakkal TN., NAMAKKAL",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "Govt Urban Primary Health Centre Arcot, Ranipet",
+      "value": "1"
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "hospitalName": "GOVT HOSPITAL KARIAPATTI VIRUDHUNAGAR TN, VIRUDHUNAGAR",
+      "value": "1"
+    }
+  ],
+  "ts": "2026-07-24T14:40:51.481+05:51",
+  "status": "true"
+}

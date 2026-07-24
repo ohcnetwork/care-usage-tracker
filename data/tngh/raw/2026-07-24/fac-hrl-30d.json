@@ -1,0 +1,86 @@
+{
+  "list": [
+    {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Rajiv Gandhi Government General Hospital",
+      "value": "108463",
+      "status": "EVR Road, Chennai"
+    },
+    {
+      "districtName": "Tirunelveli",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL",
+      "value": "69016",
+      "status": "North high ground road, High ground,"
+    },
+    {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut, PMNDP",
+      "text": "Government Peripheral Hospital Periyar Nagar",
+      "value": "53657",
+      "status": "Karthikeyan Rd, Periyar Nagar West, Perambur"
+    },
+    {
+      "districtName": "Salem",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL",
+      "value": "44741",
+      "status": "OPP TO COLLECTORATE"
+    },
+    {
+      "districtName": "Virudhunagar",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "Government medical college Virudhunagar",
+      "value": "40463",
+      "status": "No.1 Ramamoorthy road Virudhunagar"
+    },
+    {
+      "districtName": "Kallakurichi",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI",
+      "value": "26551",
+      "status": "No 251, Agarakottalam Road, siruvangur Village, kallakurichi"
+    },
+    {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut, PMNDP",
+      "text": "Government Kilpauk Medical College And Hospital",
+      "value": "25473",
+      "status": "822, Poonamallee High Rd, near Ega Theatre, Chennai"
+    },
+    {
+      "districtName": "Krishnagiri",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "GOVERNMENT MEDICAL COLLEGE KRISHNAGIRI",
+      "value": "25138",
+      "status": "BLOCK 1"
+    },
+    {
+      "districtName": "Chennai",
+      "stateName": "Tamil Nadu",
+      "partnerName": "E-Sushrut Railway Hospital",
+      "text": "SOUTHERN RAILWAY CENTRAL HOSPITAL",
+      "value": "22416",
+      "status": "ambedkar road"
+    },
+    {
+      "districtName": "Namakkal",
+      "stateName": "Tamil Nadu",
+      "partnerName": "C-DAC e-Sushrut",
+      "text": "GOVERNMENT MEDICAL COLLEGE NAMAKKAL",
+      "value": "17414",
+      "status": "353 MASTERPLAN COMPLEX SILUVAMPATTI"
+    }
+  ],
+  "ts": "2026-07-24T14:40:52.717+05:52",
+  "status": "true"
+}

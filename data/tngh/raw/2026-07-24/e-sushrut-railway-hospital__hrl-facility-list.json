@@ -1,0 +1,167 @@
+{
+  "list2": [],
+  "list": [
+    {
+      "hospId": "IN3310000033",
+      "hospitalName": "AVADI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000042",
+      "hospitalName": "CHENGALPATTI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000023",
+      "hospitalName": "CHENNAI DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000032",
+      "hospitalName": "COONOOR RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000039",
+      "hospitalName": "DINDIGUL RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000027",
+      "hospitalName": "EGMORE RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000020",
+      "hospitalName": "ERODE SUB DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000052",
+      "hospitalName": "HAEFILEPET RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000054",
+      "hospitalName": "INTEGRAL COACH FACTORY RAILWAY CENTRAL HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000038",
+      "hospitalName": "KARAIKKUDI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000026",
+      "hospitalName": "KARUR RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000034",
+      "hospitalName": "KATPADI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000044",
+      "hospitalName": "MADRAS RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000014",
+      "hospitalName": "MADURAI DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000037",
+      "hospitalName": "MANAMADURAI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000028",
+      "hospitalName": "MANDAPAM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000018",
+      "hospitalName": "MAYILADUTURAI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000031",
+      "hospitalName": "METTUPALAYAM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000049",
+      "hospitalName": "NAGERCOIL RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000040",
+      "hospitalName": "PALANI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000030",
+      "hospitalName": "PODANUR SUB DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000048",
+      "hospitalName": "POLLACHI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000016",
+      "hospitalName": "ROYAPURAM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000035",
+      "hospitalName": "SALEM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000029",
+      "hospitalName": "SENGOTTI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000050",
+      "hospitalName": "SOUTHERN RAILWAY CENTRAL HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000024",
+      "hospitalName": "SRIRANGAM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000046",
+      "hospitalName": "TAMBARAM RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000017",
+      "hospitalName": "THANJAVUR RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000041",
+      "hospitalName": "THIRUVARUR RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000022",
+      "hospitalName": "TIRUCHCHIRAPPALLI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000015",
+      "hospitalName": "TIRUCHIRAPPALI DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000053",
+      "hospitalName": "TIRUCHUCHIRAPPALI FORT RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000043",
+      "hospitalName": "TIRUNELVELI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000025",
+      "hospitalName": "TIRUVANNAMALAI RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000051",
+      "hospitalName": "TONDIARPET RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000045",
+      "hospitalName": "TUTICORIN RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000021",
+      "hospitalName": "VILLUPURAM SUB DIVISIONAL RAILWAY HOSPITAL"
+    },
+    {
+      "hospId": "IN3310000036",
+      "hospitalName": "VIRUDHUNAGAR RAILWAY HEALTH UNIT"
+    },
+    {
+      "hospId": "IN3310000019",
+      "hospitalName": "VRINDHACHALAM RAILWAY HEALTH UNIT"
+    }
+  ],
+  "ts": "2026-07-24T14:43:33.103+05:33",
+  "status": "true"
+}

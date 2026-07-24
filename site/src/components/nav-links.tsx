@@ -8,6 +8,8 @@ const links = [
   { href: "/", label: "Trackers", exact: true },
   { href: "/abdm/", label: "ABDM", exact: true },
   { href: "/abdm/partners/", label: "ABDM Partners", exact: false },
+  { href: "/tngh/", label: "TN Govt", exact: true },
+  { href: "/tngh/facilities/", label: "TN Facilities", exact: false },
 ];
 
 export function NavLinks() {

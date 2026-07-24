@@ -1,0 +1,47 @@
+{
+ "abha": {
+  "total": 1846397,
+  "today": 15353,
+  "last30d": 438637,
+  "last7d": 105930,
+  "prev7d": 100307,
+  "weekGrowthPct": 5.6,
+  "perDay7d": 15132.9,
+  "perDay30d": 14621.2
+ },
+ "hrl": {
+  "total": 3965175,
+  "today": 1010,
+  "last30d": 685609,
+  "last7d": 148819,
+  "prev7d": 171363,
+  "weekGrowthPct": -13.2,
+  "perDay7d": 21259.9,
+  "perDay30d": 22853.6
+ },
+ "abhaLinked": {
+  "total": 3709689,
+  "today": 1009,
+  "last30d": 676411,
+  "last7d": 147545,
+  "prev7d": 169642,
+  "weekGrowthPct": -13,
+  "perDay7d": 21077.9,
+  "perDay30d": 22547
+ },
+ "sas": {
+  "total": 56229,
+  "today": 100,
+  "last30d": 3297,
+  "last7d": 629,
+  "prev7d": 423,
+  "weekGrowthPct": 48.7,
+  "perDay7d": 89.9,
+  "perDay30d": 109.9,
+  "facilities": 256,
+  "activePartners": 4
+ },
+ "partnersTracked": 4,
+ "districtsCovered": 35,
+ "facilityClasses": 17
+}

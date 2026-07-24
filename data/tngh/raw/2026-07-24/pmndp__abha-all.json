@@ -1,0 +1,941 @@
+{
+  "list": [
+    {
+      "value2": "",
+      "text": "26-Dec-2022",
+      "value": "66"
+    },
+    {
+      "value2": "",
+      "text": "02-Jan-2023",
+      "value": "97"
+    },
+    {
+      "value2": "",
+      "text": "09-Jan-2023",
+      "value": "64"
+    },
+    {
+      "value2": "",
+      "text": "16-Jan-2023",
+      "value": "37"
+    },
+    {
+      "value2": "",
+      "text": "23-Jan-2023",
+      "value": "67"
+    },
+    {
+      "value2": "",
+      "text": "30-Jan-2023",
+      "value": "46"
+    },
+    {
+      "value2": "",
+      "text": "06-Feb-2023",
+      "value": "64"
+    },
+    {
+      "value2": "",
+      "text": "13-Feb-2023",
+      "value": "53"
+    },
+    {
+      "value2": "",
+      "text": "20-Feb-2023",
+      "value": "18"
+    },
+    {
+      "value2": "",
+      "text": "27-Feb-2023",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "06-Mar-2023",
+      "value": "30"
+    },
+    {
+      "value2": "",
+      "text": "13-Mar-2023",
+      "value": "24"
+    },
+    {
+      "value2": "",
+      "text": "20-Mar-2023",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "27-Mar-2023",
+      "value": "12"
+    },
+    {
+      "value2": "",
+      "text": "03-Apr-2023",
+      "value": "19"
+    },
+    {
+      "value2": "",
+      "text": "10-Apr-2023",
+      "value": "9"
+    },
+    {
+      "value2": "",
+      "text": "17-Apr-2023",
+      "value": "8"
+    },
+    {
+      "value2": "",
+      "text": "24-Apr-2023",
+      "value": "3"
+    },
+    {
+      "value2": "",
+      "text": "01-May-2023",
+      "value": "11"
+    },
+    {
+      "value2": "",
+      "text": "08-May-2023",
+      "value": "12"
+    },
+    {
+      "value2": "",
+      "text": "15-May-2023",
+      "value": "12"
+    },
+    {
+      "value2": "",
+      "text": "22-May-2023",
+      "value": "141"
+    },
+    {
+      "value2": "",
+      "text": "29-May-2023",
+      "value": "317"
+    },
+    {
+      "value2": "",
+      "text": "05-Jun-2023",
+      "value": "288"
+    },
+    {
+      "value2": "",
+      "text": "12-Jun-2023",
+      "value": "149"
+    },
+    {
+      "value2": "",
+      "text": "19-Jun-2023",
+      "value": "160"
+    },
+    {
+      "value2": "",
+      "text": "26-Jun-2023",
+      "value": "128"
+    },
+    {
+      "value2": "",
+      "text": "03-Jul-2023",
+      "value": "84"
+    },
+    {
+      "value2": "",
+      "text": "10-Jul-2023",
+      "value": "93"
+    },
+    {
+      "value2": "",
+      "text": "17-Jul-2023",
+      "value": "122"
+    },
+    {
+      "value2": "",
+      "text": "24-Jul-2023",
+      "value": "81"
+    },
+    {
+      "value2": "",
+      "text": "31-Jul-2023",
+      "value": "105"
+    },
+    {
+      "value2": "",
+      "text": "07-Aug-2023",
+      "value": "66"
+    },
+    {
+      "value2": "",
+      "text": "14-Aug-2023",
+      "value": "86"
+    },
+    {
+      "value2": "",
+      "text": "21-Aug-2023",
+      "value": "63"
+    },
+    {
+      "value2": "",
+      "text": "28-Aug-2023",
+      "value": "102"
+    },
+    {
+      "value2": "",
+      "text": "04-Sep-2023",
+      "value": "124"
+    },
+    {
+      "value2": "",
+      "text": "11-Sep-2023",
+      "value": "82"
+    },
+    {
+      "value2": "",
+      "text": "18-Sep-2023",
+      "value": "50"
+    },
+    {
+      "value2": "",
+      "text": "25-Sep-2023",
+      "value": "36"
+    },
+    {
+      "value2": "",
+      "text": "02-Oct-2023",
+      "value": "37"
+    },
+    {
+      "value2": "",
+      "text": "09-Oct-2023",
+      "value": "55"
+    },
+    {
+      "value2": "",
+      "text": "16-Oct-2023",
+      "value": "45"
+    },
+    {
+      "value2": "",
+      "text": "23-Oct-2023",
+      "value": "32"
+    },
+    {
+      "value2": "",
+      "text": "30-Oct-2023",
+      "value": "39"
+    },
+    {
+      "value2": "",
+      "text": "06-Nov-2023",
+      "value": "82"
+    },
+    {
+      "value2": "",
+      "text": "13-Nov-2023",
+      "value": "41"
+    },
+    {
+      "value2": "",
+      "text": "20-Nov-2023",
+      "value": "67"
+    },
+    {
+      "value2": "",
+      "text": "27-Nov-2023",
+      "value": "18"
+    },
+    {
+      "value2": "",
+      "text": "04-Dec-2023",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "11-Dec-2023",
+      "value": "36"
+    },
+    {
+      "value2": "",
+      "text": "18-Dec-2023",
+      "value": "61"
+    },
+    {
+      "value2": "",
+      "text": "25-Dec-2023",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "01-Jan-2024",
+      "value": "35"
+    },
+    {
+      "value2": "",
+      "text": "08-Jan-2024",
+      "value": "22"
+    },
+    {
+      "value2": "",
+      "text": "15-Jan-2024",
+      "value": "22"
+    },
+    {
+      "value2": "",
+      "text": "22-Jan-2024",
+      "value": "36"
+    },
+    {
+      "value2": "",
+      "text": "29-Jan-2024",
+      "value": "53"
+    },
+    {
+      "value2": "",
+      "text": "05-Feb-2024",
+      "value": "52"
+    },
+    {
+      "value2": "",
+      "text": "12-Feb-2024",
+      "value": "21"
+    },
+    {
+      "value2": "",
+      "text": "19-Feb-2024",
+      "value": "24"
+    },
+    {
+      "value2": "",
+      "text": "26-Feb-2024",
+      "value": "71"
+    },
+    {
+      "value2": "",
+      "text": "04-Mar-2024",
+      "value": "30"
+    },
+    {
+      "value2": "",
+      "text": "11-Mar-2024",
+      "value": "40"
+    },
+    {
+      "value2": "",
+      "text": "18-Mar-2024",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "25-Mar-2024",
+      "value": "24"
+    },
+    {
+      "value2": "",
+      "text": "01-Apr-2024",
+      "value": "19"
+    },
+    {
+      "value2": "",
+      "text": "08-Apr-2024",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "15-Apr-2024",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "22-Apr-2024",
+      "value": "19"
+    },
+    {
+      "value2": "",
+      "text": "29-Apr-2024",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "06-May-2024",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "13-May-2024",
+      "value": "21"
+    },
+    {
+      "value2": "",
+      "text": "20-May-2024",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "27-May-2024",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "03-Jun-2024",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "10-Jun-2024",
+      "value": "15"
+    },
+    {
+      "value2": "",
+      "text": "17-Jun-2024",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "24-Jun-2024",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "01-Jul-2024",
+      "value": "44"
+    },
+    {
+      "value2": "",
+      "text": "08-Jul-2024",
+      "value": "21"
+    },
+    {
+      "value2": "",
+      "text": "15-Jul-2024",
+      "value": "61"
+    },
+    {
+      "value2": "",
+      "text": "22-Jul-2024",
+      "value": "67"
+    },
+    {
+      "value2": "",
+      "text": "29-Jul-2024",
+      "value": "41"
+    },
+    {
+      "value2": "",
+      "text": "05-Aug-2024",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "12-Aug-2024",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "19-Aug-2024",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "26-Aug-2024",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "02-Sep-2024",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "09-Sep-2024",
+      "value": "58"
+    },
+    {
+      "value2": "",
+      "text": "16-Sep-2024",
+      "value": "15"
+    },
+    {
+      "value2": "",
+      "text": "23-Sep-2024",
+      "value": "66"
+    },
+    {
+      "value2": "",
+      "text": "30-Sep-2024",
+      "value": "52"
+    },
+    {
+      "value2": "",
+      "text": "07-Oct-2024",
+      "value": "32"
+    },
+    {
+      "value2": "",
+      "text": "14-Oct-2024",
+      "value": "35"
+    },
+    {
+      "value2": "",
+      "text": "21-Oct-2024",
+      "value": "11"
+    },
+    {
+      "value2": "",
+      "text": "28-Oct-2024",
+      "value": "13"
+    },
+    {
+      "value2": "",
+      "text": "04-Nov-2024",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "11-Nov-2024",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "18-Nov-2024",
+      "value": "12"
+    },
+    {
+      "value2": "",
+      "text": "25-Nov-2024",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "02-Dec-2024",
+      "value": "13"
+    },
+    {
+      "value2": "",
+      "text": "09-Dec-2024",
+      "value": "9"
+    },
+    {
+      "value2": "",
+      "text": "16-Dec-2024",
+      "value": "32"
+    },
+    {
+      "value2": "",
+      "text": "23-Dec-2024",
+      "value": "11"
+    },
+    {
+      "value2": "",
+      "text": "30-Dec-2024",
+      "value": "5"
+    },
+    {
+      "value2": "",
+      "text": "06-Jan-2025",
+      "value": "31"
+    },
+    {
+      "value2": "",
+      "text": "13-Jan-2025",
+      "value": "9"
+    },
+    {
+      "value2": "",
+      "text": "20-Jan-2025",
+      "value": "40"
+    },
+    {
+      "value2": "",
+      "text": "27-Jan-2025",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "03-Feb-2025",
+      "value": "34"
+    },
+    {
+      "value2": "",
+      "text": "10-Feb-2025",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "17-Feb-2025",
+      "value": "33"
+    },
+    {
+      "value2": "",
+      "text": "24-Feb-2025",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "03-Mar-2025",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "10-Mar-2025",
+      "value": "40"
+    },
+    {
+      "value2": "",
+      "text": "17-Mar-2025",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "24-Mar-2025",
+      "value": "40"
+    },
+    {
+      "value2": "",
+      "text": "31-Mar-2025",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "07-Apr-2025",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "14-Apr-2025",
+      "value": "30"
+    },
+    {
+      "value2": "",
+      "text": "21-Apr-2025",
+      "value": "32"
+    },
+    {
+      "value2": "",
+      "text": "28-Apr-2025",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "05-May-2025",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "12-May-2025",
+      "value": "37"
+    },
+    {
+      "value2": "",
+      "text": "19-May-2025",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "26-May-2025",
+      "value": "35"
+    },
+    {
+      "value2": "",
+      "text": "02-Jun-2025",
+      "value": "24"
+    },
+    {
+      "value2": "",
+      "text": "09-Jun-2025",
+      "value": "35"
+    },
+    {
+      "value2": "",
+      "text": "16-Jun-2025",
+      "value": "54"
+    },
+    {
+      "value2": "",
+      "text": "23-Jun-2025",
+      "value": "41"
+    },
+    {
+      "value2": "",
+      "text": "30-Jun-2025",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "07-Jul-2025",
+      "value": "19"
+    },
+    {
+      "value2": "",
+      "text": "14-Jul-2025",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "21-Jul-2025",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "28-Jul-2025",
+      "value": "79"
+    },
+    {
+      "value2": "",
+      "text": "04-Aug-2025",
+      "value": "36"
+    },
+    {
+      "value2": "",
+      "text": "11-Aug-2025",
+      "value": "46"
+    },
+    {
+      "value2": "",
+      "text": "18-Aug-2025",
+      "value": "32"
+    },
+    {
+      "value2": "",
+      "text": "25-Aug-2025",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "01-Sep-2025",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "08-Sep-2025",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "15-Sep-2025",
+      "value": "33"
+    },
+    {
+      "value2": "",
+      "text": "22-Sep-2025",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "29-Sep-2025",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "06-Oct-2025",
+      "value": "42"
+    },
+    {
+      "value2": "",
+      "text": "13-Oct-2025",
+      "value": "33"
+    },
+    {
+      "value2": "",
+      "text": "20-Oct-2025",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "27-Oct-2025",
+      "value": "36"
+    },
+    {
+      "value2": "",
+      "text": "03-Nov-2025",
+      "value": "26"
+    },
+    {
+      "value2": "",
+      "text": "10-Nov-2025",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "17-Nov-2025",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "24-Nov-2025",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "01-Dec-2025",
+      "value": "23"
+    },
+    {
+      "value2": "",
+      "text": "08-Dec-2025",
+      "value": "30"
+    },
+    {
+      "value2": "",
+      "text": "15-Dec-2025",
+      "value": "22"
+    },
+    {
+      "value2": "",
+      "text": "22-Dec-2025",
+      "value": "39"
+    },
+    {
+      "value2": "",
+      "text": "29-Dec-2025",
+      "value": "50"
+    },
+    {
+      "value2": "",
+      "text": "05-Jan-2026",
+      "value": "31"
+    },
+    {
+      "value2": "",
+      "text": "12-Jan-2026",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "19-Jan-2026",
+      "value": "30"
+    },
+    {
+      "value2": "",
+      "text": "26-Jan-2026",
+      "value": "41"
+    },
+    {
+      "value2": "",
+      "text": "02-Feb-2026",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "09-Feb-2026",
+      "value": "24"
+    },
+    {
+      "value2": "",
+      "text": "16-Feb-2026",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "23-Feb-2026",
+      "value": "15"
+    },
+    {
+      "value2": "",
+      "text": "02-Mar-2026",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "09-Mar-2026",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "16-Mar-2026",
+      "value": "27"
+    },
+    {
+      "value2": "",
+      "text": "23-Mar-2026",
+      "value": "8"
+    },
+    {
+      "value2": "",
+      "text": "30-Mar-2026",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "06-Apr-2026",
+      "value": "18"
+    },
+    {
+      "value2": "",
+      "text": "13-Apr-2026",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "20-Apr-2026",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "27-Apr-2026",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "04-May-2026",
+      "value": "7"
+    },
+    {
+      "value2": "",
+      "text": "11-May-2026",
+      "value": "13"
+    },
+    {
+      "value2": "",
+      "text": "18-May-2026",
+      "value": "9"
+    },
+    {
+      "value2": "",
+      "text": "25-May-2026",
+      "value": "5"
+    },
+    {
+      "value2": "",
+      "text": "01-Jun-2026",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "08-Jun-2026",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "15-Jun-2026",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "22-Jun-2026",
+      "value": "13"
+    },
+    {
+      "value2": "",
+      "text": "29-Jun-2026",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "06-Jul-2026",
+      "value": "14"
+    },
+    {
+      "value2": "",
+      "text": "13-Jul-2026",
+      "value": "15"
+    },
+    {
+      "value2": "",
+      "text": "20-Jul-2026",
+      "value": "8"
+    }
+  ],
+  "ts": "2026-07-24T14:40:44.488+05:44",
+  "status": "true"
+}

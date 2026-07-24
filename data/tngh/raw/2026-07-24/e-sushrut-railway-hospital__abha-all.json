@@ -1,0 +1,671 @@
+{
+  "list": [
+    {
+      "value2": "",
+      "text": "04-Oct-2021",
+      "value": "1"
+    },
+    {
+      "value2": "",
+      "text": "11-Oct-2021",
+      "value": "6"
+    },
+    {
+      "value2": "",
+      "text": "18-Oct-2021",
+      "value": "1"
+    },
+    {
+      "value2": "",
+      "text": "08-Nov-2021",
+      "value": "2"
+    },
+    {
+      "value2": "",
+      "text": "15-Nov-2021",
+      "value": "2"
+    },
+    {
+      "value2": "",
+      "text": "06-Dec-2021",
+      "value": "6"
+    },
+    {
+      "value2": "",
+      "text": "13-Dec-2021",
+      "value": "2"
+    },
+    {
+      "value2": "",
+      "text": "20-Dec-2021",
+      "value": "41"
+    },
+    {
+      "value2": "",
+      "text": "27-Dec-2021",
+      "value": "50"
+    },
+    {
+      "value2": "",
+      "text": "03-Jan-2022",
+      "value": "25"
+    },
+    {
+      "value2": "",
+      "text": "10-Jan-2022",
+      "value": "15"
+    },
+    {
+      "value2": "",
+      "text": "17-Jan-2022",
+      "value": "10"
+    },
+    {
+      "value2": "",
+      "text": "24-Jan-2022",
+      "value": "8"
+    },
+    {
+      "value2": "",
+      "text": "31-Jan-2022",
+      "value": "45"
+    },
+    {
+      "value2": "",
+      "text": "07-Feb-2022",
+      "value": "56"
+    },
+    {
+      "value2": "",
+      "text": "14-Feb-2022",
+      "value": "81"
+    },
+    {
+      "value2": "",
+      "text": "21-Feb-2022",
+      "value": "357"
+    },
+    {
+      "value2": "",
+      "text": "28-Feb-2022",
+      "value": "411"
+    },
+    {
+      "value2": "",
+      "text": "07-Mar-2022",
+      "value": "259"
+    },
+    {
+      "value2": "",
+      "text": "14-Mar-2022",
+      "value": "151"
+    },
+    {
+      "value2": "",
+      "text": "21-Mar-2022",
+      "value": "214"
+    },
+    {
+      "value2": "",
+      "text": "28-Mar-2022",
+      "value": "163"
+    },
+    {
+      "value2": "",
+      "text": "04-Apr-2022",
+      "value": "73"
+    },
+    {
+      "value2": "",
+      "text": "11-Apr-2022",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "18-Apr-2022",
+      "value": "38"
+    },
+    {
+      "value2": "",
+      "text": "18-Sep-2023",
+      "value": "177"
+    },
+    {
+      "value2": "",
+      "text": "25-Sep-2023",
+      "value": "455"
+    },
+    {
+      "value2": "",
+      "text": "02-Oct-2023",
+      "value": "407"
+    },
+    {
+      "value2": "",
+      "text": "09-Oct-2023",
+      "value": "469"
+    },
+    {
+      "value2": "",
+      "text": "16-Oct-2023",
+      "value": "380"
+    },
+    {
+      "value2": "",
+      "text": "23-Oct-2023",
+      "value": "371"
+    },
+    {
+      "value2": "",
+      "text": "30-Oct-2023",
+      "value": "447"
+    },
+    {
+      "value2": "",
+      "text": "06-Nov-2023",
+      "value": "172"
+    },
+    {
+      "value2": "",
+      "text": "13-Nov-2023",
+      "value": "110"
+    },
+    {
+      "value2": "",
+      "text": "20-Nov-2023",
+      "value": "147"
+    },
+    {
+      "value2": "",
+      "text": "27-Nov-2023",
+      "value": "127"
+    },
+    {
+      "value2": "",
+      "text": "04-Dec-2023",
+      "value": "86"
+    },
+    {
+      "value2": "",
+      "text": "11-Dec-2023",
+      "value": "140"
+    },
+    {
+      "value2": "",
+      "text": "18-Dec-2023",
+      "value": "126"
+    },
+    {
+      "value2": "",
+      "text": "25-Dec-2023",
+      "value": "118"
+    },
+    {
+      "value2": "",
+      "text": "01-Jan-2024",
+      "value": "20"
+    },
+    {
+      "value2": "",
+      "text": "22-Jan-2024",
+      "value": "89"
+    },
+    {
+      "value2": "",
+      "text": "29-Jan-2024",
+      "value": "189"
+    },
+    {
+      "value2": "",
+      "text": "05-Feb-2024",
+      "value": "167"
+    },
+    {
+      "value2": "",
+      "text": "12-Feb-2024",
+      "value": "169"
+    },
+    {
+      "value2": "",
+      "text": "19-Feb-2024",
+      "value": "125"
+    },
+    {
+      "value2": "",
+      "text": "26-Feb-2024",
+      "value": "123"
+    },
+    {
+      "value2": "",
+      "text": "04-Mar-2024",
+      "value": "123"
+    },
+    {
+      "value2": "",
+      "text": "11-Mar-2024",
+      "value": "134"
+    },
+    {
+      "value2": "",
+      "text": "18-Mar-2024",
+      "value": "141"
+    },
+    {
+      "value2": "",
+      "text": "25-Mar-2024",
+      "value": "121"
+    },
+    {
+      "value2": "",
+      "text": "01-Apr-2024",
+      "value": "104"
+    },
+    {
+      "value2": "",
+      "text": "08-Apr-2024",
+      "value": "80"
+    },
+    {
+      "value2": "",
+      "text": "15-Apr-2024",
+      "value": "77"
+    },
+    {
+      "value2": "",
+      "text": "22-Apr-2024",
+      "value": "86"
+    },
+    {
+      "value2": "",
+      "text": "29-Apr-2024",
+      "value": "84"
+    },
+    {
+      "value2": "",
+      "text": "06-May-2024",
+      "value": "64"
+    },
+    {
+      "value2": "",
+      "text": "13-May-2024",
+      "value": "83"
+    },
+    {
+      "value2": "",
+      "text": "20-May-2024",
+      "value": "115"
+    },
+    {
+      "value2": "",
+      "text": "27-May-2024",
+      "value": "115"
+    },
+    {
+      "value2": "",
+      "text": "03-Jun-2024",
+      "value": "77"
+    },
+    {
+      "value2": "",
+      "text": "10-Jun-2024",
+      "value": "131"
+    },
+    {
+      "value2": "",
+      "text": "17-Jun-2024",
+      "value": "94"
+    },
+    {
+      "value2": "",
+      "text": "24-Jun-2024",
+      "value": "107"
+    },
+    {
+      "value2": "",
+      "text": "01-Jul-2024",
+      "value": "110"
+    },
+    {
+      "value2": "",
+      "text": "08-Jul-2024",
+      "value": "98"
+    },
+    {
+      "value2": "",
+      "text": "15-Jul-2024",
+      "value": "82"
+    },
+    {
+      "value2": "",
+      "text": "22-Jul-2024",
+      "value": "60"
+    },
+    {
+      "value2": "",
+      "text": "12-Aug-2024",
+      "value": "48"
+    },
+    {
+      "value2": "",
+      "text": "19-Aug-2024",
+      "value": "145"
+    },
+    {
+      "value2": "",
+      "text": "26-Aug-2024",
+      "value": "98"
+    },
+    {
+      "value2": "",
+      "text": "02-Sep-2024",
+      "value": "88"
+    },
+    {
+      "value2": "",
+      "text": "09-Sep-2024",
+      "value": "137"
+    },
+    {
+      "value2": "",
+      "text": "16-Sep-2024",
+      "value": "88"
+    },
+    {
+      "value2": "",
+      "text": "23-Sep-2024",
+      "value": "71"
+    },
+    {
+      "value2": "",
+      "text": "07-Oct-2024",
+      "value": "70"
+    },
+    {
+      "value2": "",
+      "text": "14-Oct-2024",
+      "value": "93"
+    },
+    {
+      "value2": "",
+      "text": "21-Oct-2024",
+      "value": "59"
+    },
+    {
+      "value2": "",
+      "text": "30-Dec-2024",
+      "value": "108"
+    },
+    {
+      "value2": "",
+      "text": "06-Jan-2025",
+      "value": "134"
+    },
+    {
+      "value2": "",
+      "text": "13-Jan-2025",
+      "value": "97"
+    },
+    {
+      "value2": "",
+      "text": "20-Jan-2025",
+      "value": "136"
+    },
+    {
+      "value2": "",
+      "text": "27-Jan-2025",
+      "value": "118"
+    },
+    {
+      "value2": "",
+      "text": "03-Feb-2025",
+      "value": "115"
+    },
+    {
+      "value2": "",
+      "text": "05-May-2025",
+      "value": "74"
+    },
+    {
+      "value2": "",
+      "text": "12-May-2025",
+      "value": "161"
+    },
+    {
+      "value2": "",
+      "text": "19-May-2025",
+      "value": "195"
+    },
+    {
+      "value2": "",
+      "text": "26-May-2025",
+      "value": "144"
+    },
+    {
+      "value2": "",
+      "text": "02-Jun-2025",
+      "value": "201"
+    },
+    {
+      "value2": "",
+      "text": "09-Jun-2025",
+      "value": "201"
+    },
+    {
+      "value2": "",
+      "text": "16-Jun-2025",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "07-Jul-2025",
+      "value": "177"
+    },
+    {
+      "value2": "",
+      "text": "14-Jul-2025",
+      "value": "199"
+    },
+    {
+      "value2": "",
+      "text": "21-Jul-2025",
+      "value": "169"
+    },
+    {
+      "value2": "",
+      "text": "28-Jul-2025",
+      "value": "131"
+    },
+    {
+      "value2": "",
+      "text": "04-Aug-2025",
+      "value": "140"
+    },
+    {
+      "value2": "",
+      "text": "11-Aug-2025",
+      "value": "117"
+    },
+    {
+      "value2": "",
+      "text": "18-Aug-2025",
+      "value": "77"
+    },
+    {
+      "value2": "",
+      "text": "20-Oct-2025",
+      "value": "59"
+    },
+    {
+      "value2": "",
+      "text": "27-Oct-2025",
+      "value": "142"
+    },
+    {
+      "value2": "",
+      "text": "03-Nov-2025",
+      "value": "47"
+    },
+    {
+      "value2": "",
+      "text": "10-Nov-2025",
+      "value": "159"
+    },
+    {
+      "value2": "",
+      "text": "17-Nov-2025",
+      "value": "131"
+    },
+    {
+      "value2": "",
+      "text": "24-Nov-2025",
+      "value": "119"
+    },
+    {
+      "value2": "",
+      "text": "01-Dec-2025",
+      "value": "123"
+    },
+    {
+      "value2": "",
+      "text": "08-Dec-2025",
+      "value": "119"
+    },
+    {
+      "value2": "",
+      "text": "15-Dec-2025",
+      "value": "119"
+    },
+    {
+      "value2": "",
+      "text": "22-Dec-2025",
+      "value": "90"
+    },
+    {
+      "value2": "",
+      "text": "29-Dec-2025",
+      "value": "93"
+    },
+    {
+      "value2": "",
+      "text": "05-Jan-2026",
+      "value": "129"
+    },
+    {
+      "value2": "",
+      "text": "12-Jan-2026",
+      "value": "107"
+    },
+    {
+      "value2": "",
+      "text": "19-Jan-2026",
+      "value": "206"
+    },
+    {
+      "value2": "",
+      "text": "26-Jan-2026",
+      "value": "175"
+    },
+    {
+      "value2": "",
+      "text": "02-Feb-2026",
+      "value": "109"
+    },
+    {
+      "value2": "",
+      "text": "09-Feb-2026",
+      "value": "167"
+    },
+    {
+      "value2": "",
+      "text": "16-Feb-2026",
+      "value": "139"
+    },
+    {
+      "value2": "",
+      "text": "23-Feb-2026",
+      "value": "171"
+    },
+    {
+      "value2": "",
+      "text": "02-Mar-2026",
+      "value": "49"
+    },
+    {
+      "value2": "",
+      "text": "09-Mar-2026",
+      "value": "35"
+    },
+    {
+      "value2": "",
+      "text": "16-Mar-2026",
+      "value": "34"
+    },
+    {
+      "value2": "",
+      "text": "23-Mar-2026",
+      "value": "19"
+    },
+    {
+      "value2": "",
+      "text": "30-Mar-2026",
+      "value": "11"
+    },
+    {
+      "value2": "",
+      "text": "04-May-2026",
+      "value": "11"
+    },
+    {
+      "value2": "",
+      "text": "11-May-2026",
+      "value": "12"
+    },
+    {
+      "value2": "",
+      "text": "18-May-2026",
+      "value": "13"
+    },
+    {
+      "value2": "",
+      "text": "25-May-2026",
+      "value": "18"
+    },
+    {
+      "value2": "",
+      "text": "01-Jun-2026",
+      "value": "16"
+    },
+    {
+      "value2": "",
+      "text": "08-Jun-2026",
+      "value": "29"
+    },
+    {
+      "value2": "",
+      "text": "15-Jun-2026",
+      "value": "28"
+    },
+    {
+      "value2": "",
+      "text": "22-Jun-2026",
+      "value": "21"
+    },
+    {
+      "value2": "",
+      "text": "29-Jun-2026",
+      "value": "22"
+    },
+    {
+      "value2": "",
+      "text": "13-Jul-2026",
+      "value": "17"
+    },
+    {
+      "value2": "",
+      "text": "20-Jul-2026",
+      "value": "18"
+    }
+  ],
+  "ts": "2026-07-24T14:40:46.839+05:46",
+  "status": "true"
+}
