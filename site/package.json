@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync-data": "mkdir -p src/data/abdm && cp ../data/abdm/normalized/*.json src/data/abdm/",
+    "sync-data": "mkdir -p src/data/abdm src/data/tngh && cp ../data/abdm/normalized/*.json src/data/abdm/ && cp ../data/tngh/normalized/*.json src/data/tngh/",
     "predev": "npm run sync-data",
     "prebuild": "npm run sync-data"
   },

@@ -1,0 +1,2270 @@
+{
+ "sas": [
+  {
+   "name": "Government Kilpauk Medical College And Hospital",
+   "district": "Chennai",
+   "class": "Medical College Hospital",
+   "total": 22216,
+   "month": 176,
+   "today": 4
+  },
+  {
+   "name": "Rajiv Gandhi Government General Hospital",
+   "district": "Chennai",
+   "class": "Government Hospital",
+   "total": 15754,
+   "month": 1315,
+   "today": 5
+  },
+  {
+   "name": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL",
+   "district": "Tirunelveli",
+   "class": "Medical College Hospital",
+   "total": 11565,
+   "month": 348,
+   "today": 46
+  },
+  {
+   "name": "Thirumullaivoyal Urban Primary Health Centre",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 1450,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "COMPOSITE HOSPITAL CRPF",
+   "district": "Thiruvallur",
+   "class": "Central Govt Hospital",
+   "total": 1099,
+   "month": 934,
+   "today": 36
+  },
+  {
+   "name": "Parivakkam Primary Health Centre",
+   "district": "Thiruvallur",
+   "class": "PHC",
+   "total": 814,
+   "month": 11,
+   "today": 0
+  },
+  {
+   "name": "Paruthipattu UPHC",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 724,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr Nagesh Clinic",
+   "district": "Krishnagiri",
+   "class": "Clinic",
+   "total": 559,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Solambedu Urban Primary Health Centre",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 484,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERMENT HOSPITAL AVADI",
+   "district": "Thiruvallur",
+   "class": "Hospital (other)",
+   "total": 409,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Thirunindravur PHC",
+   "district": "Thiruvallur",
+   "class": "PHC",
+   "total": 345,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Thirumazhisai Government Primary Health Center",
+   "district": "Thiruvallur",
+   "class": "PHC",
+   "total": 344,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "DEEPAS DENT TENT",
+   "district": "Krishnagiri",
+   "class": "Dental Clinic",
+   "total": 316,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Goverment Taluk Hospital Poonamallee",
+   "district": "Thiruvallur",
+   "class": "Taluk Hospital",
+   "total": 315,
+   "month": 16,
+   "today": 0
+  },
+  {
+   "name": "Thangam nursing home",
+   "district": "Krishnagiri",
+   "class": "Nursing Home",
+   "total": 296,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI",
+   "district": "Kallakurichi",
+   "class": "Medical College Hospital",
+   "total": 294,
+   "month": 97,
+   "today": 9
+  },
+  {
+   "name": "Nemam Government primary health centre",
+   "district": "Thiruvallur",
+   "class": "PHC",
+   "total": 289,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Urban Primary Health Center, Poonamallee",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 201,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Villinjiampakkam urban primary helath center",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 200,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SRI SAKTHI CLINIC",
+   "district": "Krishnagiri",
+   "class": "Clinic",
+   "total": 200,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "V V SPECIALITY CLINIC",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 129,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HEADQUARTERS HOSPITAL HOSUR",
+   "district": "Krishnagiri",
+   "class": "District HQ Hospital",
+   "total": 120,
+   "month": 64,
+   "today": 2
+  },
+  {
+   "name": "ABI CLINIC",
+   "district": "Krishnagiri",
+   "class": "Clinic",
+   "total": 111,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "THARUNIKA WOMENS CLINIC AND FERTITLITY CENTRE",
+   "district": "Thiruvallur",
+   "class": "Women & Children Hospital",
+   "total": 105,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Ranipet",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 85,
+   "month": 85,
+   "today": 22
+  },
+  {
+   "name": "periyar nagar uphc",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 83,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "CHAMPA CLINIC",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 63,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT MEDICAL COLLEGE NAMAKKAL",
+   "district": "Namakkal",
+   "class": "Medical College Hospital",
+   "total": 52,
+   "month": 38,
+   "today": 0
+  },
+  {
+   "name": "JEEVA HOSPITAL",
+   "district": "Krishnagiri",
+   "class": "Hospital (other)",
+   "total": 43,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kauvery Hospital Tennur",
+   "district": "Tiruchirappalli",
+   "class": "Hospital (other)",
+   "total": 31,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "RAMANA MAHARISHI RANGAMMAL HOSPITAL",
+   "district": "Tiruvannamalai",
+   "class": "Hospital (other)",
+   "total": 31,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVT THIRUVANNAMALAI MEDICAL COLLEGE HOSPITAL",
+   "district": "Tiruvannamalai",
+   "class": "Medical College Hospital",
+   "total": 29,
+   "month": 9,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL AMBASAMUDRAM",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 29,
+   "month": 29,
+   "today": 0
+  },
+  {
+   "name": "District Head Quarters Hospital Vallioor",
+   "district": "Tirunelveli",
+   "class": "District HQ Hospital",
+   "total": 26,
+   "month": 12,
+   "today": 2
+  },
+  {
+   "name": "MITTINAMALLE uphc",
+   "district": "Thiruvallur",
+   "class": "Urban PHC",
+   "total": 24,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "S V CLINIC",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 23,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KOVILPATTI",
+   "district": "Thoothukkudi",
+   "class": "Unclassified",
+   "total": 23,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College Ramanathapuram",
+   "district": "Ramanathapuram",
+   "class": "Medical College Hospital",
+   "total": 21,
+   "month": 6,
+   "today": 2
+  },
+  {
+   "name": "Government Peripheral Hospital Periyar Nagar",
+   "district": "Chennai",
+   "class": "Government Hospital",
+   "total": 19,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "govt hospital",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 19,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "ZN diagnostics and labs private limited",
+   "district": "Chennai",
+   "class": "Diagnostics / Lab",
+   "total": 18,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College",
+   "district": "Thiruvallur",
+   "class": "Medical College Hospital",
+   "total": 16,
+   "month": 16,
+   "today": 0
+  },
+  {
+   "name": "ARAKKONAM GH",
+   "district": "Ranipet",
+   "class": "Government Hospital",
+   "total": 16,
+   "month": 16,
+   "today": 1
+  },
+  {
+   "name": "JD DENTAL HOSPITAL",
+   "district": "Coimbatore",
+   "class": "Dental Clinic",
+   "total": 14,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Virutcham Hospital",
+   "district": "Thiruvallur",
+   "class": "Hospital (other)",
+   "total": 14,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Scudder Memorial Hospital",
+   "district": "Ranipet",
+   "class": "Hospital (other)",
+   "total": 14,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KANNAN HOSPITAL",
+   "district": "Kallakurichi",
+   "class": "Hospital (other)",
+   "total": 14,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr Ravis Clinic",
+   "district": "Erode",
+   "class": "Clinic",
+   "total": 13,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government medical college Virudhunagar",
+   "district": "Virudhunagar",
+   "class": "Medical College Hospital",
+   "total": 13,
+   "month": 11,
+   "today": 0
+  },
+  {
+   "name": "Kanyakumari Government Medical College Hospital",
+   "district": "Kanniyakumari",
+   "class": "Medical College Hospital",
+   "total": 12,
+   "month": 6,
+   "today": 0
+  },
+  {
+   "name": "SUDAR HOSPITAL AND RESEARCH INSTITUTE",
+   "district": "Thanjavur",
+   "class": "Hospital (other)",
+   "total": 11,
+   "month": 11,
+   "today": 3
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL SHOLINGHUR RANIPET TN",
+   "district": "Ranipet",
+   "class": "Government Hospital",
+   "total": 10,
+   "month": 10,
+   "today": 0
+  },
+  {
+   "name": "Lakshmi Medicals",
+   "district": "Thiruvallur",
+   "class": "Pharmacy",
+   "total": 10,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KARTHICK HOSPITAL",
+   "district": "Krishnagiri",
+   "class": "Hospital (other)",
+   "total": 9,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL",
+   "district": "Salem",
+   "class": "Medical College Hospital",
+   "total": 9,
+   "month": 5,
+   "today": 0
+  },
+  {
+   "name": "KAMALA SPECIALTY HOSPITALS PRIVATE LIMITED",
+   "district": "Thoothukkudi",
+   "class": "Hospital (other)",
+   "total": 9,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Mudukulathur Government Hospital",
+   "district": "Ramanathapuram",
+   "class": "Government Hospital",
+   "total": 8,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Melvisharam",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 8,
+   "month": 8,
+   "today": 0
+  },
+  {
+   "name": "SHREE K.K NURSING HOME",
+   "district": "Kallakurichi",
+   "class": "Nursing Home",
+   "total": 8,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Tamilnadu Health System Project",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 8,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kilakarai Government Hospital",
+   "district": "Ramanathapuram",
+   "class": "Government Hospital",
+   "total": 7,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "Govt Hospital Sivakasi",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 7,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HEAD QUARTERS HOSPITAL WALAJAPET",
+   "district": "Ranipet",
+   "class": "District HQ Hospital",
+   "total": 7,
+   "month": 7,
+   "today": 0
+  },
+  {
+   "name": "SRI RAJU HEART AND SKIN HOSPITAL LLP",
+   "district": "Kallakurichi",
+   "class": "Hospital (other)",
+   "total": 7,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Regional Centre for Cancer Research and Treatment",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 7,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kauvery Hospital Alwarpet",
+   "district": "Chennai",
+   "class": "Hospital (other)",
+   "total": 7,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Sri Ramakrishna Hospital",
+   "district": "Coimbatore",
+   "class": "Hospital (other)",
+   "total": 7,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Deepa Hospital",
+   "district": "Thiruvallur",
+   "class": "Hospital (other)",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "VIDHYA HOSPITAL THENI",
+   "district": "Theni",
+   "class": "Hospital (other)",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT MEDICAL COLLEGE KRISHNAGIRI",
+   "district": "Krishnagiri",
+   "class": "Medical College Hospital",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Navin healthcare",
+   "district": "Karur",
+   "class": "Unclassified",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KOVILPATTI GOVERNMENT DISTRICT HEADQUARTERS HOSPITAL",
+   "district": "Thoothukkudi",
+   "class": "District HQ Hospital",
+   "total": 6,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Thandarai",
+   "district": "Thiruvallur",
+   "class": "Unclassified",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Anu Hospital",
+   "district": "Thanjavur",
+   "class": "Hospital (other)",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr Mitthra Clinic",
+   "district": "Kancheepuram",
+   "class": "Clinic",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "CBS NATURE CURE AND AYURVEDIC CLINIC",
+   "district": "Krishnagiri",
+   "class": "AYUSH",
+   "total": 6,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SIVASAKTHI HOSPITAL",
+   "district": "Thiruvallur",
+   "class": "Hospital (other)",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "ARUNPRIYA MULTISPECIALITY HOSPITAL",
+   "district": "Mayiladuthurai",
+   "class": "Hospital (other)",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Udyarpalyam",
+   "district": "Ariyalur",
+   "class": "Government Hospital",
+   "total": 5,
+   "month": 5,
+   "today": 0
+  },
+  {
+   "name": "Government District Headquarters Hospital",
+   "district": "Tirupathur",
+   "class": "District HQ Hospital",
+   "total": 5,
+   "month": 5,
+   "today": 0
+  },
+  {
+   "name": "SRI SIVASAKTHI DENTAL HOSPITAL AND ORTHODONTIC CENTRE",
+   "district": "Kallakurichi",
+   "class": "Dental Clinic",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Babus Dental Care",
+   "district": "Thiruvallur",
+   "class": "Dental Clinic",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "K V R KIDNEY AND DIABETIC CENTRE",
+   "district": "Vellore",
+   "class": "Unclassified",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Attupakkam",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 5,
+   "month": 5,
+   "today": 0
+  },
+  {
+   "name": "Arikalpadi",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 5,
+   "month": 5,
+   "today": 0
+  },
+  {
+   "name": "GOVT HOSPITAL KARIAPATTI VIRUDHUNAGAR TN",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 5,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Government Primary Health Center Sorancherry",
+   "district": "Thiruvallur",
+   "class": "PHC",
+   "total": 5,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Pudupadi",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 5,
+   "month": 5,
+   "today": 1
+  },
+  {
+   "name": "Mudhur",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 4,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "SRI LAKSHMI HOSPITAL",
+   "district": "Kallakurichi",
+   "class": "Hospital (other)",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Raj Hospital Tiruvannamalai TN",
+   "district": "Tiruvannamalai",
+   "class": "Hospital (other)",
+   "total": 4,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "Jayankondam Government Hospital",
+   "district": "Ariyalur",
+   "class": "Government Hospital",
+   "total": 4,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College Dindigul",
+   "district": "Dindigul",
+   "class": "Medical College Hospital",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "ELITTE DENTISTRY",
+   "district": "Krishnagiri",
+   "class": "Unclassified",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "CHENGALPATTI RAILWAY HEALTH UNIT",
+   "district": "Kancheepuram",
+   "class": "Railway Hospital",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Shenbagam Hospitals Pvt Ltd",
+   "district": "Madurai",
+   "class": "Hospital (other)",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "MADURA DENTAL CARE",
+   "district": "Kallakurichi",
+   "class": "Dental Clinic",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr.suganya Clinic",
+   "district": "Theni",
+   "class": "Clinic",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr.Suganya Diabetic Clinic",
+   "district": "Theni",
+   "class": "Clinic",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SRI VISHAL HEALTH CARE",
+   "district": "Thiruvallur",
+   "class": "Unclassified",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "NANDHA DENTAL HOSPITAL",
+   "district": "Kallakurichi",
+   "class": "Dental Clinic",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Arcot",
+   "district": "Ranipet",
+   "class": "Government Hospital",
+   "total": 4,
+   "month": 4,
+   "today": 0
+  },
+  {
+   "name": "THE DENTAL CLINIC",
+   "district": "Krishnagiri",
+   "class": "Dental Clinic",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Rajah Muthiah Medical College",
+   "district": "Cuddalore",
+   "class": "Medical College Hospital",
+   "total": 4,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Radhapuram",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 4,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Melapalayam",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 4,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "M M Multi Speciality Hospital Theni TN",
+   "district": "Theni",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Thoothukudi Medical College",
+   "district": "Thoothukkudi",
+   "class": "Medical College Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Dr.Malas Hospital",
+   "district": "Tiruchirappalli",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "ANNA CLINIC",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KEVIN MEDICALS",
+   "district": "Thiruvallur",
+   "class": "Pharmacy",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "IKRAM HOSPITAL with EClinic",
+   "district": "Tirupathur",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Greater Chennai corporation RCME TANKER DIALYSIS UNIT",
+   "district": "Chennai",
+   "class": "Government Hospital",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "SKS Hospital And Postgraduate Medical Institute",
+   "district": "Salem",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Stanley Medical College and Hospital",
+   "district": "Chennai",
+   "class": "Medical College Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT DISTRICT HEAD QUARTERS HOSPITAL TENKASI",
+   "district": "Tenkasi",
+   "class": "District HQ Hospital",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "KAVAN HOSPITAL",
+   "district": "Dharmapuri",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Swamiyarmadam Rathna Memorial Hospital",
+   "district": "Kanniyakumari",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "Government Sivagangai Medical College Hospital",
+   "district": "Sivaganga",
+   "class": "Medical College Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "govt hosptel",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Sathish Dental Clinic",
+   "district": "Dindigul",
+   "class": "Dental Clinic",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Calwin hospitals",
+   "district": "Kanniyakumari",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre Govt Arumbakkam",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "BARGUR GOVERNMENT HOSPITAL",
+   "district": "Krishnagiri",
+   "class": "Government Hospital",
+   "total": 3,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "AMMAIYAPPA HOSPITAL",
+   "district": "Namakkal",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "PONNI HOSPITAL",
+   "district": "Madurai",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Isha Medicare",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Abishek Hospital",
+   "district": "Thiruvallur",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GH SANKARAPURAM",
+   "district": "Kallakurichi",
+   "class": "Government Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Tiruppur Medical College Hospital",
+   "district": "Tiruppur",
+   "class": "Medical College Hospital",
+   "total": 3,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "THE SALVATION ARMY CATHERINE BOOTH HOSPITAL",
+   "district": "Kanniyakumari",
+   "class": "Central Govt Hospital",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "KUMARARANI Dr MEENA MUTHIAH HOSPITAL",
+   "district": "Sivaganga",
+   "class": "Hospital (other)",
+   "total": 3,
+   "month": 3,
+   "today": 0
+  },
+  {
+   "name": "Kalavai GH",
+   "district": "Ranipet",
+   "class": "Government Hospital",
+   "total": 3,
+   "month": 3,
+   "today": 1
+  },
+  {
+   "name": "Nagavedu",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT DHARMAPURI MEDICAL COLLEGE HOSPITAL",
+   "district": "Dharmapuri",
+   "class": "Medical College Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Punagai Dental Clinic",
+   "district": "Chennai",
+   "class": "Dental Clinic",
+   "total": 2,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "KHIVRAJ CHORDIA MEMORIAL DIALYSIS CENTRE",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL KRISHNAPURAM",
+   "district": "Perambalur",
+   "class": "Government Hospital",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Kudankulam",
+   "district": "Tirunelveli",
+   "class": "Government Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Govt Hospital Kumarapalayam Namakkal TN.",
+   "district": "Namakkal",
+   "class": "Government Hospital",
+   "total": 2,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Rani ENT Clinic",
+   "district": "Chengalpattu",
+   "class": "Clinic",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Veppur",
+   "district": "Perambalur",
+   "class": "Government Hospital",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "VELS CLINICAL LABORATORY",
+   "district": "Chengalpattu",
+   "class": "Diagnostics / Lab",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre Anna Nagar UPHC",
+   "district": "Tirupathur",
+   "class": "Urban PHC",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Ammagenomics",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "B.M HOSPITAL",
+   "district": "Tiruchirappalli",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL KARAI",
+   "district": "Perambalur",
+   "class": "Government Hospital",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "AVIRA SPECALITIY CLINIC",
+   "district": "Dharmapuri",
+   "class": "Clinic",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Banavaram",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Urban Primary Health Centre",
+   "district": "Ranipet",
+   "class": "Urban PHC",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "PRIDE SUPERSPECIALITY HOSPITAL",
+   "district": "Chennai",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HEADQUARTERS HOSPITAL PERAMBALUR",
+   "district": "Perambalur",
+   "class": "District HQ Hospital",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "SK HEALTH CARE CLINIC",
+   "district": "Thanjavur",
+   "class": "Clinic",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kewalchand Mohanabai Daga Dialysis Centre",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "TANISHA CLINIC",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Govt medical College hospital kallakurichi",
+   "district": "Kallakurichi",
+   "class": "Medical College Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Retteri Sri Kumaran Health Centre Pvt Ltd",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SOMASUNDARAM EYE HOSPITAL",
+   "district": "Karur",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Badhras Clinical Laboratory",
+   "district": "Chengalpattu",
+   "class": "Diagnostics / Lab",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "RAMBONE AND JOINT HOSPITAL MAYILADUTHURAI",
+   "district": "Mayiladuthurai",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Lalapet",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "BALAJI HOSPITAL",
+   "district": "Tirunelveli",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "ANCHI BAI HEMARAJ KATARIYA DIALYSIS CENTRE",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Goverment Hospital Sendurai",
+   "district": "Ariyalur",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Singarapettai BPHC",
+   "district": "Krishnagiri",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "ABHI HEALTH CARE",
+   "district": "Vellore",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Suriyan Hospital Tiruvannamalai TN",
+   "district": "Tiruvannamalai",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 2,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College and Hospital The Nilgiris",
+   "district": "The Nilgiris",
+   "class": "Medical College Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "JANANI ORTHOPAEDICS AND SPORTS INJURY CENTER",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College and Hospital Pudukkottai",
+   "district": "Pudukkottai",
+   "class": "Medical College Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GEM HOSPITAL - ERODE",
+   "district": "Erode",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Ahaan Diagnostic Center",
+   "district": "Tiruchirappalli",
+   "class": "Diagnostics / Lab",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT MEDICAL COLLEGE HOSPITAL THENI",
+   "district": "Theni",
+   "class": "Medical College Hospital",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "bethesda hospital",
+   "district": "Kanniyakumari",
+   "class": "Hospital (other)",
+   "total": 2,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Arakkonam",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 1
+  },
+  {
+   "name": "Guruvarajapet",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 2
+  },
+  {
+   "name": "Ammoor",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 2,
+   "month": 2,
+   "today": 2
+  },
+  {
+   "name": "LAYA HEALTH CARE CLINIC",
+   "district": "Krishnagiri",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Goodwill Clinic",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Rameshwaram Government Hospital",
+   "district": "Ramanathapuram",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "THAVAM HOSPITAL",
+   "district": "Madurai",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SRN Clinic",
+   "district": "Thiruvallur",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "THE DEIVATHIRU BALAMANI KRISHNASAMI MEMORIAL TANKER FOUNDATION DIALYSIS CENTER,",
+   "district": "Dindigul",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "KAVIN DIALYSIS CENTER",
+   "district": "Tirupathur",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Paramakudi GHQH",
+   "district": "Ramanathapuram",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre Govt Thimiri",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Sri Ram Krupa Clinic",
+   "district": "Chengalpattu",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SRINIKA PHYSIOCARE",
+   "district": "Krishnagiri",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Life First Multi Speciality Clinic",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kaspa Tirupathur",
+   "district": "Tirupathur",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Vengupattu",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "TANKER FOUNDATION DIALYSIS CENTRE",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Government Head Qrtrs Hospital Aruppukottai",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "KMC CLINIC",
+   "district": "Thoothukkudi",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GHPALLIPALAYAM",
+   "district": "Namakkal",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "AKT Medical",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL PARAMATHYVELUR",
+   "district": "Namakkal",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Nowlack",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Rajeswari hospital",
+   "district": "Ranipet",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GR HOSPITAL",
+   "district": "Tirupathur",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Tamilnad Kidney Research Foundation Dindigul",
+   "district": "Dindigul",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Perumuchi",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL PONNERI",
+   "district": "Thiruvallur",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "SRINIVASA SPECIALITY HOSPITAL",
+   "district": "Krishnagiri",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Coimbatore Medical College Hospital",
+   "district": "Coimbatore",
+   "class": "Medical College Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Clarius Biological Pvt Ltd",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Rajapalayam",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "chitra multispeciality hospitals private limited",
+   "district": "Virudhunagar",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Government Medical College and Hospital Virudhunagar",
+   "district": "Virudhunagar",
+   "class": "Medical College Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GRH HEALTH CARE CLINIC AND DIAGNOSTICS",
+   "district": "Thiruvallur",
+   "class": "Diagnostics / Lab",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Sattur",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "G KUPPUSWAMY NAIDU MEMORIAL HOSPITAL",
+   "district": "Coimbatore",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "OM SAKTHI DENTAL HOSPITAL",
+   "district": "Kancheepuram",
+   "class": "Dental Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "AGILAN CHILDREN HOSPITAL",
+   "district": "Namakkal",
+   "class": "Women & Children Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Sumaithangi",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "KARUNAI LUNG CARE CENTRE",
+   "district": "Krishnagiri",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Vilapakkam",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Oneglance",
+   "district": "Kancheepuram",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "A Little Heart Childrens Clinic",
+   "district": "Madurai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Sri kauvery medical care limited Dialysis",
+   "district": "Tiruchirappalli",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Govt Urban Primary Health Centre Arcot",
+   "district": "Ranipet",
+   "class": "Urban PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "LAKSHMI HOMOEO CLINIC",
+   "district": "Thiruvallur",
+   "class": "AYUSH",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Bensam Hospital",
+   "district": "Kanniyakumari",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Annai Clinic",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Metro Diagnostics",
+   "district": "Chennai",
+   "class": "Diagnostics / Lab",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "vilathikulam gh",
+   "district": "Thoothukkudi",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENT HOSPITAL ALANGULAM",
+   "district": "Tenkasi",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "GOVERNMENTHOSPITAL SRIVILLIPUTHUR",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "PONNIAH HOSPITAL",
+   "district": "Coimbatore",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "CORPORATION U.P.H.C,RCCT and TANKER DIALYSIS UNIT",
+   "district": "Chennai",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Karadikuppam",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Shree Paramhans Care Clinic",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Govt Primary Health Centre Kodaikkal",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "ECR Multispeciality Clinic EMC",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "CS Multi speciality Hospital",
+   "district": "Sivaganga",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Hale Homoeo Clinic",
+   "district": "Chennai",
+   "class": "AYUSH",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre GOVT ARUNKUNDRAM",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Government Hospital Thiruthangal",
+   "district": "Virudhunagar",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "TIRUPPUR NORTH ROTARY CLUB,TIRUPPUR CORPORATION TANKER DIALYSIS UNIT",
+   "district": "Tiruppur",
+   "class": "Government Hospital",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Revivee Homeo Clinic",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Kothanallur",
+   "district": "Kanniyakumari",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre Govt Mambakkam",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Punnai",
+   "district": "Ranipet",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "GCC RCMW KCS Tanker PADI DIALYSIS UNIT",
+   "district": "Chennai",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "SRIRAM HOSPITAL VILLUPURAM TN",
+   "district": "Kallakurichi",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "VISWA MAGAADEV MEDICAL CENTRE",
+   "district": "Cuddalore",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "T.Kunnathur",
+   "district": "Kallakurichi",
+   "class": "Unclassified",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "CHENNAI HERITAGE HOSPITAL",
+   "district": "Chennai",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Primary Health Centre GOVT LADAVARAM",
+   "district": "Ranipet",
+   "class": "PHC",
+   "total": 1,
+   "month": 1,
+   "today": 0
+  },
+  {
+   "name": "Nanda Clinic",
+   "district": "Chennai",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Faith Multispeciality Hospital",
+   "district": "Chennai",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Chengalpattu Medical college Hospital",
+   "district": "Chengalpattu",
+   "class": "Medical College Hospital",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "GEM HOSPITAL AND RESEARCH CENTRE PVT LTD",
+   "district": "Tiruppur",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "DIAMOND DENTAL CLINIC",
+   "district": "Thanjavur",
+   "class": "Dental Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "Mount Multi-speciality Hospitals",
+   "district": "Chennai",
+   "class": "Hospital (other)",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  },
+  {
+   "name": "MS Clinic",
+   "district": "Erode",
+   "class": "Clinic",
+   "total": 1,
+   "month": 0,
+   "today": 0
+  }
+ ],
+ "topHrl": {
+  "allTime": [
+   {
+    "name": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL",
+    "class": "Medical College Hospital",
+    "district": "Tirunelveli",
+    "partner": "C-DAC e-Sushrut",
+    "records": 929503
+   },
+   {
+    "name": "Rajiv Gandhi Government General Hospital",
+    "class": "Government Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut",
+    "records": 588143
+   },
+   {
+    "name": "Government Kilpauk Medical College And Hospital",
+    "class": "Medical College Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut, PMNDP",
+    "records": 299428
+   },
+   {
+    "name": "Government Peripheral Hospital Periyar Nagar",
+    "class": "Government Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut, PMNDP",
+    "records": 243121
+   },
+   {
+    "name": "SOUTHERN RAILWAY CENTRAL HOSPITAL",
+    "class": "Railway Hospital",
+    "district": "Chennai",
+    "partner": "E-Sushrut Railway Hospital",
+    "records": 240330
+   },
+   {
+    "name": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL",
+    "class": "Medical College Hospital",
+    "district": "Salem",
+    "partner": "C-DAC e-Sushrut, UWIN",
+    "records": 182840
+   },
+   {
+    "name": "GOVERNMENT MEDICAL COLLEGE KRISHNAGIRI",
+    "class": "Medical College Hospital",
+    "district": "Krishnagiri",
+    "partner": "C-DAC e-Sushrut",
+    "records": 119524
+   },
+   {
+    "name": "Government medical college Virudhunagar",
+    "class": "Medical College Hospital",
+    "district": "Virudhunagar",
+    "partner": "C-DAC e-Sushrut",
+    "records": 86355
+   },
+   {
+    "name": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI",
+    "class": "Medical College Hospital",
+    "district": "Kallakurichi",
+    "partner": "C-DAC e-Sushrut",
+    "records": 81596
+   },
+   {
+    "name": "INTEGRAL COACH FACTORY RAILWAY CENTRAL HOSPITAL",
+    "class": "Railway Hospital",
+    "district": "Chennai",
+    "partner": "E-Sushrut Railway Hospital",
+    "records": 81407
+   }
+  ],
+  "last30d": [
+   {
+    "name": "Rajiv Gandhi Government General Hospital",
+    "class": "Government Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut",
+    "records": 108463
+   },
+   {
+    "name": "TIRUNELVELI MEDICAL COLLEGE HOSPITAL",
+    "class": "Medical College Hospital",
+    "district": "Tirunelveli",
+    "partner": "C-DAC e-Sushrut",
+    "records": 69016
+   },
+   {
+    "name": "Government Peripheral Hospital Periyar Nagar",
+    "class": "Government Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut, PMNDP",
+    "records": 53657
+   },
+   {
+    "name": "GOVT MOHAN KUMARAMANGALAM MEDICAL COLLEGE HOSPITAL",
+    "class": "Medical College Hospital",
+    "district": "Salem",
+    "partner": "C-DAC e-Sushrut",
+    "records": 44741
+   },
+   {
+    "name": "Government medical college Virudhunagar",
+    "class": "Medical College Hospital",
+    "district": "Virudhunagar",
+    "partner": "C-DAC e-Sushrut",
+    "records": 40463
+   },
+   {
+    "name": "GOVERNMENT MEDICAL COLLEGE AND HOSPITAL KALLAKURICHI",
+    "class": "Medical College Hospital",
+    "district": "Kallakurichi",
+    "partner": "C-DAC e-Sushrut",
+    "records": 26551
+   },
+   {
+    "name": "Government Kilpauk Medical College And Hospital",
+    "class": "Medical College Hospital",
+    "district": "Chennai",
+    "partner": "C-DAC e-Sushrut, PMNDP",
+    "records": 25471
+   },
+   {
+    "name": "GOVERNMENT MEDICAL COLLEGE KRISHNAGIRI",
+    "class": "Medical College Hospital",
+    "district": "Krishnagiri",
+    "partner": "C-DAC e-Sushrut",
+    "records": 25138
+   },
+   {
+    "name": "SOUTHERN RAILWAY CENTRAL HOSPITAL",
+    "class": "Railway Hospital",
+    "district": "Chennai",
+    "partner": "E-Sushrut Railway Hospital",
+    "records": 22416
+   },
+   {
+    "name": "GOVERNMENT MEDICAL COLLEGE NAMAKKAL",
+    "class": "Medical College Hospital",
+    "district": "Namakkal",
+    "partner": "C-DAC e-Sushrut",
+    "records": 17414
+   }
+  ],
+  "today": [
+   {
+    "name": "KOVILPATTI GOVERNMENT DISTRICT HEADQUARTERS HOSPITAL",
+    "class": "District HQ Hospital",
+    "district": "Tuticorin",
+    "partner": "C-DAC e-Sushrut",
+    "records": 37
+   },
+   {
+    "name": "P.Kodikulam",
+    "class": "Unclassified",
+    "district": "Ramanathapuram",
+    "partner": "C-DAC e-Sushrut",
+    "records": 35
+   },
+   {
+    "name": "GOVERMENT HOSPITAL AVADI",
+    "class": "Hospital (other)",
+    "district": "Thiruvallur",
+    "partner": "C-DAC e-Sushrut",
+    "records": 35
+   },
+   {
+    "name": "Primary Health Centre Govt Thimiri",
+    "class": "PHC",
+    "district": "Ranipet",
+    "partner": "C-DAC e-Sushrut",
+    "records": 34
+   },
+   {
+    "name": "Urban Primary Health Center, Poonamallee",
+    "class": "Urban PHC",
+    "district": "Thiruvallur",
+    "partner": "C-DAC e-Sushrut",
+    "records": 33
+   },
+   {
+    "name": "Musiri",
+    "class": "Unclassified",
+    "district": "Ranipet",
+    "partner": "C-DAC e-Sushrut",
+    "records": 27
+   },
+   {
+    "name": "Goverment Taluk Hospital Poonamallee",
+    "class": "Taluk Hospital",
+    "district": "Thiruvallur",
+    "partner": "C-DAC e-Sushrut",
+    "records": 24
+   },
+   {
+    "name": "TAMIL NADU GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL",
+    "class": "Government Hospital",
+    "district": "Chennai",
+    "partner": "PMNDP",
+    "records": 21
+   },
+   {
+    "name": "Arakkonam",
+    "class": "Unclassified",
+    "district": "Ranipet",
+    "partner": "C-DAC e-Sushrut",
+    "records": 20
+   },
+   {
+    "name": "Kaveripakkam",
+    "class": "Unclassified",
+    "district": "Ranipet",
+    "partner": "C-DAC e-Sushrut",
+    "records": 20
+   }
+  ]
+ }
+}

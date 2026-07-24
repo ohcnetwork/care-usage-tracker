@@ -1,0 +1,169 @@
+{
+ "snapshotDate": "2026-07-24",
+ "generatedAt": "2026-07-24T08:46:49.422Z",
+ "source": "https://dashboard.abdm.gov.in/abdm/",
+ "state": {
+  "code": "33",
+  "name": "Tamil Nadu"
+ },
+ "partners": [
+  "C-DAC e-Sushrut",
+  "PMNDP",
+  "E-Sushrut Railway Hospital",
+  "eSushrut@Clinic"
+ ],
+ "districts": [
+  {
+   "code": "610",
+   "name": "Ariyalur"
+  },
+  {
+   "code": "730",
+   "name": "Chengalpattu"
+  },
+  {
+   "code": "568",
+   "name": "Chennai"
+  },
+  {
+   "code": "569",
+   "name": "Coimbatore"
+  },
+  {
+   "code": "570",
+   "name": "Cuddalore"
+  },
+  {
+   "code": "571",
+   "name": "Dharmapuri"
+  },
+  {
+   "code": "572",
+   "name": "Dindigul"
+  },
+  {
+   "code": "573",
+   "name": "Erode"
+  },
+  {
+   "code": "729",
+   "name": "Kallakurichi"
+  },
+  {
+   "code": "574",
+   "name": "Kanchipuram"
+  },
+  {
+   "code": "575",
+   "name": "Kanniyakumari"
+  },
+  {
+   "code": "576",
+   "name": "Karur"
+  },
+  {
+   "code": "577",
+   "name": "Krishnagiri"
+  },
+  {
+   "code": "578",
+   "name": "Madurai"
+  },
+  {
+   "code": "735",
+   "name": "Mayiladuthurai"
+  },
+  {
+   "code": "579",
+   "name": "Nagapattinam"
+  },
+  {
+   "code": "580",
+   "name": "Namakkal"
+  },
+  {
+   "code": "581",
+   "name": "Perambalur"
+  },
+  {
+   "code": "582",
+   "name": "Pudukkottai"
+  },
+  {
+   "code": "583",
+   "name": "Ramanathapuram"
+  },
+  {
+   "code": "731",
+   "name": "Ranipet"
+  },
+  {
+   "code": "584",
+   "name": "Salem"
+  },
+  {
+   "code": "585",
+   "name": "Sivaganga"
+  },
+  {
+   "code": "733",
+   "name": "Tenkasi"
+  },
+  {
+   "code": "586",
+   "name": "Thanjavur"
+  },
+  {
+   "code": "587",
+   "name": "The Nilgiris"
+  },
+  {
+   "code": "588",
+   "name": "Theni"
+  },
+  {
+   "code": "589",
+   "name": "Thiruvallur"
+  },
+  {
+   "code": "590",
+   "name": "Thiruvarur"
+  },
+  {
+   "code": "591",
+   "name": "Tiruchirappalli"
+  },
+  {
+   "code": "592",
+   "name": "Tirunelveli"
+  },
+  {
+   "code": "732",
+   "name": "Tirupathur"
+  },
+  {
+   "code": "634",
+   "name": "Tiruppur"
+  },
+  {
+   "code": "593",
+   "name": "Tiruvannamalai"
+  },
+  {
+   "code": "594",
+   "name": "Tuticorin"
+  },
+  {
+   "code": "595",
+   "name": "Vellore"
+  },
+  {
+   "code": "596",
+   "name": "Villupuram"
+  },
+  {
+   "code": "597",
+   "name": "Virudhunagar"
+  }
+ ]
+}

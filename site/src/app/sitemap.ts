@@ -25,5 +25,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/tngh/`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/tngh/facilities/`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
   ];
 }
